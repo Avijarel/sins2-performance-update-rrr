@@ -1,0 +1,150 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 9.604111,
+        "box": {
+            "center": [0.0, 0.0, -3.401069],
+            "extents": [3.031542, 2.992880, 6.179785]
+        },
+        "collision_rank": 0
+    },
+    "physics": {
+        "can_move_linear": true,
+        "max_linear_speed": 800.0,
+        "time_to_max_linear_speed": 6.0,
+        "arrival_tolerance_spatial_radius_scalar": 0.250,
+        "death_linear_speed_range": [1.0, 2.0],
+        "can_move_angular": true,
+        "max_angular_speed": 60.0,
+        "time_to_max_angular_speed": 2.20,
+        "max_bank_angle": 89.0,
+        "death_angular_speed_range": [5.0, 10.0],
+        "linear_acceleration_angle": 180.0,
+        "can_strafe_linear": true,
+        "strafe_max_linear_speed": 325.0,
+        "time_to_strafe_max_linear_speed": 21.60,
+        "strafe_max_linear_distance_spatial_radius_scalar": 10.0,
+        "strafe_start_angle": 0.0,
+        "strafe_stop_angle": 180.0,
+        "strafe_speed_start_angle": 10.0,
+        "strafe_max_start_turning_angle": 170.0
+    },
+    "move": {
+        "follow_distance": 31.826010
+    },
+    "attack":
+    {
+        "attack_pattern":
+        {
+            "type": "strafe_and_pull_away",
+            "use_weapon_cooldown": false,
+            "weapon_cooldown_percent_to_start_strafe": 0.8,
+            "pull_away_angle_range": 45.0
+        }
+    },
+    "ai": {
+        "attack_target_type_groups": [
+            "heavy_capital",
+            "defense"
+        ],
+        "attack_target_type_groups_to_ignore": [
+            "torpedo_strikecraft_corvette"
+        ],
+        "auto_follow_target_priority": -1.0,
+        "pursuit": {
+            "min_target_speed": 500.0,
+            "min_distance_to_target": 100.0
+        }
+    },
+    "ai_attack_target": {
+        "attack_priority": 999.0,
+        "is_always_a_threat": true,
+        "attack_target_type": "strikecraft"
+    },
+    "user_interface": {
+        "pip_type": "strikecraft",
+        "can_ever_be_selected": true,
+        "selection_priority": 5,
+        "has_sub_selection_grouping": true,
+        "selection_group_unit_type": "strikecraft",
+        "can_move": true,
+        "can_rotate": true,
+        "can_attack": true,
+        "can_show_distance_to_plane_line": true,
+        "skip_as_zoom_target_when_zooming_in_from_far": true
+    },
+    "weapons": {
+        "weapons": [
+            {
+                "weapon": "advent_mine_strikecraft_bait",
+                "mesh_point": "weapon.0",
+                "weapon_position": [0.0, 0.0, 0.0],
+                "non_turret_muzzle_positions": [
+                    [0.0, 0.0, -0.0]
+                ],
+                "forward": [-0.0, 0.0, 1.0],
+                "up": [0.0, -1.0, 0.0],
+                "yaw_arc": {
+                    "min_angle": -90.0,
+                    "max_angle": 90.0
+                },
+                "pitch_arc": {
+                    "min_angle": -90.0,
+                    "max_angle": 90.0
+                }
+            }
+        ],
+        "max_range_weapon_index": 0
+    },
+    "formation": {
+        "leader_priority": 0,
+        "offsets_per_formation_type": {
+            "ships_and_structures": {
+                "rank": 1,
+                "group": 4
+            }
+        }
+    },
+    "health": {
+        "release_time_after_death": 5.0,
+        "can_collide_duration_after_death": 0.10,
+        "round_max_points_up_to_5": false,
+        "levels": [
+            {
+                "max_hull_points": 25.0,
+                "hull_point_restore_rate": 1.0,
+                "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "experience_given_on_death": 2.50
+            }
+        ]
+    },
+    "strikecraft": {
+        "kind": "mem_custom_strikecraft2",
+        "build_time": 20.0,
+        "squadron_size": 2,
+        "launch_destination_formation_offset": {
+            "rank": 0,
+            "group": 0
+        }
+    },
+    "target_filter_unit_type": "strikecraft",
+    "tags": [
+        "strikecraft"
+    ],
+    "virtual_supply_cost": 1,
+    "abilities": [
+        {
+            "abilities": [
+                "advent_mine_strikecraft_detonate"
+            ]
+        }
+    ],
+    "skin_groups": [
+        {
+            "skins": [
+                "advent_mine_strikecraft"
+            ]
+        }
+    ],
+    "action_effect_size": "small_unit"
+}

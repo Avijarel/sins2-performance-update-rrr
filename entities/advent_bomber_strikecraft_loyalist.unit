@@ -1,0 +1,173 @@
+{
+    "version": 0,
+    "spatial":
+    {
+        "radius": 9.902448,
+        "box":
+        {
+            "center": [0.0, 0.153127, -0.623082],
+            "extents": [8.637574, 2.756458, 5.021775]
+        },
+        "collision_rank": 0
+    },
+    "physics":
+    {
+        "can_move_linear": true,
+        "max_linear_speed": 1000.0,
+        "time_to_max_linear_speed": 10.0,
+        "arrival_tolerance_spatial_radius_scalar": 2.0,
+        "death_linear_speed_range": [1.0, 2.0],
+        "can_move_angular": true,
+        "max_angular_speed": 80.0,
+        "time_to_max_angular_speed": 2.0,
+        "max_bank_angle": 89.0,
+        "death_angular_speed_range": [5.0, 10.0],
+        "linear_acceleration_angle": 180.0,
+        "can_strafe_linear": true,
+        "strafe_max_linear_speed": 375.0,
+        "time_to_strafe_max_linear_speed": 15.0,
+        "strafe_max_linear_distance_spatial_radius_scalar": 10.0,
+        "strafe_start_angle": 0.0,
+        "strafe_stop_angle": 180.0,
+        "strafe_speed_start_angle": 10.0,
+        "strafe_max_start_turning_angle": 170.0
+    },
+    "move":
+    {
+        "follow_distance": 40.119759
+    },
+    "attack":
+    {
+        "attack_pattern":
+        {
+            "type": "strafe_and_pull_away",
+            "use_weapon_cooldown": true,
+            "weapon_cooldown_percent_to_start_strafe": 0.525,
+            "pull_away_angle_range": 45.0
+        }
+    },
+    "ai":
+    {
+        "attack_target_type_groups": [
+            "heavy_capital",
+            "defense"
+        ],
+        "attack_target_type_groups_to_ignore": [
+            "torpedo_strikecraft"
+        ],
+        "attack_target_type_groups_matching_weapon": "advent_bomber_strikecraft_heavy_beam",
+        "auto_follow_target_priority": -1.0,
+        "pursuit":
+        {
+            "min_target_speed": 500.0,
+            "min_distance_to_target": 500.0
+        }
+    },
+    "ai_attack_target":
+    {
+        "attack_priority": 50.0,
+        "is_always_a_threat": true,
+        "attack_target_type": "strikecraft"
+    },
+    "user_interface":
+    {
+        "pip_type": "strikecraft",
+        "can_ever_be_selected": true,
+        "selection_priority": 5,
+        "has_sub_selection_grouping": true,
+        "selection_group_unit_type": "strikecraft",
+        "can_move": true,
+        "can_attack": true,
+        "can_show_distance_to_plane_line": true,
+        "skip_as_zoom_target_when_zooming_in_from_far": true,
+        "can_rotate": true
+    },
+    "weapons":
+    {
+        "weapons": [
+        {
+            "weapon": "advent_bomber_strikecraft_heavy_beam",
+            "mesh_point": "weapon.0",
+            "weapon_position": [0.004379, -2.11621, 0.929169],
+            "non_turret_muzzle_positions": [
+                [-6.328531, -2.11621, 0.929169],
+                [6.337288, -2.11621, 0.929169]
+            ],
+            "forward": [0.0, 0.0, 1.0],
+            "up": [0.0, 1.0, -0.0],
+            "yaw_arc":
+            {
+                "min_angle": -5.0,
+                "max_angle": 5.0
+            },
+            "pitch_arc":
+            {
+                "min_angle": -5.0,
+                "max_angle": 5.0
+            }
+        }],
+        "max_range_weapon_index": 0
+    },
+    "formation":
+    {
+        "leader_priority": 0,
+        "offsets_per_formation_type":
+        {
+            "ships_and_structures":
+            {
+                "rank": 0,
+                "group": 1
+            },
+            "strikecraft_only":
+            {
+                "rank": 1,
+                "group": 4
+            }
+        }
+    },
+    "health":
+    {
+        "release_time_after_death": 10.3,
+        "can_collide_duration_after_death": 0.1,
+        "round_max_points_up_to_5": false,
+        "levels": [
+        {
+            "max_hull_points": 120.0,
+            "hull_point_restore_rate": 1.33,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "max_armor_points": 15.0,
+            "armor_point_restore_rate": 1.33,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 5.0,
+            "max_shield_points": 3.0,
+            "shield_point_restore_rate": 1.33,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "experience_given_on_death": 7.5
+        }]
+    },
+    "strikecraft":
+    {
+        "kind": "bomber",
+        "build_time": 40.0,
+        "squadron_size": 3,
+        "launch_destination_formation_offset":
+        {
+            "rank": 1,
+            "group": 4
+        }
+    },
+    "target_filter_unit_type": "strikecraft",
+    "tags": [
+        "strikecraft"
+    ],    "virtual_supply_cost": 1,
+
+    "skin_groups": [
+    {
+        "skins": [
+            "advent_bomber_strikecraft"]
+    }],
+    "action_effect_size": "small_unit"
+}
