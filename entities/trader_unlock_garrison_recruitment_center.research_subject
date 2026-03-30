@@ -1,0 +1,24 @@
+{
+    "version": 0,
+    "domain": "military",
+    "tier": 1,
+    "field": "military_mobilization",
+    "field_coord": [2, 3],
+    "research_time": 120.0,
+    "price":
+    {
+        "credits": 700.0,
+        "metal": 100.0,
+        "crystal": 125.0
+    },
+    "exotic_price": [
+    {
+        "exotic_type": "defense",
+        "count": 1
+    }],
+    "name": "trader_unlock_garrison_recruitment_center_research_subject_name",
+    "name_uppercase": "trader_unlock_garrison_recruitment_center_research_subject_name_uppercase",
+    "description": "trader_unlock_garrison_recruitment_center_research_subject_description",
+    "hud_icon": "trader_unlock_garrison_recruitment_center_research_subject_hud_icon",
+    "tooltip_picture": "trader_unlock_garrison_recruitment_center_research_subject_tooltip_picture"
+}

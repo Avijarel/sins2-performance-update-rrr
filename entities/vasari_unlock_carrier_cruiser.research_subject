@@ -1,0 +1,18 @@
+{
+    "version": 0,
+    "domain": "military",
+    "tier": 6,
+    "field": "military_revival",
+    "field_coord": [12, 0],
+    "research_time": 225.0,
+    "price":
+    {
+        "metal": 420.0,
+        "crystal": 420.0,
+        "credits": 0.0
+    },
+    "name": "vasari_unlock_carrier_cruiser_research_subject_name",
+    "name_uppercase": "vasari_unlock_carrier_cruiser_research_subject_name_uppercase",
+    "hud_icon": "vasari_carrier_cruiser_hud_icon",
+    "tooltip_picture": "vasari_carrier_cruiser_tooltip_picture"
+}

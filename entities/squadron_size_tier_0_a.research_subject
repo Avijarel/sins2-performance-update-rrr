@@ -1,0 +1,31 @@
+{
+    "version": 0,
+    "domain": "military",
+    "tier": 5,
+    "field": "military_ascension",
+    "field_coord": [10, 10],
+    "research_time": 1300,
+    "price":
+    {
+        "credits": 8000.0,
+        "metal": 3000.0,
+        "crystal": 3000.0
+    },
+    "exotic_price": [
+    {
+        "exotic_type": "research",
+        "count": 4
+    }],
+    "unit_modifiers": [
+    {
+        "modifier_type": "max_squadron_capacity",
+        "value_behavior": "additive",
+        "value": 1.0,
+        "tags": ["super_capital_ship", "titan"]
+    }],
+    "name": "research_subject.squad_capacity_capital_name",
+    "name_uppercase": "research_subject.squad_capacity_capital_name_upper",
+    "description": "research_subject.squad_capacity_capital_description",
+    "hud_icon": "trader_upgrade_experience_gain_0_research_subject_hud_icon",
+    "tooltip_picture": "trader_upgrade_experience_gain_0_research_subject_tooltip_picture"
+}

@@ -1,0 +1,230 @@
+{
+    "version": 0,
+    "spatial":
+    {
+        "radius": 162.664597,
+        "box":
+        {
+            "center": [0.0, 0.0, 0.0],
+            "extents": [83.799255, 39.303265, 139.280762]
+        },
+        "collision_rank": 1
+    },
+    "physics":
+    {
+        "can_move_linear": true,
+        "max_linear_speed": 650.0,
+        "time_to_max_linear_speed": 8.125,
+        "arrival_tolerance_spatial_radius_scalar": 0.25,
+        "death_linear_speed_range": [0.75, 1.25],
+        "can_move_angular": true,
+        "max_angular_speed": 18.0,
+        "time_to_max_angular_speed": 10.0,
+        "max_bank_angle": 35.0,
+        "death_angular_speed_range": [3.0, 6.0],
+        "linear_acceleration_angle": 90.0,
+        "can_strafe_linear": true,
+        "strafe_max_linear_speed": 187.5,
+        "time_to_strafe_max_linear_speed": 12.5,
+        "strafe_max_linear_distance_spatial_radius_scalar": 8.0,
+        "strafe_start_angle": 0.0,
+        "strafe_stop_angle": 180.0,
+        "strafe_speed_start_angle": 10.0,
+        "strafe_max_start_turning_angle": 170.0
+    },
+    "hyperspace":
+    {
+        "speed": 215000.0,
+        "speed_between_stars": 752500.0,
+        "charge_time": 8.0,
+        "charge_time_variance": 1.0,
+        "min_charge_angle": 10.0,
+        "max_charge_angle": 45.0
+    },
+    "move":
+    {
+        "follow_distance": 798.665405
+    },
+    "ai":
+    {
+        "attack_target_type_groups_to_ignore": [
+            "torpedo_strikecraft"]
+    },
+    "ai_attack_target":
+    {
+        "attack_priority": 50.0,
+        "is_always_a_threat": true,
+        "attack_target_type": "carrier"
+    },
+    "user_interface":
+    {
+        "pip_type": "cruiser",
+        "can_ever_be_selected": true,
+        "selection_priority": 300,
+        "has_sub_selection_grouping": true,
+        "selection_group_unit_type": "combat_ship",
+        "can_move": true,
+        "can_show_distance_to_plane_line": true,
+        "can_rotate": true
+    },
+    "formation":
+    {
+        "leader_priority": 1,
+        "offsets_per_formation_type":
+        {
+            "ships_and_structures":
+            {
+                "rank": 3,
+                "group": 2
+            }
+        }
+    },
+    "spawn_debris":
+    {
+        "spawn_debris_time": 3.0,
+        "generic_group_name": "trader",
+        "generic_counts":
+        {
+            "small_debris": [7, 8],
+            "large_debris": [1, 2]
+        }
+    },
+    "health":
+    {
+        "release_time_after_death": 60.0,
+        "can_collide_duration_after_death": 3.95,
+        "durability": 200.0,
+        "can_ever_be_resurrected": true,
+        "levels": [
+        {
+            "max_hull_points": 1350.0,
+            "hull_point_restore_rate": 2.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "max_armor_points": 750.0,
+            "armor_point_restore_rate": 3.0,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 25.0,
+            "shield_point_restore_rate": 4.0,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 40.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 84.0
+        }]
+    },
+    "build":
+    {
+        "build_time": 55.0,
+        "price":
+        {
+            "credits": 715.0,
+            "metal": 210.0,
+            "crystal": 115.0
+        },
+        "prerequisites": [
+            ["trader_unlock_carrier_cruiser"]
+        ],
+        "build_kind": "cruiser",
+        "supply_cost": 14,
+        "build_group_id": "cruiser"
+    },
+    "carrier":
+    {
+        "base_max_squadron_capacity": 1,
+        "strikecraft_kinds": [
+            "interceptor",
+            "bomber"
+        ],
+        "launch_destination_formation": "carrier_frigate_strikecraft",
+        "launch_destination_formation_offset":
+        {
+            "rank": 2,
+            "group": 0
+        },
+        "hangar_data": [
+        {
+            "hangar_basis":
+            {
+                "position": [40.766865, 4.023466, -27.366314],
+                "rotation": [-0.0, 0.0, -1.0, -0.0, 1.0, 0.0, 1.0, 0.0, -0.0]
+            }
+        },
+        {
+            "hangar_basis":
+            {
+                "position": [40.766865, 4.023466, 18.227726],
+                "rotation": [-0.0, 0.0, -1.0, -0.0, 1.0, 0.0, 1.0, 0.0, -0.0]
+            }
+        },
+        {
+            "hangar_basis":
+            {
+                "position": [-41.040066, 4.023466, -27.366314],
+                "rotation": [-0.0, 0.0, 1.0, 0.0, 1.0, -0.0, -1.0, 0.0, -0.0]
+            }
+        },
+        {
+            "hangar_basis":
+            {
+                "position": [-41.040066, 4.023466, 18.227726],
+                "rotation": [-0.0, 0.0, 1.0, 0.0, 1.0, -0.0, -1.0, 0.0, -0.0]
+            }
+        }]
+    },
+    "unit_modifiers": [
+    {
+        "modifier_type": "max_shield_points",
+        "value_behavior": "additive",
+        "value": 750.0,
+        "prerequisites": [
+            ["trader_shields_cruiser"]
+        ]
+    }],
+    "target_filter_unit_type": "cruiser",
+    "tags": [
+        "cruiser", "mem_limited2"
+    ],
+    "abilities": [
+    {
+        "abilities": []
+    },
+    {
+        "abilities": [
+			"special_operation_unit"
+		],
+		"required_special_operation_unit_kind": "garrison"
+    },
+    {
+        "abilities": [
+			"special_operation_unit"
+		],
+		"required_special_operation_unit_kind": "insurgent"
+    },
+    {
+        "abilities": [
+			"special_operation_unit"
+        ],
+        "required_special_operation_unit_kind": "naibor_xeno_raid"
+	},
+    {
+        "abilities": [
+			"special_operation_unit"
+        ],
+        "required_special_operation_unit_kind": "naibor_raid"
+	}],
+    "ship_roles": [
+        "attack_ship"
+    ],
+    "skin_groups": [
+    {
+        "skins": [
+            "trader_carrier_cruiser"]
+    }],
+    "can_join_fleet": true,
+    "action_effect_size": "small_unit"
+}

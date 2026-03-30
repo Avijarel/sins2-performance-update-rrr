@@ -1,0 +1,26 @@
+{
+    "version": 0,
+    "domain": "military",
+    "tier": 6,
+    "field": "military_ascension",
+    "field_coord": [12, 11],
+    "research_time": 1390,
+    "price":
+    {
+        "credits": 0.0,
+        "metal": 0.0,
+        "crystal": 0.0
+    },
+    "strikecraft_modifiers": [
+    {
+        "value_behavior": "additive",
+        "modifier_type": "squadron_size",
+        "value": 0.0
+    }],
+    "prerequisites": [["squadron_size_tier_2_a"]],
+    "name": "research_subject.squad_size_name",
+    "name_uppercase": "research_subject.squad_size_name_upper",
+    "description": "research_subject.squad_size_description",
+    "hud_icon": "trader_upgrade_experience_gain_0_research_subject_hud_icon",
+    "tooltip_picture": "trader_upgrade_experience_gain_0_research_subject_tooltip_picture"
+}

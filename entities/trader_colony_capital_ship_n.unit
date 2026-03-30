@@ -1,0 +1,1333 @@
+{
+    "version": 0,
+    "spatial":
+    {
+        "radius": 412.214142,
+        "box":
+        {
+            "center": [0.0, 1.085419, 1.132095],
+            "extents": [111.037498, 119.2015, 408.026306]
+        },
+        "collision_rank": 2
+    },
+    "physics":
+    {
+        "can_move_linear": true,
+        "max_linear_speed": 800.0,
+        "time_to_max_linear_speed": 5.0,
+        "arrival_tolerance_spatial_radius_scalar": 0.25,
+        "death_linear_speed_range": [0.75, 1.25],
+        "can_move_angular": true,
+        "max_angular_speed": 19.5,
+        "time_to_max_angular_speed": 13.0,
+        "max_bank_angle": 15.0,
+        "death_angular_speed_range": [2.0, 4.0],
+        "linear_acceleration_angle": 75.0,
+        "can_strafe_linear": true,
+        "strafe_max_linear_speed": 262.5,
+        "time_to_strafe_max_linear_speed": 15.0,
+        "strafe_max_linear_distance_spatial_radius_scalar": 5.0,
+        "strafe_start_angle": 0.0,
+        "strafe_stop_angle": 180.0,
+        "strafe_speed_start_angle": 10.0,
+        "strafe_max_start_turning_angle": 170.0
+    },
+    "hyperspace":
+    {
+        "speed": 215000.0,
+        "speed_between_stars": 752500.0,
+        "charge_time": 8.0,
+        "charge_time_variance": 1.0,
+        "min_charge_angle": 10.0,
+        "max_charge_angle": 45.0
+    },
+    "move":
+    {
+        "follow_distance": 2281.230713
+    },
+    "attack":
+    {
+        "attack_pattern":
+        {
+            "type": "stop_and_fire",
+            "alignment":
+            {
+                "type": "yaw",
+                "angle": 90.0,
+                "allow_opposite_angle": true
+            }
+        }
+    },
+    "ai":
+    {
+        "attack_target_type_groups": [
+            "light_flak",
+            "corvette"
+        ],
+        "attack_target_type_groups_to_ignore": [
+            "torpedo_strikecraft_corvette"
+        ],
+        "attack_target_type_groups_matching_weapon": "trader_colony_capital_ship_autocannon",
+        "auto_follow_target_priority": 5.0,
+        "pursuit":
+        {
+            "min_target_speed": 100.0,
+            "min_distance_to_target": 5000.0
+        },
+        "attack_target_type_range_scalar": 1.5
+    },
+    "ai_attack_target":
+    {
+        "attack_priority": 50.0,
+        "is_always_a_threat": true,
+        "attack_target_type": "capital"
+    },
+    "user_interface":
+    {
+        "pip_type": "capital_ship",
+        "can_ever_be_selected": true,
+        "selection_priority": 400,
+        "selection_group_unit_type": "combat_ship",
+        "can_move": true,
+        "can_rotate": true,
+        "can_attack": true,
+        "can_show_max_weapon_range_in_tactical_view": true,
+        "can_show_distance_to_plane_line": true,
+        "bar_size": "large"
+    },
+    "weapons":
+    {
+        "weapons": [
+        {
+            "weapon": "trader_colony_capital_ship_autocannon_rebel",
+            "mesh_point": "child.medturret_mount_0",
+            "weapon_position": [80.129822, -21.793007, 65.200592],
+            "forward": [1.0, 0.0, 1e-06],
+            "up": [0.0, 1.0, 0.0],
+            "yaw_arc":
+            {
+                "min_angle": -75.0,
+                "max_angle": 45.0
+            },
+            "pitch_arc":
+            {
+                "min_angle": -50.0,
+                "max_angle": 25.0
+            }
+        },
+        {
+            "weapon": "trader_colony_capital_ship_autocannon_rebel",
+            "mesh_point": "child.medturret_mount_1",
+            "weapon_position": [98.329254, -21.793007, -26.380995],
+            "forward": [1.0, 0.0, 1e-06],
+            "up": [0.0, 1.0, 0.0],
+            "yaw_arc":
+            {
+                "min_angle": -70.0,
+                "max_angle": 100.0
+            },
+            "pitch_arc":
+            {
+                "min_angle": -50.0,
+                "max_angle": 15.0
+            }
+        },
+        {
+            "weapon": "trader_colony_capital_ship_autocannon_rebel",
+            "mesh_point": "child.medturret_mount_2",
+            "weapon_position": [-99.308868, -21.793007, -26.413101],
+            "forward": [-1.0, 0.0, -0.0],
+            "up": [0.0, 1.0, 0.0],
+            "yaw_arc":
+            {
+                "min_angle": -100.0,
+                "max_angle": 70.0
+            },
+            "pitch_arc":
+            {
+                "min_angle": -50.0,
+                "max_angle": 15.0
+            }
+        },
+        {
+            "weapon": "trader_colony_capital_ship_autocannon_rebel",
+            "mesh_point": "child.medturret_mount_3",
+            "weapon_position": [-80.313599, -21.793007, 64.301414],
+            "forward": [-1.0, 0.0, -0.0],
+            "up": [0.0, 1.0, 0.0],
+            "yaw_arc":
+            {
+                "min_angle": -45.0,
+                "max_angle": 75.0
+            },
+            "pitch_arc":
+            {
+                "min_angle": -50.0,
+                "max_angle": 25.0
+            }
+        },
+        {
+            "weapon": "trader_colony_capital_ship_point_defense_autocannon_rebel",
+            "mesh_point": "child.pdturret_mount_0",
+            "weapon_position": [-80.990875, 51.855099, -4.275206],
+            "forward": [-1.0, 0.0, -0.0],
+            "up": [0.0, 1.0, 0.0],
+            "yaw_arc":
+            {
+                "min_angle": -90.0,
+                "max_angle": 90.0
+            },
+            "pitch_arc":
+            {
+                "min_angle": -80.0,
+                "max_angle": 35.0
+            }
+        },
+        {
+            "weapon": "trader_colony_capital_ship_point_defense_autocannon_rebel",
+            "mesh_point": "child.pdturret_mount_1",
+            "weapon_position": [80.460815, 51.855099, -4.268632],
+            "forward": [1.0, 0.0, -0.0],
+            "up": [0.0, 1.0, 0.0],
+            "yaw_arc":
+            {
+                "min_angle": -90.0,
+                "max_angle": 90.0
+            },
+            "pitch_arc":
+            {
+                "min_angle": -80.0,
+                "max_angle": 35.0
+            }
+        },
+        {
+            "weapon": "trader_colony_capital_ship_planet_bombing",
+            "mesh_point": "bomb",
+            "weapon_position": [1.6e-05, -22.421749, 366.704102],
+            "non_turret_muzzle_positions": [
+                [1.6e-05, -22.421749, 366.704102]
+            ],
+            "forward": [0.0, 0.0, 1.0],
+            "up": [0.0, 1.0, -0.0],
+            "yaw_arc":
+            {
+                "min_angle": -10.0,
+                "max_angle": 10.0
+            },
+            "pitch_arc":
+            {
+                "min_angle": -10.0,
+                "max_angle": 10.0
+            }
+        }],
+        "max_range_weapon_index": 0
+    },
+    "formation":
+    {
+        "leader_priority": 2,
+        "offsets_per_formation_type":
+        {
+            "ships_and_structures":
+            {
+                "rank": 3,
+                "group": 2
+            }
+        }
+    },
+    "spawn_debris":
+    {
+        "spawn_debris_time": 5.5,
+        "generic_group_name": "trader",
+        "generic_counts":
+        {
+            "small_debris": [16, 28],
+            "large_debris": [4, 7]
+        },
+        "custom_debris": [
+        {
+            "unit": "trader_colony_capital_ship_debris_front",
+            "basis":
+            {
+                "position": [0.0, 5.0, 330.0],
+                "rotation": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+            }
+        },
+        {
+            "unit": "trader_colony_capital_ship_debris_mid",
+            "basis":
+            {
+                "position": [100.0, 50.0, 110.0],
+                "rotation": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+            }
+        },
+        {
+            "unit": "trader_colony_capital_ship_debris_back",
+            "basis":
+            {
+                "position": [5.0, 15.0, -315.0],
+                "rotation": [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+            }
+        }],
+        "spawn_loot":
+        {
+            "loot_unit": "ship_loot_trader",
+            "loot_name": "trader_colony_capital_ship_loot_name",
+            "experience_given": 200.0,
+            "exotics": [
+            {
+                "bundles": [
+                {
+                    "types": [
+                        "utility"
+                    ],
+                    "counts": [1, 1]
+                }],
+                "weight": 1.0
+            },
+            {
+                "bundles": [
+                {
+                    "types": [
+                        "economic"
+                    ],
+                    "counts": [1, 2]
+                }],
+                "weight": 1.0
+            }],
+            "assets":
+            {
+                "credits": [250, 750],
+                "metal": [85, 225],
+                "crystal": [60, 180]
+            }
+        }
+    },
+    "health":
+    {
+        "release_time_after_death": 60.0,
+        "can_collide_duration_after_death": 6.0,
+        "durability": 500.0,
+        "can_ever_be_resurrected": true,
+        "levels": [
+        {
+            "max_hull_points": 4940.0,
+            "hull_point_restore_rate": 3.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 0.5,
+            "max_armor_points": 1245.0,
+            "armor_point_restore_rate": 4.0,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 50.0,
+            "max_shield_points": 3125.0,
+            "shield_point_restore_rate": 5.0,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 50.0,
+                "restore_percentage": 0.25
+            },
+            "experience_given_on_death": 100.0
+        },
+        {
+            "max_hull_points": 5435.0,
+            "hull_point_restore_rate": 3.5,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 0.55,
+            "max_armor_points": 1330.0,
+            "armor_point_restore_rate": 4.6,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 55.0,
+            "max_shield_points": 3475.0,
+            "shield_point_restore_rate": 6.2,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 48.0,
+                "restore_percentage": 0.27
+            },
+            "experience_given_on_death": 120.0
+        },
+        {
+            "max_hull_points": 5930.0,
+            "hull_point_restore_rate": 4.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 0.6,
+            "max_armor_points": 1415.0,
+            "armor_point_restore_rate": 5.2,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 60.0,
+            "max_shield_points": 3825.0,
+            "shield_point_restore_rate": 7.4,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 46.0,
+                "restore_percentage": 0.29
+            },
+            "experience_given_on_death": 150.0
+        },
+        {
+            "max_hull_points": 6425.0,
+            "hull_point_restore_rate": 4.5,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 0.65,
+            "max_armor_points": 1500.0,
+            "armor_point_restore_rate": 5.8,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 65.0,
+            "max_shield_points": 4175.0,
+            "shield_point_restore_rate": 8.6,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 44.0,
+                "restore_percentage": 0.32
+            },
+            "experience_given_on_death": 190.0
+        },
+        {
+            "max_hull_points": 6920.0,
+            "hull_point_restore_rate": 5.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 0.7,
+            "max_armor_points": 1580.0,
+            "armor_point_restore_rate": 6.4,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 70.0,
+            "max_shield_points": 4525.0,
+            "shield_point_restore_rate": 9.8,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 42.0,
+                "restore_percentage": 0.35
+            },
+            "experience_given_on_death": 240.0
+        },
+        {
+            "max_hull_points": 7410.0,
+            "hull_point_restore_rate": 5.5,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 0.75,
+            "max_armor_points": 1665.0,
+            "armor_point_restore_rate": 7.0,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 75.0,
+            "max_shield_points": 4875.0,
+            "shield_point_restore_rate": 11.0,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 40.0,
+                "restore_percentage": 0.38
+            },
+            "experience_given_on_death": 300.0
+        },
+        {
+            "max_hull_points": 7905.0,
+            "hull_point_restore_rate": 6.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 0.8,
+            "max_armor_points": 1750.0,
+            "armor_point_restore_rate": 7.6,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 80.0,
+            "max_shield_points": 5225.0,
+            "shield_point_restore_rate": 12.2,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 38.0,
+                "restore_percentage": 0.41
+            },
+            "experience_given_on_death": 370.0
+        },
+        {
+            "max_hull_points": 8400.0,
+            "hull_point_restore_rate": 6.5,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 0.85,
+            "max_armor_points": 1830.0,
+            "armor_point_restore_rate": 8.2,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 85.0,
+            "max_shield_points": 5575.0,
+            "shield_point_restore_rate": 13.4,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 36.0,
+                "restore_percentage": 0.44
+            },
+            "experience_given_on_death": 450.0
+        },
+        {
+            "max_hull_points": 8895.0,
+            "hull_point_restore_rate": 7.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 0.92,
+            "max_armor_points": 1915.0,
+            "armor_point_restore_rate": 8.8,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 90.0,
+            "max_shield_points": 5925.0,
+            "shield_point_restore_rate": 14.6,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 33.0,
+                "restore_percentage": 0.47
+            },
+            "experience_given_on_death": 540.0
+        },
+        {
+            "max_hull_points": 9390.0,
+            "hull_point_restore_rate": 7.5,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 1.0,
+            "max_armor_points": 2000.0,
+            "armor_point_restore_rate": 9.4,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 95.0,
+            "max_shield_points": 6275.0,
+            "shield_point_restore_rate": 15.8,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 30.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 640.0
+        },
+        {
+            "max_hull_points": 9885.0,
+            "hull_point_restore_rate": 8.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 1.0,
+            "max_armor_points": 2085.0,
+            "armor_point_restore_rate": 10.0,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 100.0,
+            "max_shield_points": 6625.0,
+            "shield_point_restore_rate": 17.0,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 30.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 750.0
+        },
+        {
+            "max_hull_points": 10380.0,
+            "hull_point_restore_rate": 8.5,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 1.0,
+            "max_armor_points": 2170.0,
+            "armor_point_restore_rate": 10.6,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 105.0,
+            "max_shield_points": 6975.0,
+            "shield_point_restore_rate": 18.2,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 30.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 870.0
+        },
+        {
+            "max_hull_points": 10875.0,
+            "hull_point_restore_rate": 9.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 1.0,
+            "max_armor_points": 2255.0,
+            "armor_point_restore_rate": 11.2,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 110.0,
+            "max_shield_points": 7325.0,
+            "shield_point_restore_rate": 19.4,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 30.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 1000.0
+        },
+        {
+            "max_hull_points": 11370.0,
+            "hull_point_restore_rate": 9.5,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 1.0,
+            "max_armor_points": 2340.0,
+            "armor_point_restore_rate": 11.8,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 115.0,
+            "max_shield_points": 7675.0,
+            "shield_point_restore_rate": 20.6,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 30.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 1140.0
+        },
+        {
+            "max_hull_points": 11865.0,
+            "hull_point_restore_rate": 10.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 1.0,
+            "max_armor_points": 2425.0,
+            "armor_point_restore_rate": 12.4,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 120.0,
+            "max_shield_points": 8025.0,
+            "shield_point_restore_rate": 21.8,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 30.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 1290.0
+        },
+        {
+            "max_hull_points": 12360.0,
+            "hull_point_restore_rate": 10.5,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 1.0,
+            "max_armor_points": 2510.0,
+            "armor_point_restore_rate": 13.0,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 125.0,
+            "max_shield_points": 8375.0,
+            "shield_point_restore_rate": 23.0,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 30.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 1450.0
+        },
+        {
+            "max_hull_points": 12855.0,
+            "hull_point_restore_rate": 11.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 1.0,
+            "max_armor_points": 2595.0,
+            "armor_point_restore_rate": 13.6,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 130.0,
+            "max_shield_points": 8725.0,
+            "shield_point_restore_rate": 24.2,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 30.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 1620.0
+        },
+        {
+            "max_hull_points": 13350.0,
+            "hull_point_restore_rate": 11.5,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 1.0,
+            "max_armor_points": 2680.0,
+            "armor_point_restore_rate": 14.2,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 135.0,
+            "max_shield_points": 9075.0,
+            "shield_point_restore_rate": 25.4,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 30.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 1800.0
+        },
+        {
+            "max_hull_points": 13845.0,
+            "hull_point_restore_rate": 12.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 1.0,
+            "max_armor_points": 2765.0,
+            "armor_point_restore_rate": 14.8,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 140.0,
+            "max_shield_points": 9425.0,
+            "shield_point_restore_rate": 26.6,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 30.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 1990.0
+        },
+        {
+            "max_hull_points": 14340.0,
+            "hull_point_restore_rate": 12.5,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "hull_crippled_percentage": 1.0,
+            "max_armor_points": 2850.0,
+            "armor_point_restore_rate": 15.4,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 155.0,
+            "max_shield_points": 9775.0,
+            "shield_point_restore_rate": 27.8,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 30.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 2190.0
+        }]
+    },
+    "antimatter": {
+        "max_antimatter": 0.0,
+        "antimatter_restore_rate": 0.0
+    },
+    "levels": {
+        "type": "experience",
+        "levels": [
+            {
+                "experience_to_next_level": 100.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 260.0,
+                        "antimatter_restore_rate": 0.85,
+                        "max_squadron_capacity": 2.0,
+                        "metal_income_rate": 0.1,
+                        "crystal_income_rate": 0.1
+                    },
+                    "scalar_values": {}
+                }
+            },
+            {
+                "experience_to_next_level": 200.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 295.0,
+                        "antimatter_restore_rate": 0.95,
+                        "max_squadron_capacity": 2.0,
+                        "metal_income_rate": 0.2,
+                        "crystal_income_rate": 0.2
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 0.09,
+                        "cooldown_duration": -0.035
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 300.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 330.0,
+                        "antimatter_restore_rate": 1.05,
+                        "max_squadron_capacity": 2.0,
+                        "metal_income_rate": 0.3,
+                        "crystal_income_rate": 0.3
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 0.18,
+                        "cooldown_duration": -0.07
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 400.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 365.0,
+                        "antimatter_restore_rate": 1.15,
+                        "max_squadron_capacity": 3.0,
+                        "metal_income_rate": 0.4,
+                        "crystal_income_rate": 0.4
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 0.27,
+                        "cooldown_duration": -0.105
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 500.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 400.0,
+                        "antimatter_restore_rate": 1.25,
+                        "max_squadron_capacity": 3.0,
+                        "metal_income_rate": 0.5,
+                        "crystal_income_rate": 0.5
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 0.36,
+                        "cooldown_duration": -0.14
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 600.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 435.0,
+                        "antimatter_restore_rate": 1.35,
+                        "max_squadron_capacity": 3.0,
+                        "metal_income_rate": 0.6,
+                        "crystal_income_rate": 0.6
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 0.45,
+                        "cooldown_duration": -0.175
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 700.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 470.0,
+                        "antimatter_restore_rate": 1.45,
+                        "max_squadron_capacity": 4.0,
+                        "metal_income_rate": 0.7,
+                        "crystal_income_rate": 0.7
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 0.54,
+                        "cooldown_duration": -0.21
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 800.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 505.0,
+                        "antimatter_restore_rate": 1.55,
+                        "max_squadron_capacity": 4.0,
+                        "metal_income_rate": 0.8,
+                        "crystal_income_rate": 0.8
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 0.63,
+                        "cooldown_duration": -0.245
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 900.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 540.0,
+                        "antimatter_restore_rate": 1.65,
+                        "max_squadron_capacity": 4.0,
+                        "metal_income_rate": 0.9,
+                        "crystal_income_rate": 0.9
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 0.72,
+                        "cooldown_duration": -0.28
+                    }
+                }
+            },
+            {
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 575.0,
+                        "antimatter_restore_rate": 1.75,
+                        "max_squadron_capacity": 5.0,
+                        "metal_income_rate": 1.0,
+                        "crystal_income_rate": 1.0
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 0.81,
+                        "cooldown_duration": -0.315
+                    }
+                },
+                "experience_to_next_level": 1000.0
+            },
+            {
+                "experience_to_next_level": 1100.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 610.0,
+                        "antimatter_restore_rate": 1.85,
+                        "max_squadron_capacity": 5.0,
+                        "metal_income_rate": 1.2,
+                        "crystal_income_rate": 1.2
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 0.9,
+                        "cooldown_duration": -0.35
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 1200.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 645.0,
+                        "antimatter_restore_rate": 1.95,
+                        "max_squadron_capacity": 5.0,
+                        "metal_income_rate": 1.4,
+                        "crystal_income_rate": 1.4
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 0.99,
+                        "cooldown_duration": -0.385
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 1300.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 680.0,
+                        "antimatter_restore_rate": 2.05,
+                        "max_squadron_capacity": 6.0,
+                        "metal_income_rate": 1.6,
+                        "crystal_income_rate": 1.6
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 1.08,
+                        "cooldown_duration": -0.42
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 1400.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 715.0,
+                        "antimatter_restore_rate": 2.15,
+                        "max_squadron_capacity": 6.0,
+                        "metal_income_rate": 1.8,
+                        "crystal_income_rate": 1.8
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 1.17,
+                        "cooldown_duration": -0.455
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 1500.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 750.0,
+                        "antimatter_restore_rate": 2.25,
+                        "max_squadron_capacity": 6.0,
+                        "metal_income_rate": 2.0,
+                        "crystal_income_rate": 2.0
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 1.26,
+                        "cooldown_duration": -0.49
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 1600.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 785.0,
+                        "antimatter_restore_rate": 2.35,
+                        "max_squadron_capacity": 7.0,
+                        "metal_income_rate": 2.2,
+                        "crystal_income_rate": 2.2
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 1.35,
+                        "cooldown_duration": -0.525
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 1700.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 820.0,
+                        "antimatter_restore_rate": 2.45,
+                        "max_squadron_capacity": 7.0,
+                        "metal_income_rate": 2.4,
+                        "crystal_income_rate": 2.4
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 1.44,
+                        "cooldown_duration": -0.56
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 1800.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 855.0,
+                        "antimatter_restore_rate": 2.55,
+                        "max_squadron_capacity": 7.0,
+                        "metal_income_rate": 2.6,
+                        "crystal_income_rate": 2.6
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 1.53,
+                        "cooldown_duration": -0.595
+                    }
+                }
+            },
+            {
+                "experience_to_next_level": 1900.0,
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 890.0,
+                        "antimatter_restore_rate": 2.65,
+                        "max_squadron_capacity": 8.0,
+                        "metal_income_rate": 2.8,
+                        "crystal_income_rate": 2.8
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 1.62,
+                        "cooldown_duration": -0.63
+                    }
+                }
+            },
+            {
+                "unit_modifiers": {
+                    "additive_values": {
+                        "max_antimatter": 925.0,
+                        "antimatter_restore_rate": 2.75,
+                        "max_squadron_capacity": 8.0,
+                        "metal_income_rate": 3.0,
+                        "crystal_income_rate": 3.0
+                    },
+                    "scalar_values": {}
+                },
+                "weapon_modifiers": {
+                    "additive_values": {},
+                    "scalar_values": {
+                        "damage": 1.72,
+                        "cooldown_duration": -0.665
+                    }
+                }
+            }
+        ]
+    },
+    "unit_factory":
+    {
+        "build_kinds": [
+            "corvette",
+            "frigate",
+            "cruiser",
+            "capital_ship",
+			"super_capital_ship",
+            "titan"
+        ],
+        "required_mutation": "mobile_unit_factory_enabled",
+        "will_spawn_units_in_hyperspace": true,
+        "spawn_units_in_hyperspace_delay_duration": 10.0
+    },
+    "exotic_factory":
+    {
+        "required_mutation": "mobile_exotic_factory_enabled"
+    },
+    "build":
+    {
+        "build_time": 75.0,
+        "price":
+        {
+            "credits": 2500.0,
+            "metal": 850.0,
+            "crystal": 600.0
+        },
+        "build_kind": "capital_ship",
+        "supply_cost": 50,
+        "build_group_id": "capital_ship"
+    },
+    "carrier":
+    {
+        "base_max_squadron_capacity": 0,
+        "strikecraft_kinds": [
+            "interceptor",
+            "bomber"
+        ],
+        "launch_destination_formation": "capital_ship_strikecraft",
+        "launch_destination_formation_offset":
+        {
+            "rank": 2,
+            "group": 0
+        },
+        "hangar_data": [
+        {
+            "hangar_basis":
+            {
+				"position": [75.040066, 0.023466, -207.366314],
+				"rotation": [-0.0, 0.0, -1.0, -0.0, 1.0, 0.0, 1.0, 0.0, -0.0]
+            }
+        },
+        {
+            "hangar_basis":
+            {
+				"position": [75.040066, 0.023466, -207.366314],
+				"rotation": [-0.0, 0.0, -1.0, -0.0, 1.0, 0.0, 1.0, 0.0, -0.0]
+            }
+        },
+        {
+            "hangar_basis":
+            {
+				"position": [-75.040066, 0.023466, -207.366314],
+				"rotation": [-0.0, 0.0, 1.0, 0.0, 1.0, -0.0, -1.0, 0.0, -0.0]
+            }
+        },
+        {
+            "hangar_basis":
+            {
+				"position": [-75.040066, 0.023466, -207.366314],
+				"rotation": [-0.0, 0.0, 1.0, 0.0, 1.0, -0.0, -1.0, 0.0, -0.0]
+            }
+        }]
+    },
+    "items":
+    {
+        "levels": [
+        {
+            "max_ship_component_count": 8
+        }]
+    },
+    "trade_port":
+    {
+        "max_trade_ship_count": 1,
+        "trade_ship_construction_time": 1200.0,
+        "trade_ship": "trader_trade_ship",
+        "special_operation_unit_kind": "trade_ship",
+        "create_trade_ship_offset": [0.0, 0.0, 1500.0]
+    },
+    "passive_income":
+    {},
+    "item_builds": [
+    {
+        "build_group": [
+            "trader_flak_burst",
+            "trader_high_yield_warheads",
+            "trader_targeting_array",
+            "trader_volatile_accelerants"
+        ],
+        "weight": 10.0
+    },
+    {
+        "build_group": [
+            "trader_flak_burst"
+        ],
+        "weight": 8.0
+    },
+    {
+        "build_group": [
+            "trader_heavy_armor",
+            "trader_combat_repair_system"
+        ],
+        "weight": 5.0
+    },
+    {
+        "build_group": [
+            "trader_targeting_array"
+        ],
+        "weight": 5.0
+    },
+    {
+        "build_group": [
+            "trader_high_yield_warheads"
+        ],
+        "weight": 3.0
+    },
+    {
+        "build_group": [
+            "trader_radiation_bomb",
+            "trader_salvage_kit"
+        ],
+        "weight": 3.0
+    },
+    {
+        "build_group": [
+            "trader_war_reporter"]
+    },
+    {
+        "build_group": [
+            "trader_capital_ship_insurance"]
+    }],
+    "culture_provider":
+    {},
+    "target_filter_unit_type": "capital_ship",
+    "tags": [
+        "capital_ship"
+    ],
+    "is_loot_collector": false,
+    "abilities": [
+    {
+        "abilities": [
+            "trader_colony_capital_ship_colonize",
+            "trader_colony_capital_ship_inspiring_broadcast",
+            "trader_colony_capital_ship_deploy_missile_battery",
+            "trader_colony_capital_ship_armistice"
+        ]
+    },
+    {
+        "abilities": [
+            "trader_colony_capital_ship_colonize",
+            "trader_colony_capital_ship_inspiring_broadcast",
+            "trader_colony_capital_ship_deploy_missile_battery",
+            "trader_colony_capital_ship_armistice",
+			"special_operation_unit"
+        ],
+		"required_special_operation_unit_kind": "naibor_xeno_raid"
+    }],
+    "ship_roles": [
+        "attack_ship",
+        "bomb_planet"
+    ],
+    "colonize_ability": "trader_colony_capital_ship_colonize",
+    "skin_groups": [
+    {
+        "skins": [
+            "trader_colony_capital_ship_rrr"]
+    }],
+    "action_effect_size": "medium_unit",
+    "can_join_fleet": true
+}

@@ -1,0 +1,296 @@
+{
+	"version": 0,
+	"spatial": {
+		"radius": 185.303696,
+		"box": {
+			"center": [
+				0.0,
+				-7.477242,
+				0.000008
+			],
+			"extents": [
+				130.017548,
+				173.568817,
+				107.214577
+			]
+		},
+		"can_be_displaced_on_collision": false
+	},
+	"physics": {
+
+	},
+	"ai": {
+		"attack_target_type_groups": [
+			"torpedo_strikecraft"
+		]
+	},
+	"ai_attack_target": {
+		"attack_priority": 50.0,
+		"is_always_a_threat": true,
+		"attack_target_type": "defense"
+	},
+	"player_ai": {
+		"max_count_at_planet": {
+			"type": "constant",
+			"value": 0.0
+		}
+	},
+	"user_interface": {
+		"can_be_controlled_by_selected_planet": true,
+		"pip_type": "cruiser",
+		"can_ever_be_selected": true,
+		"selection_priority": 100,
+		"has_sub_selection_grouping": true,
+		"selection_group_unit_type": "military_structure"
+	},
+	"structure": {
+		"slot_type": "military",
+		"slots_required": 7,
+		"roles": [
+			"defense"
+		],
+		"build_group_id": "military"
+	},
+	"formation": {
+		"leader_priority": 1,
+		"offsets_per_formation_type": {
+			"ships_and_structures": {
+				"rank": 1,
+				"group": 2
+			}
+		}
+	},
+	"spawn_debris": {
+		"spawn_debris_time": 1.0,
+		"generic_group_name": "trader",
+		"generic_counts": {
+			"small_debris": [
+				14,
+				18
+			],
+			"large_debris": [
+				3,
+				5
+			]
+		}
+	},
+	"health": {
+		"release_time_after_death": 60.0,
+		"can_collide_duration_after_death": 3.80,
+		"durability": 510.0,
+		"levels": [
+			{
+				"max_hull_points": 4800.0,
+				"hull_point_restore_rate": 3.0,
+				"hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+				"max_armor_points": 1140.0,
+				"armor_point_restore_rate": 4.0,
+				"armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+				"armor_strength": 48.0,
+				"experience_given_on_death": 75.0
+			}
+		]
+	},
+	"build": {
+		"build_time": 48.0,
+		"price": {
+			"metal": 4000.0,
+			"crystal": 950.0
+		},
+		"prerequisites": [
+			[
+				"vasari_unlock_hangar_defense_structure"
+			]
+		],
+		"build_kind": "structure",
+		"build_radius": 168.521591
+	},
+	"carrier": {
+		"base_max_squadron_capacity": 1,
+		"strikecraft_kinds": [
+			"interceptor",
+			"bomber",
+			"mem_custom_strikecraft1"
+		],
+		"launch_destination_formation": "hangar_defense_structure_strikecraft",
+		"launch_destination_formation_offset": {
+			"rank": 2,
+			"group": 0
+		},
+		"hangar_data": [
+			{
+				"hangar_basis": {
+					"position": [
+						27.702007,
+						67.8620,
+						-40.924992
+					],
+					"rotation": [
+						-1.0,
+						-0.0,
+						-0.0,
+						-0.0,
+						1.0,
+						0.0,
+						0.0,
+						0.0,
+						-1.0
+					]
+				}
+			},
+			{
+				"hangar_basis": {
+					"position": [
+						27.702007,
+						77.732002,
+						-40.924992
+					],
+					"rotation": [
+						-1.0,
+						-0.0,
+						-0.0,
+						-0.0,
+						1.0,
+						0.0,
+						0.0,
+						0.0,
+						-1.0
+					]
+				}
+			},
+			{
+				"hangar_basis": {
+					"position": [
+						27.702011,
+						14.790998,
+						-40.924999
+					],
+					"rotation": [
+						-1.0,
+						-0.0,
+						-0.0,
+						-0.0,
+						1.0,
+						0.0,
+						0.0,
+						0.0,
+						-1.0
+					]
+				}
+			},
+			{
+				"hangar_basis": {
+					"position": [
+						27.702009,
+						24.660,
+						-40.924995
+					],
+					"rotation": [
+						-1.0,
+						-0.0,
+						-0.0,
+						-0.0,
+						-0.0,
+						1.0,
+						-0.0,
+						1.0,
+						0.0
+					]
+				}
+			},
+			{
+				"hangar_basis": {
+					"position": [
+						-27.7020,
+						14.790997,
+						-40.925007
+					],
+					"rotation": [
+						-1.0,
+						-0.0,
+						-0.0,
+						-0.0,
+						1.0,
+						0.0,
+						0.0,
+						0.0,
+						-1.0
+					]
+				}
+			},
+			{
+				"hangar_basis": {
+					"position": [
+						-27.702002,
+						24.659996,
+						-40.925003
+					],
+					"rotation": [
+						-1.0,
+						-0.0,
+						-0.0,
+						-0.0,
+						1.0,
+						0.0,
+						0.0,
+						0.0,
+						-1.0
+					]
+				}
+			},
+			{
+				"hangar_basis": {
+					"position": [
+						-27.702003,
+						77.732002,
+						-40.924999
+					],
+					"rotation": [
+						-1.0,
+						-0.0,
+						-0.0,
+						-0.0,
+						1.0,
+						0.0,
+						0.0,
+						0.0,
+						-1.0
+					]
+				}
+			},
+			{
+				"hangar_basis": {
+					"position": [
+						-27.702003,
+						67.8620,
+						-40.924999
+					],
+					"rotation": [
+						-1.0,
+						-0.0,
+						-0.0,
+						-0.0,
+						1.0,
+						0.0,
+						0.0,
+						0.0,
+						-1.0
+					]
+				}
+			}
+		]
+	},
+	"target_filter_unit_type": "structure",
+	"tags": [
+		"structure"
+	],
+	"virtual_supply_cost": 10,
+	"skin_groups": [
+		{
+			"skins": [
+				"vasari_hangar_defense_structure"
+			]
+		}
+	],
+	"action_effect_size": "medium_unit"
+}

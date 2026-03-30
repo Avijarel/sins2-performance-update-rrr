@@ -1,0 +1,21 @@
+{
+    "version": 0,
+    "domain": "military",
+    "tier": 6,
+    "field": "military_ascension",
+    "field_coord": [12, 1],
+    "research_time": 150.0,
+    "price":
+    {
+        "credits": 600.0,
+        "metal": 125.0,
+        "crystal": 225.0
+    },
+    "prerequisites": [
+        ["advent_unlock_carrier_cruiser"]
+    ],
+    "name": "advent_unlock_mine_strikecraft_research_subject_name",
+    "name_uppercase": "advent_unlock_mine_strikecraft_research_subject_name_uppercase",
+    "description": "advent_unlock_mine_strikecraft_research_subject_description",
+    "hud_icon": "advent_unlock_mine_strikecraft_research_subject_hud_icon"
+}

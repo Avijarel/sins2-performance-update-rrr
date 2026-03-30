@@ -1,0 +1,27 @@
+{
+    "version": 0,
+    "domain": "military",
+    "tier": 2,
+    "field": "military_mobilization",
+    "field_coord": [4, 3],
+    "research_time": 225.0,
+    "price":
+    {
+        "credits": 1200.0,
+        "metal": 200.0,
+        "crystal": 300.0
+    },
+    "exotic_price": [
+    {
+        "exotic_type": "defense",
+        "count": 1
+    }],
+    "prerequisites": [
+        ["trader_unlock_garrison_recruitment_center"]
+    ],
+    "name": "trader_garrison_max_supply_research_subject_name",
+    "name_uppercase": "trader_garrison_max_supply_research_subject_name_uppercase",
+    "description": "trader_garrison_max_supply_research_subject_description",
+    "hud_icon": "trader_garrison_max_supply_research_subject_hud_icon",
+    "tooltip_picture": "trader_garrison_max_supply_research_subject_tooltip_picture"
+}

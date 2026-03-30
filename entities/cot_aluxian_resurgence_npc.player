@@ -1,0 +1,512 @@
+{
+    "version": 0,
+    "race": "trader",
+    "fleet": "trader_fleet",
+    "fleet_name_group": "fleet",
+    "unit_build_groups": [
+    {
+        "id": "corvette",
+        "name": "unit_build_group_name.corvette",
+        "column_count": 2
+    },
+    {
+        "id": "frigate",
+        "name": "unit_build_group_name.frigate",
+        "column_count": 3
+    },
+    {
+        "id": "cruiser",
+        "name": "unit_build_group_name.cruiser",
+        "column_count": 3
+    },
+    {
+        "id": "capital_ship",
+        "name": "unit_build_group_name.capital_ship",
+        "column_count": 3
+    },
+    {
+        "id": "super_capital_ship",
+        "name": "unit_build_group_name.super_capital_ship",
+        "column_count": 1
+    },
+    {
+        "id": "titan",
+        "name": "unit_build_group_name.titan",
+        "column_count": 1
+    }],
+    "ship_component_build_groups": [
+    {
+        "id": "consumable",
+        "name": "ship_component_build_group_name_consumable",
+        "column_count": 2
+    },
+    {
+        "id": "offense",
+        "name": "ship_component_build_group_name_offense",
+        "column_count": 4
+    },
+    {
+        "id": "defense",
+        "name": "ship_component_build_group_name_defense",
+        "column_count": 4
+    },
+    {
+        "id": "utility",
+        "name": "ship_component_build_group_name_utility",
+        "column_count": 4
+    }],
+    "unit_names": [
+    {
+        "group_name": "capital_ship",
+        "localized_text":
+        {
+            "id_prefix": "capital_ship_name.trader"
+        }
+    },
+    {
+        "group_name": "fleet",
+        "localized_text":
+        {
+            "id_prefix": "fleet_name.trader"
+        }
+    },
+    {
+        "group_name": "starbase",
+        "localized_text":
+        {
+            "id_prefix": "starbase_name.trader"
+        }
+    },
+    {
+        "group_name": "titan",
+        "localized_text":
+        {
+            "id_prefix": "titan_name.trader"
+        }
+    }],
+    "default_starting_assets":
+    {
+        "credits": 3000,
+        "metal": 750,
+        "crystal": 500
+    },
+    "planet_bombing_recovery_cooldown": 30.0,
+    "colonize_starting_health_percent": 0.125,
+    "colonize_starting_shield_percent": 1,
+    "default_starting_exotics": [
+    {
+        "exotic_type": "offense",
+        "count": 500
+    },
+    {
+        "exotic_type": "defense",
+        "count": 500
+    },
+    {
+        "exotic_type": "utility",
+        "count": 500
+    },
+    {
+        "exotic_type": "economic",
+        "count": 500
+    }],
+    "home_planet":
+    {
+        "random_fixture_filling": "random_terran_planet",
+        "levels": [
+        {
+            "income_rates":
+            {
+                "credits": 15.0,
+                "metal": 4.0,
+                "crystal": 3.0
+            },
+            "modifier_values":
+            {
+                "max_civilian_structure_slots":
+                {
+                    "additive": 10.0
+                },
+                "max_military_structure_slots":
+                {
+                    "additive": 20.0
+                },
+                "max_health_points":
+                {
+                    "additive": 6000.0
+                }
+            }
+        }]
+    },
+    "starting_units_in_gravity_well":
+    {
+        "required_units": [
+        {
+            "unit": "trader_autocannon_defense_structure",
+            "count": [4, 7]
+        },
+        {
+            "unit": "trader_gauss_defense_structure",
+            "count": [3, 5]
+        },
+        {
+            "unit": "trader_population_structure",
+            "count": [2, 2]
+        },
+        {
+            "unit": "trader_exotic_factory_structure",
+            "count": [1, 1]
+        },
+        {
+            "unit": "trader_trade_port_structure",
+            "count": [1, 1]
+        },
+        {
+            "unit": "trader_starbase_n",
+            "count": [1, 1]
+        }]
+    },
+    "starting_units_in_formations": [
+    {
+        "required_units": [
+        {
+            "unit": "trader_scout_frigate",
+            "count": [5, 10]
+        },
+        {
+            "unit": "trader_skirmisher_corvette_frigate",
+            "count": [3, 5]
+        },
+        {
+            "unit": "trader_missile_corvette",
+            "count": [3, 5]
+        },
+        {
+            "unit": "trader_light_frigate",
+            "count": [5, 10]
+        },
+        {
+            "unit": "trader_antifighter_frigate",
+            "count": [8, 10]
+        },
+        {
+            "unit": "trader_frigate_factory_structure",
+            "count": [1, 1]
+        }]
+    },
+    {
+        "required_units": [
+        {
+            "unit": "trader_medium_cruiser",
+            "count": [6, 10]
+        },
+        {
+            "unit": "trader_long_range_cruiser",
+            "count": [6, 10]
+        },
+        {
+            "unit": "trader_carrier_cruiser",
+            "count": [3, 5]
+        },
+        {
+            "unit": "trader_command_cruiser",
+            "count": [3, 5]
+        },
+        {
+            "unit": "trader_capital_ship_factory_structure",
+            "count": [1, 1]
+        }]
+    },
+    {
+        "required_units": [
+        {
+            "unit": "trader_torpedo_cruiser",
+            "count": [3, 5]
+        },
+        {
+            "unit": "trader_siege_frigate",
+            "count": [5, 10]
+        },
+        {
+            "unit": "trader_retrofit_bay_structure",
+            "count": [1, 1]
+        },
+        {
+            "unit": "npc_player_buffs_trader"
+        }]
+    }],
+    "buildable_strikecraft": [
+        "trader_interceptor_strikecraft",
+        "trader_bomber_strikecraft"
+    ],
+    "unit_limits":
+    {
+        "global": [
+        {
+            "tag": "starbase",
+            "unit_limit": 1
+        }]
+    },
+    "buildable_units": [
+        "trader_scout_frigate",
+        "trader_skirmisher_corvette_frigate",
+        "trader_missile_corvette",
+        "trader_light_frigate",
+        "trader_antifighter_frigate",
+		"trader_antiarmor_frigate",
+        "trader_siege_frigate",
+        "trader_colony_frigate",
+        "trader_medium_cruiser",
+        "trader_long_range_cruiser",
+		"trader_robotics_cruiser",
+        "trader_command_cruiser",
+        "trader_torpedo_cruiser",
+        "trader_carrier_capital_ship_n",
+        "trader_colony_capital_ship_n",
+        "trader_siege_capital_ship_n",
+        "trader_support_capital_ship_n"
+    ],
+    "structure_builder":
+    {
+        "ship": "trader_constructor_ship",
+        "special_operation_unit_kind": "structure_builder"
+    },
+    "structures": [
+        "trader_capital_ship_factory_structure",
+        "trader_frigate_factory_structure",
+        "trader_autocannon_defense_structure",
+        "trader_gauss_defense_structure",
+        "trader_hangar_defense_structure",
+        "trader_starbase_n"
+    ],
+    "allowed_traffic_ports": [
+        "trader_population_structure",
+        "trader_exotic_factory_structure",
+        "trader_crystal_extractor_structure",
+        "trader_metal_extractor_structure",
+        "advent_population_structure",
+        "vasari_population_structure"
+    ],
+    "ship_components": [
+        "trader_starbase_planetary_shield_array",
+        "trader_starbase_unlock_beam_weapon",
+        "trader_starbase_unlock_torpedo_weapon"
+    ],
+    "npc":
+    {
+        "visuals": [
+        {
+            "name": "npc_player.aluxian_resurgence.name",
+            "description": "npc_player.aluxian_resurgence.description",
+            "portrait": "merchant_0",
+            "icon": "militia_0",
+            "color_group": "npc_aluxian_resurgence",
+            "reputation_panel": "aluxian_resurgence_panel"
+        }],
+        "sounds":
+        {
+            "sounds":
+            {
+                "use_ability_generic": "aluxian_npc_use_ability_generic_0",
+                "use_ability_raid_0": "aluxian_npc_use_ability_raid_0_0",
+                "use_ability_raid_1": "aluxian_npc_use_ability_raid_1_0",
+                "use_ability_purchase_item": "aluxian_npc_use_ability_purchase_item_0",
+                "reputation_level_increased": "aluxian_npc_reputation_level_increased_0",
+                "insufficient_influence_points": "aluxian_npc_insufficient_influence_points_0",
+                "auction_started": "aluxian_npc_auction_started_0",
+                "auction_won": "aluxian_npc_auction_won_0",
+                "auction_lost": "aluxian_npc_auction_lost_0",
+                "auction_ignored": "aluxian_npc_auction_ignored_0",
+                "attacking": "aluxian_npc_attacking_0"
+            }
+        },        
+		"ai_difficulty": "hard",
+        "ai_params":
+        {
+            "max_jumps_from_home_planet_for_fleets": 2,
+            "will_fleet_retreat": false,
+            "fleet_will_probably_defeat_ratio_range": [0.9, 1.1],
+            "pick_another_buildable_attack_ship_type_interval_in_minutes": [0, 0],
+            "will_attack_other_ai_before_human_players": false,
+            "chance_to_ally_with_other_players": [0,0],
+            "desired_explore_ship_count":
+            {
+                "type": "constant",
+                "value": 4
+            }
+        },
+        "max_fleet_supply":
+        {
+            "roam": [150, 300, 600, 1000],
+            "defend": [750, 1500, 2250, 3000]
+        },
+        "start_allied_to_playable_players": false,
+        "start_allied_to_other_npc_players": false,
+        "start_allied_to_militia_npc_players": false,
+        "auctions": [],
+        "simple_can_ever_be_colonized_planet_types": [
+            "asteroid",
+			"crystalline",
+            "desert",
+			"desert_home",
+            "ferrous",
+			"ferrous_home",
+			"ice_asteroid",
+            "ice",
+            "moon",
+            "oceanic",
+			"pirate_base",
+			"swamp",
+            "terran",
+			"terran_home",
+            "volcanic",
+			"ship_graveyard",
+			"greenhouse",
+			"barren",
+			"city",
+			"magnetic",
+			"ice_moon",
+			"volcanic_moon",
+			"gas_giant",
+			"hive_asteroid",
+			"irradiated"
+        ],
+        "simple_planet_level": 10,
+        "simple_planet_tracks":
+        {
+            "defense":
+            {
+                "max_military_structure_slots": 10,
+                "max_health_points": 4000.0,
+                "health_points_restore_rate": 2.0
+            },
+            "logistics":
+            {
+                "max_civilian_structure_slots": 5,
+                "structure_builder_count": 2
+            },
+            "commerce":
+            {
+                "credits_income_rate": 2.5
+            },
+            "mining":
+            {
+                "metal_income_rate": 1.0,
+                "crystal_income_rate": 0.5
+            },
+            "research":
+            {},
+            "surveying":
+            {},
+			"focus":
+			{}
+        },
+        "simple_trade_capacity":
+        {}
+    },
+    "buildable_exotics": [
+    {
+        "exotic_name": "defense",
+        "exotic_definition":
+        {
+            "factory_build_time": 120.0,
+            "factory_build_price":
+            {
+                "credits": 400.0,
+                "metal": 125.0,
+                "crystal": 125.0
+            }
+        }
+    },
+    {
+        "exotic_name": "economic",
+        "exotic_definition":
+        {
+            "factory_build_time": 120.0,
+            "factory_build_price":
+            {
+                "credits": 400.0,
+                "metal": 125.0,
+                "crystal": 125.0
+            }
+        }
+    },
+    {
+        "exotic_name": "offense",
+        "exotic_definition":
+        {
+            "factory_build_time": 120.0,
+            "factory_build_price":
+            {
+                "credits": 400.0,
+                "metal": 125.0,
+                "crystal": 125.0
+            }
+        }
+    },
+    {
+        "exotic_name": "utility",
+        "exotic_definition":
+        {
+            "factory_build_time": 120.0,
+            "factory_build_price":
+            {
+                "credits": 400.0,
+                "metal": 125.0,
+                "crystal": 125.0
+            }
+        }
+    },
+    {
+        "exotic_name": "ultimate",
+        "exotic_definition":
+        {
+            "factory_build_time": 240.0,
+            "factory_build_price":
+            {
+                "credits": 800.0,
+                "metal": 250.0,
+                "crystal": 250.0
+            },
+            "factory_build_prerequisites": [
+                ["advent_unlock_build_ultimate_exotic"]
+            ]
+        }
+    },
+    {
+        "exotic_name": "research",
+        "exotic_definition":
+        {
+            "factory_build_time": 360.0,
+            "factory_build_price":
+            {
+                "credits": 1000.0,
+                "metal": 350.0,
+                "crystal": 350.0
+            }
+        }
+    }],
+    "planet_elevators":
+    {
+        "elevator_meshes": [
+            "space_elevator"
+        ],
+        "starting_elevator_count": 3,
+        "per_level_elevator_count": 0.4,
+        "explosion_effect": "trader_planet_elevator_explosion",
+        "explosion_sound": "explosion_frigateshipdeath",
+        "car_count_per_elevator_connection": 35,
+        "car_max_travel_time": 80.0,
+        "car_max_travel_time_offset": 20.0,
+        "car_tangent_offset_distance": 2.0,
+        "car_path_count": 250,
+        "car_path_min_t_delta": 0.4,
+        "cars_texture_animation": "planet_elevator_cars_trader",
+        "car_width": 40.0,
+        "car_height": 64.0,
+        "car_basic_constants":
+        {
+            "emissive_factor": 0.1
+        }
+    }
+}

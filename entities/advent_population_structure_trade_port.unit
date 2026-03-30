@@ -1,0 +1,35 @@
+{
+    "version": 0,
+    "spatial":
+    {
+        "can_collide": false
+    },
+    "user_interface":
+    {
+        "can_show_mesh_overlays": false,
+        "under_cursor_type": "sphere"
+    },
+    "health":
+    {
+        "release_time_after_death": 60.0,
+        "levels": [
+        {
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "shield_point_restore_rate": 1.9,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 60.0,
+                "restore_percentage": 0.5
+            }
+        }]
+    },
+    "target_filter_unit_type": "untargetable",
+    "skin_groups": [
+    {
+        "skins": [
+            "advent_population_structure_trade_port"]
+    }],
+    "action_effect_size": "small_unit"
+}

@@ -1,0 +1,261 @@
+{
+    "version": 0,
+    "spatial":
+    {
+        "radius": 175.214859,
+        "box":
+        {
+            "center": [0.0, -5.064608, -17.579933],
+            "extents": [84.730087, 52.102203, 156.614258]
+        },
+        "collision_rank": 1
+    },
+    "physics":
+    {
+        "can_move_linear": true,
+        "max_linear_speed": 600.0,
+        "time_to_max_linear_speed": 7.5,
+        "arrival_tolerance_spatial_radius_scalar": 0.25,
+        "death_linear_speed_range": [0.75, 1.25],
+        "can_move_angular": true,
+        "max_angular_speed": 18.0,
+        "time_to_max_angular_speed": 9.0,
+        "max_bank_angle": 35.0,
+        "death_angular_speed_range": [3.0, 6.0],
+        "linear_acceleration_angle": 90.0,
+        "can_strafe_linear": true,
+        "strafe_max_linear_speed": 180.0,
+        "time_to_strafe_max_linear_speed": 12.5,
+        "strafe_max_linear_distance_spatial_radius_scalar": 8.0,
+        "strafe_start_angle": 0.0,
+        "strafe_stop_angle": 180.0,
+        "strafe_speed_start_angle": 10.0,
+        "strafe_max_start_turning_angle": 170.0
+    },
+    "hyperspace":
+    {
+        "speed": 215000.0,
+        "speed_between_stars": 752500.0,
+        "charge_time": 8.0,
+        "charge_time_variance": 1.0,
+        "min_charge_angle": 10.0,
+        "max_charge_angle": 45.0
+    },
+    "move":
+    {
+        "follow_distance": 811.109375
+    },
+    "attack":
+    {
+        "attack_pattern":
+        {
+            "type": "immobile"
+        }
+    },
+    "ai":
+    {
+        "attack_target_type_groups_to_ignore": [
+            "torpedo_strikecraft"
+        ],
+        "pursuit":
+        {
+            "min_target_speed": 100.0,
+            "min_distance_to_target": 4000.0
+        },
+        "attack_target_type_range_scalar": 2.0
+    },
+    "ai_attack_target":
+    {
+        "attack_priority": 50.0,
+        "is_always_a_threat": true,
+        "attack_target_type": "carrier"
+    },
+    "player_ai":
+    {
+        "max_empire_owned_count_percentage": 0.25
+    },
+    "user_interface":
+    {
+        "pip_type": "cruiser",
+        "can_ever_be_selected": true,
+        "selection_priority": 300,
+        "has_sub_selection_grouping": true,
+        "selection_group_unit_type": "combat_ship",
+        "can_move": true,
+        "can_attack": true,
+        "can_show_distance_to_plane_line": true,
+        "can_rotate": true
+    },
+    "weapons":
+    {
+        "weapons": [
+        {
+            "weapon": "vasari_carrier_cruiser_point_defense_pulse",
+            "mesh_point": "child.pdpulse_cap_barrel.0",
+            "weapon_position": [48.017788, -8.671081, 87.814568],
+            "forward": [-0.086824, -0.087156, 0.992404],
+            "up": [0.561578, 0.818526, 0.121017],
+            "yaw_arc":
+            {
+                "min_angle": -120.0,
+                "max_angle": 120.0
+            },
+            "pitch_arc":
+            {
+                "min_angle": -65.0,
+                "max_angle": 5.0
+            }
+        },
+        {
+            "weapon": "vasari_carrier_cruiser_point_defense_pulse",
+            "mesh_point": "child.pdpulse_cap_barrel.1",
+            "weapon_position": [-48.973885, -8.759272, 87.814575],
+            "forward": [0.052204, -0.111397, 0.992404],
+            "up": [-0.577092, 0.807663, 0.121017],
+            "yaw_arc":
+            {
+                "min_angle": -120.0,
+                "max_angle": 120.0
+            },
+            "pitch_arc":
+            {
+                "min_angle": -65.0,
+                "max_angle": 5.0
+            }
+        }],
+        "max_range_weapon_index": 0
+    },
+    "formation":
+    {
+        "leader_priority": 1,
+        "offsets_per_formation_type":
+        {
+            "ships_and_structures":
+            {
+                "rank": 3,
+                "group": 2
+            }
+        }
+    },
+    "spawn_debris":
+    {
+        "spawn_debris_time": 1.0,
+        "generic_group_name": "vasari",
+        "generic_counts":
+        {
+            "small_debris": [7, 8],
+            "large_debris": [1, 2]
+        }
+    },
+    "health":
+    {
+        "release_time_after_death": 60.0,
+        "can_collide_duration_after_death": 3.95,
+        "durability": 210.0,
+        "can_ever_be_resurrected": true,
+        "levels": [
+        {
+            "max_hull_points": 1560.0,
+            "hull_point_restore_rate": 2.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "max_armor_points": 645.0,
+            "armor_point_restore_rate": 3.0,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 48.0,
+            "max_shield_points": 840.0,
+            "shield_point_restore_rate": 4.0,
+            "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+            "shield_point_restore_scalar_after_damage_taken": 0.0,
+            "shield_burst_restore":
+            {
+                "cooldown_duration": 40.0,
+                "restore_percentage": 0.5
+            },
+            "experience_given_on_death": 90.0
+        }]
+    },
+    "build":
+    {
+        "build_time": 58.0,
+        "price":
+        {
+            "metal": 310.0,
+            "crystal": 265.0
+        },
+        "prerequisites": [
+            ["vasari_unlock_carrier_cruiser"]
+        ],
+        "build_kind": "cruiser",
+        "supply_cost": 15,
+        "build_group_id": "cruiser"
+    },
+    "carrier":
+    {
+        "base_max_squadron_capacity": 1,
+        "strikecraft_kinds": [
+            "interceptor",
+            "bomber"
+        ],
+        "launch_destination_formation": "carrier_frigate_strikecraft",
+        "launch_destination_formation_offset":
+        {
+            "rank": 2,
+            "group": 0
+        },
+        "hangar_data": [
+        {
+            "hangar_basis":
+            {
+                "position": [-45.093048, 2.827239, 19.337158],
+                "rotation": [0.642788, 0.0, 0.766044, 0.0, 1.0, 0.0, -0.766044, 0.0, 0.642788]
+            }
+        },
+        {
+            "hangar_basis":
+            {
+                "position": [-52.4603, 2.827241, -37.149055],
+                "rotation": [-0.0, -0.0, 1.0, -0.0, 1.0, 0.0, -1.0, -0.0, -0.0]
+            }
+        },
+        {
+            "hangar_basis":
+            {
+                "position": [44.811729, 2.827239, 19.337156],
+                "rotation": [0.573576, -0.0, -0.819152, 0.0, 1.0, 0.0, 0.819152, -0.0, 0.573577]
+            }
+        },
+        {
+            "hangar_basis":
+            {
+                "position": [51.911842, 2.827241, -37.149059],
+                "rotation": [-0.0, 0.0, -1.0, 0.0, 1.0, 0.0, 1.0, -0.0, -0.0]
+            }
+        }]
+    },
+    "target_filter_unit_type": "cruiser",
+    "tags": [
+        "cruiser", "mem_limited2"
+    ],
+    "abilities": [
+    {
+        "abilities": []
+    },
+    {
+        "abilities": [
+            "special_operation_unit"
+        ],
+		"required_special_operation_unit_kind": "viturak_cabal_attack_ships"
+    }],
+    "ship_roles": [
+        "attack_ship"
+    ],
+    "skin_groups": [
+    {
+        "skins": [
+            "vasari_carrier_cruiser"]
+    }],
+    "action_effect_size": "medium_unit",
+    "can_join_fleet": true
+}

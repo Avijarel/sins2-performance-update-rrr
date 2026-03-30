@@ -1,0 +1,10 @@
+{
+    "compatibility_version": 2,
+    "display_name": "RRR - AS Performance",
+    "display_version": "1.7",
+    "short_description": "Multiplayer Performance Update RRR",
+    "logos": {
+        "small_logo": "textures/advent_sis.png",
+        "large_logo": "textures/advent_sis.png"
+    }
+}

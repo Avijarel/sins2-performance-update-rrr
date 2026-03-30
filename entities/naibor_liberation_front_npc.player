@@ -1,0 +1,1323 @@
+{
+    "version": 0,
+    "race": "trader",
+    "fleet": "trader_fleet",
+    "fleet_name_group": "fleet",
+    "unit_build_groups": [
+    {
+        "id": "corvette",
+        "name": "unit_build_group_name.corvette",
+        "column_count": 2
+    },
+    {
+        "id": "frigate",
+        "name": "unit_build_group_name.frigate",
+        "column_count": 3
+    },
+    {
+        "id": "cruiser",
+        "name": "unit_build_group_name.cruiser",
+        "column_count": 3
+    },
+    {
+        "id": "capital_ship",
+        "name": "unit_build_group_name.capital_ship",
+        "column_count": 3
+    },
+    {
+        "id": "super_capital_ship",
+        "name": "unit_build_group_name.super_capital_ship",
+        "column_count": 1
+    },
+    {
+        "id": "titan",
+        "name": "unit_build_group_name.titan",
+        "column_count": 1
+    }],
+    "unit_names": [
+    {
+        "group_name": "capital_ship",
+        "localized_text":
+        {
+            "id_prefix": "capital_ship_name.trader"
+        }
+    },
+    {
+        "group_name": "fleet",
+        "localized_text":
+        {
+            "id_prefix": "fleet_name.trader"
+        }
+    },
+    {
+        "group_name": "starbase",
+        "localized_text":
+        {
+            "id_prefix": "starbase_name.trader"
+        }
+    },
+    {
+        "group_name": "titan",
+        "localized_text":
+        {
+            "id_prefix": "titan_name.trader"
+        }
+    }],
+    "sounds":
+    {
+        "user_interface_sounds":
+        {
+            "set_rally_point":
+            {
+                "sound": "ui_set_rally_point",
+                "is_dialogue": false
+            },
+            "set_unit_factory_deliverable_destination":
+            {
+                "sound": "ui_set_rally_point",
+                "is_dialogue": false
+            },
+            "build_structure":
+            {
+                "sound": "ui_build_structure",
+                "is_dialogue": false
+            },
+            "set_planet_structure_plate_spin":
+            {
+                "sound": "ui_build_structure",
+                "is_dialogue": false
+            },
+            "ping_attention":
+            {
+                "sound": "ui_common_ping",
+                "is_dialogue": false
+            },
+            "ping_attack":
+            {
+                "sound": "ui_common_ping",
+                "is_dialogue": false
+            },
+            "ping_defend":
+            {
+                "sound": "ui_common_ping",
+                "is_dialogue": false
+            },
+            "ping_received_attention":
+            {
+                "sound": "ui_common_ping",
+                "is_dialogue": false
+            },
+            "ping_received_attack":
+            {
+                "sound": "trader_narrator_ping_received_attack",
+                "is_dialogue": true
+            },
+            "ping_received_defend":
+            {
+                "sound": "trader_narrator_ping_received_defend",
+                "is_dialogue": true
+            },
+            "control_group_created":
+            {
+                "sound": "trader_narrator_control_group_created",
+                "is_dialogue": true
+            },
+            "civilian_research_subject_completed":
+            {
+                "sound": "trader_narrator_civilian_research_subject_completed",
+                "is_dialogue": true
+            },
+            "military_research_subject_completed":
+            {
+                "sound": "trader_narrator_military_research_subject_completed",
+                "is_dialogue": true
+            },
+            "victory_condition_alliance_guard_research_subject_completed":
+            {
+                "sound": "ui_common_ping",
+                "is_dialogue": false
+            },
+            "ally_victory_condition_alliance_guard_research_subject_completed":
+            {
+                "sound": "ui_common_ping",
+                "is_dialogue": false
+            },
+            "civilian_research_domain_tier_acquired":
+            {
+                "sound": "trader_narrator_civilian_research_domain_tier_acquired",
+                "is_dialogue": true
+            },
+            "military_research_domain_tier_acquired":
+            {
+                "sound": "trader_narrator_military_research_domain_tier_acquired",
+                "is_dialogue": true
+            },
+            "planet_being_bombed":
+            {
+                "sound": "trader_narrator_planet_being_bombed",
+                "is_dialogue": true
+            },
+            "ally_planet_being_bombed":
+            {
+                "sound": "trader_narrator_ally_planet_being_bombed",
+                "is_dialogue": true
+            },
+            "planet_discovered":
+            {
+                "sound": "trader_narrator_planet_discovered",
+                "is_dialogue": true
+            },
+            "planet_colonized":
+            {
+                "sound": "trader_narrator_planet_colonized",
+                "is_dialogue": true
+            },
+            "planet_lost":
+            {
+                "sound": "trader_narrator_planet_lost",
+                "is_dialogue": true
+            },
+            "ally_planet_lost":
+            {
+                "sound": "trader_narrator_ally_planet_lost",
+                "is_dialogue": true
+            },
+            "capital_planet_changed":
+            {
+                "sound": "trader_narrator_capital_planet_changed",
+                "is_dialogue": true
+            },
+            "capital_planet_being_bombed":
+            {
+                "sound": "trader_narrator_capital_planet_being_bombed",
+                "is_dialogue": true
+            },
+            "ally_capital_planet_being_bombed":
+            {
+                "sound": "trader_narrator_ally_capital_planet_being_bombed",
+                "is_dialogue": true
+            },
+            "capital_planet_nearly_lost":
+            {
+                "sound": "trader_narrator_capital_planet_nearly_lost",
+                "is_dialogue": true
+            },
+            "capital_planet_lost":
+            {
+                "sound": "trader_narrator_capital_planet_lost",
+                "is_dialogue": true
+            },
+            "ally_capital_planet_lost":
+            {
+                "sound": "trader_narrator_ally_capital_planet_lost",
+                "is_dialogue": true
+            },
+            "enemy_capital_planet_lost":
+            {
+                "sound": "trader_narrator_enemy_capital_planet_lost",
+                "is_dialogue": true
+            },
+            "player_won":
+            {
+                "sound": "trader_narrator_player_won",
+                "is_dialogue": true
+            },
+            "player_won_diplomatic":
+            {
+                "sound": "trader_narrator_player_won_diplomatic",
+                "is_dialogue": true
+            },
+            "player_lost":
+            {
+                "sound": "trader_narrator_player_lost",
+                "is_dialogue": true
+            },
+            "ally_player_lost":
+            {
+                "sound": "trader_narrator_ally_player_lost",
+                "is_dialogue": true
+            },
+            "enemy_player_lost":
+            {
+                "sound": "trader_narrator_enemy_player_lost",
+                "is_dialogue": true
+            },
+            "enemy_player_lost_by_player":
+            {
+                "sound": "trader_narrator_enemy_player_lost_by_player",
+                "is_dialogue": true
+            },
+            "nothing_surveyed":
+            {
+                "sound": "trader_narrator_nothing_surveyed",
+                "is_dialogue": true
+            },
+            "exotics_surveyed":
+            {
+                "sound": "trader_narrator_exotics_surveyed",
+                "is_dialogue": true
+            },
+            "planet_artifact_surveyed":
+            {
+                "sound": "trader_narrator_planet_artifact_surveyed",
+                "is_dialogue": true
+            },
+            "planet_bonus_surveyed":
+            {
+                "sound": "trader_narrator_planet_bonus_surveyed",
+                "is_dialogue": true
+            },
+            "planet_track_upgrade_defense_completed":
+            {
+                "sound": "trader_narrator_planet_track_upgrade_defense_completed",
+                "is_dialogue": true
+            },
+            "planet_track_upgrade_logistics_completed":
+            {
+                "sound": "trader_narrator_planet_track_upgrade_logistics_completed",
+                "is_dialogue": true
+            },
+            "planet_track_upgrade_commerce_completed":
+            {
+                "sound": "trader_narrator_planet_track_upgrade_commerce_completed",
+                "is_dialogue": true
+            },
+            "planet_track_upgrade_mining_completed":
+            {
+                "sound": "trader_narrator_planet_track_upgrade_mining_completed",
+                "is_dialogue": true
+            },
+            "planet_track_upgrade_research_completed":
+            {
+                "sound": "trader_narrator_planet_track_upgrade_research_completed",
+                "is_dialogue": true
+            },
+            "planet_track_upgrade_focus_completed":
+            {
+                "sound": "trader_narrator_planet_track_upgrade_research_completed",
+                "is_dialogue": true
+            },
+            "planet_component_finished_building":
+            {
+                "sound": "trader_narrator_planet_component_finished_building",
+                "is_dialogue": true
+            },
+            "orbital_cannon_shell_detected":
+            {
+                "sound": "trader_narrator_orbital_cannon_shell_detected",
+                "is_dialogue": true
+            },
+            "enemy_units_incoming":
+            {
+                "sound": "trader_narrator_enemy_units_incoming",
+                "is_dialogue": true
+            },
+            "enemy_units_arrived":
+            {
+                "sound": "trader_narrator_enemy_units_arrived",
+                "is_dialogue": true
+            },
+            "enemy_planet_made_dead_from_bombing":
+            {
+                "sound": "trader_narrator_enemy_planet_made_dead_from_bombing",
+                "is_dialogue": true
+            },
+            "pirate_units_arrived":
+            {
+                "sound": "trader_narrator_pirate_units_arrived",
+                "is_dialogue": true
+            },
+            "ally_special_operations_units_arrived":
+            {
+                "sound": "trader_narrator_ally_special_operations_units_arrived",
+                "is_dialogue": true
+            },
+            "enemy_special_operations_units_arrived":
+            {
+                "sound": "trader_narrator_enemy_special_operations_units_arrived",
+                "is_dialogue": true
+            },
+            "insufficient_credits":
+            {
+                "sound": "trader_narrator_insufficient_credits",
+                "is_dialogue": true
+            },
+            "insufficient_metal":
+            {
+                "sound": "trader_narrator_insufficient_metal",
+                "is_dialogue": true
+            },
+            "insufficient_crystal":
+            {
+                "sound": "trader_narrator_insufficient_crystal",
+                "is_dialogue": true
+            },
+            "insufficient_civilian_structure_slots":
+            {
+                "sound": "trader_narrator_insufficient_civilian_structure_slots",
+                "is_dialogue": true
+            },
+            "insufficient_civilian_structure_slots_at_max":
+            {
+                "sound": "trader_narrator_insufficient_civilian_structure_slots_at_max",
+                "is_dialogue": true
+            },
+            "insufficient_military_structure_slots":
+            {
+                "sound": "trader_narrator_insufficient_military_structure_slots",
+                "is_dialogue": true
+            },
+            "insufficient_military_structure_slots_at_max":
+            {
+                "sound": "trader_narrator_insufficient_military_structure_slots_at_max",
+                "is_dialogue": true
+            },
+            "insufficient_unit_supply":
+            {
+                "sound": "trader_narrator_insufficient_unit_supply",
+                "is_dialogue": true
+            },
+            "insufficient_unit_supply_at_max_supply":
+            {
+                "sound": "trader_narrator_insufficient_unit_supply_at_max_supply",
+                "is_dialogue": true
+            },
+            "insufficient_antimatter":
+            {
+                "sound": "trader_narrator_insufficient_antimatter",
+                "is_dialogue": true
+            },
+            "research_prerequisites_not_met":
+            {
+                "sound": "trader_research_prerequisites_not_met",
+                "is_dialogue": true
+            },
+            "wormhole_travel_research_prerequisites_not_met":
+            {
+                "sound": "trader_research_prerequisites_not_met",
+                "is_dialogue": true
+            },
+            "insufficient_civilian_research_points":
+            {
+                "sound": "trader_narrator_insufficient_civilian_research_points",
+                "is_dialogue": true
+            },
+            "insufficient_military_research_points":
+            {
+                "sound": "trader_narrator_insufficient_military_research_points",
+                "is_dialogue": true
+            },
+            "position_has_overlapped_unit":
+            {
+                "sound": "trader_narrator_position_has_overlapped_unit",
+                "is_dialogue": true
+            },
+            "click_failed":
+            {
+                "sound": "ui_default_error",
+                "is_dialogue": false
+            },
+            "generic_order_issued":
+            {
+                "sound": "ui_order_issued",
+                "is_dialogue": false
+            },
+            "generic_attack_order_issued":
+            {
+                "sound": "ui_attack_order_issued",
+                "is_dialogue": false
+            },
+            "generic_cannot_hyperspace":
+            {
+                "sound": "trader_narrator_generic_cannot_hyperspace",
+                "is_dialogue": true
+            },
+            "generic_joined_fleet":
+            {
+                "sound": "trader_narrator_generic_joined_fleet",
+                "is_dialogue": true
+            },
+            "fleet_created":
+            {
+                "sound": "trader_narrator_fleet_created",
+                "is_dialogue": true
+            },
+            "sell_npc_market_asset":
+            {
+                "sound": "button_pressed",
+                "is_dialogue": false
+            },
+            "buy_npc_market_asset":
+            {
+                "sound": "button_pressed",
+                "is_dialogue": false
+            },
+            "npc_metal_market_exclusive_player_started_positive":
+            {
+                "sound": "trader_narrator_npc_metal_market_exclusive_player_started_positive",
+                "is_dialogue": true
+            },
+            "npc_metal_market_exclusive_player_started_negative":
+            {
+                "sound": "trader_narrator_npc_metal_market_exclusive_player_started_negative",
+                "is_dialogue": true
+            },
+            "npc_crystal_market_exclusive_player_started_positive":
+            {
+                "sound": "trader_narrator_npc_crystal_market_exclusive_player_started_positive",
+                "is_dialogue": true
+            },
+            "npc_crystal_market_exclusive_player_started_negative":
+            {
+                "sound": "trader_narrator_npc_crystal_market_exclusive_player_started_negative",
+                "is_dialogue": true
+            },
+            "ally_capital_ship_destroyed":
+            {
+                "sound": "trader_narrator_ally_capital_ship_destroyed",
+                "is_dialogue": true
+            },
+            "ally_starbase_destroyed":
+            {
+                "sound": "trader_narrator_ally_starbase_destroyed",
+                "is_dialogue": true
+            },
+            "ally_titan_destroyed":
+            {
+                "sound": "trader_narrator_ally_titan_destroyed",
+                "is_dialogue": true
+            },
+            "ally_titan_built":
+            {
+                "sound": "trader_narrator_ally_titan_built",
+                "is_dialogue": true
+            },
+            "enemy_titan_built":
+            {
+                "sound": "trader_narrator_enemy_titan_built",
+                "is_dialogue": true
+            },
+            "military_structure_built":
+            {
+                "sound": "trader_narrator_military_structure_built",
+                "is_dialogue": true
+            },
+            "civilian_structure_built":
+            {
+                "sound": "trader_narrator_civilian_structure_built",
+                "is_dialogue": true
+            },
+            "enemy_phase_jump_inhibitor_built":
+            {
+                "sound": "trader_narrator_enemy_phase_jump_inhibitor_built",
+                "is_dialogue": true
+            },
+            "player_units_arrived_at_enemy_phase_jump_inhibitor":
+            {
+                "sound": "trader_narrator_player_units_arrived_at_enemy_phase_jump_inhibitor",
+                "is_dialogue": true
+            },
+            "fleet_arrived":
+            {
+                "sound": "trader_narrator_fleet_arrived",
+                "is_dialogue": true
+            },
+            "ally_fleet_arrived":
+            {
+                "sound": "trader_narrator_ally_fleet_arrived",
+                "is_dialogue": true
+            },
+            "reinforcing_fleet_arrived":
+            {
+                "sound": "trader_narrator_reinforcing_fleet_arrived",
+                "is_dialogue": true
+            },
+            "ally_reinforcing_fleet_arrived":
+            {
+                "sound": "trader_narrator_ally_reinforcing_fleet_arrived",
+                "is_dialogue": true
+            },
+            "ally_reinforcing_fleet_incoming":
+            {
+                "sound": "trader_narrator_ally_reinforcing_fleet_incoming",
+                "is_dialogue": true
+            },
+            "fleet_under_attack":
+            {
+                "sound": "trader_narrator_fleet_under_attack",
+                "is_dialogue": true
+            },
+            "ally_fleet_under_attack":
+            {
+                "sound": "trader_narrator_ally_fleet_under_attack",
+                "is_dialogue": true
+            },
+            "destroy_planet_started":
+            {
+                "sound": "ui_common_ping",
+                "is_dialogue": false
+            },
+            "destroy_planet_rewards_given":
+            {
+                "sound": "ui_common_ping",
+                "is_dialogue": false
+            },
+            "game_paused":
+            {
+                "sound": "trader_narrator_game_paused",
+                "is_dialogue": true
+            },
+            "game_unpaused":
+            {
+                "sound": "trader_narrator_game_unpaused",
+                "is_dialogue": true
+            },
+            "small_unit_factory_needed":
+            {
+                "sound": "trader_narrator_small_unit_factory_needed",
+                "is_dialogue": true
+            },
+            "medium_unit_factory_needed":
+            {
+                "sound": "trader_narrator_medium_unit_factory_needed",
+                "is_dialogue": true
+            },
+            "large_unit_factory_needed":
+            {
+                "sound": "trader_narrator_large_unit_factory_needed",
+                "is_dialogue": true
+            },
+            "insufficient_offense_exotics":
+            {
+                "sound": "trader_narrator_insufficient_offense_exotics",
+                "is_dialogue": true
+            },
+            "insufficient_defense_exotics":
+            {
+                "sound": "trader_narrator_insufficient_defense_exotics",
+                "is_dialogue": true
+            },
+            "insufficient_utility_exotics":
+            {
+                "sound": "trader_narrator_insufficient_utility_exotics",
+                "is_dialogue": true
+            },
+            "insufficient_economic_exotics":
+            {
+                "sound": "trader_narrator_insufficient_economic_exotics",
+                "is_dialogue": true
+            },
+            "insufficient_ultimate_exotics":
+            {
+                "sound": "trader_narrator_insufficient_ultimate_exotics",
+                "is_dialogue": true
+            },
+            "insufficient_generic_exotics":
+            {
+                "sound": "trader_narrator_insufficient_generic_exotics",
+                "is_dialogue": true
+            },
+            "insufficient_custom_exotics_a":
+            {
+                "sound": "trader_narrator_insufficient_custom_exotics_a",
+                "is_dialogue": true
+            },
+            "insufficient_custom_exotics_b":
+            {
+                "sound": "trader_narrator_insufficient_custom_exotics_b",
+                "is_dialogue": true
+            },
+            "insufficient_custom_exotics_c":
+            {
+                "sound": "trader_narrator_insufficient_custom_exotics_c",
+                "is_dialogue": true
+            },
+            "scuttle_planet_started":
+            {
+                "sound": "trader_narrator_scuttle_planet_started",
+                "is_dialogue": true
+            },
+            "scuttle_unit_started":
+            {
+                "sound": "trader_narrator_scuttle_unit_started",
+                "is_dialogue": true
+            },
+            "insufficient_unity_points":
+            {
+                "sound": "ui_default_error",
+                "is_dialogue": false
+            },
+            "insufficient_unity_mana":
+            {
+                "sound": "ui_default_error",
+                "is_dialogue": false
+            },
+            "unity_ability_cooldown_is_not_completed":
+            {
+                "sound": "trader_narrator_rebel_enemyontitancreation_0",
+                "is_dialogue": true
+            },
+            "player_added_first_ruler_ship":
+            {
+                "sound": "ui_default_error",
+                "is_dialogue": false
+            },
+            "planet_conversion_started":
+            {
+                "sound": "trader_narrator_planet_conversion_started",
+                "is_dialogue": true
+            },
+            "planet_conversion_colonized":
+            {
+                "sound": "trader_narrator_enemy_units_incoming",
+                "is_dialogue": true
+            },
+            "alliance_offered_cease_fire":
+            {
+                "sound": "trader_narrator_alliance_offered_cease_fire",
+                "is_dialogue": true
+            },
+            "alliance_offered_share_vision":
+            {
+                "sound": "trader_narrator_alliance_offered_share_vision",
+                "is_dialogue": true
+            },
+            "alliance_offered_synergy":
+            {
+                "sound": "ui_common_ping",
+                "is_dialogue": false
+            },
+            "alliance_accepted_cease_fire":
+            {
+                "sound": "trader_narrator_alliance_accepted_cease_fire",
+                "is_dialogue": true
+            },
+            "alliance_accepted_share_vision":
+            {
+                "sound": "trader_narrator_alliance_accepted_share_vision",
+                "is_dialogue": true
+            },
+            "alliance_accepted_synergy":
+            {
+                "sound": "ui_common_ping",
+                "is_dialogue": false
+            },
+            "alliance_broken_cease_fire":
+            {
+                "sound": "aluxian_npc_attacking_0",
+                "is_dialogue": true
+            },
+            "alliance_offered_share_vision_aggressive":
+            {
+                "sound": "trader_narrator_alliance_offered_share_vision_aggressive",
+                "is_dialogue": true
+            },
+            "alliance_offered_synergy_aggressive":
+            {
+                "sound": "ui_default_error",
+                "is_dialogue": false
+            },
+            "alliance_accepted_share_vision_aggressive":
+            {
+                "sound": "trader_narrator_alliance_accepted_share_vision_aggressive",
+                "is_dialogue": true
+            },
+            "alliance_accepted_synergy_aggressive":
+            {
+                "sound": "ui_default_error",
+                "is_dialogue": false
+            },
+            "alliance_broken_cease_fire_aggressive":
+            {
+                "sound": "trader_narrator_alliance_broken_cease_fire_aggressive",
+                "is_dialogue": true
+            },
+            "artifact_captured":
+            {
+                "sound": "trader_narrator_artifact_captured",
+                "is_dialogue": true
+            }
+        },
+        "unit_build_kind_sounds": [
+        {
+            "build_kind": "corvette",
+            "sound_id": "small_unit_factory_needed"
+        },
+        {
+            "build_kind": "frigate",
+            "sound_id": "small_unit_factory_needed"
+        },
+        {
+            "build_kind": "cruiser",
+            "sound_id": "medium_unit_factory_needed"
+        },
+        {
+            "build_kind": "capital_ship",
+            "sound_id": "medium_unit_factory_needed"
+        },
+        {
+            "build_kind": "titan",
+            "sound_id": "large_unit_factory_needed"
+        }]
+    },
+    "buildable_exotics": [
+    {
+        "exotic_name": "defense",
+        "exotic_definition":
+        {
+            "factory_build_time": 120.0,
+            "factory_build_price":
+            {
+                "metal": 240.0,
+                "crystal": 240.0
+            }
+        }
+    },
+    {
+        "exotic_name": "economic",
+        "exotic_definition":
+        {
+            "factory_build_time": 120.0,
+            "factory_build_price":
+            {
+                "metal": 240.0,
+                "crystal": 240.0
+            }
+        }
+    },
+    {
+        "exotic_name": "offense",
+        "exotic_definition":
+        {
+            "factory_build_time": 120.0,
+            "factory_build_price":
+            {
+                "metal": 240.0,
+                "crystal": 240.0
+            }
+        }
+    },
+    {
+        "exotic_name": "utility",
+        "exotic_definition":
+        {
+            "factory_build_time": 120.0,
+            "factory_build_price":
+            {
+                "metal": 240.0,
+                "crystal": 240.0
+            }
+        }
+    },
+    {
+        "exotic_name": "ultimate",
+        "exotic_definition":
+        {
+            "factory_build_time": 240.0,
+            "factory_build_price":
+            {
+                "metal": 480.0,
+                "crystal": 480.0
+            }
+        }
+    },
+    {
+        "exotic_name": "research",
+        "exotic_definition":
+        {
+            "factory_build_time": 240.0,
+            "factory_build_price":
+            {
+                "metal": 480.0,
+                "crystal": 480.0
+            }
+        }
+    }],
+    "default_starting_assets":
+    {
+        "credits": 12000,
+        "metal": 3000,
+        "crystal": 2000
+    },
+    "planet_bombing_recovery_cooldown": 30.0,
+    "colonize_starting_health_percent": 0.125,
+    "colonize_starting_shield_percent": 1,
+    "default_starting_exotics": [
+    {
+        "exotic_type": "offense",
+        "count": 1000
+    },
+    {
+        "exotic_type": "defense",
+        "count": 1000
+    },
+    {
+        "exotic_type": "economic",
+        "count": 1000
+    },
+    {
+        "exotic_type": "utility",
+        "count": 1000
+    }],
+    "home_planet":
+    {
+        "random_fixture_filling": "random_city_planet",
+        "levels": [
+        {
+            "income_rates":
+            {
+                "credits": 10.0,
+                "metal": 5.0,
+                "crystal": 2.5
+            },
+            "modifier_values":
+            {
+                "max_civilian_structure_slots":
+                {
+                    "additive": 8.0
+                },
+                "max_military_structure_slots":
+                {
+                    "additive": 20.0
+                },
+                "max_health_points":
+                {
+                    "additive": 6000.0
+                }
+            }
+        }]
+    },
+    "starting_units_in_gravity_well":
+    {
+        "required_units": [
+        {
+            "unit": "trader_autocannon_defense_structure",
+            "count": [2, 4]
+        },
+        {
+            "unit": "trader_gauss_defense_structure",
+            "count": [3, 5]
+        },
+        {
+            "unit": "trader_starbase_n",
+            "count": [1, 1]
+        }]
+    },
+    "starting_units_in_formations": [
+    {
+        "required_units": [
+        {
+            "unit": "trader_heavy_cruiser",
+            "count": [3, 5]
+        },
+        {
+            "unit": "trader_battle_capital_ship_n",
+            "count": [1, 2]
+        },
+        {
+            "unit": "trader_antifighter_frigate",
+            "count": [5, 8]
+        }]
+    },
+    {
+        "required_units": [
+        {
+            "unit": "trader_heavy_cruiser",
+            "count": [3, 5]
+        },
+        {
+            "unit": "trader_antifighter_frigate",
+            "count": [5, 8]
+        },
+        {
+            "unit": "trader_siege_capital_ship_n",
+            "count": [1, 2]
+        },
+        {
+            "unit": "npc_trader_trade_port_structure",
+            "count": [1, 1]
+        },
+        {
+            "unit": "trader_culture_center_structure",
+            "count": [1, 1]
+        }]
+    },
+    {
+        "required_units": [
+        {
+            "unit": "trader_heavy_cruiser",
+            "count": [3, 5]
+        },
+        {
+            "unit": "trader_antifighter_frigate",
+            "count": [5, 8]
+        },
+        {
+            "unit": "trader_carrier_capital_ship_n",
+            "count": [1, 2]
+        },
+        {
+            "unit": "trader_retrofit_bay_structure",
+            "count": [1, 1]
+        },
+        {
+            "unit": "trader_culture_center_structure",
+            "count": [1, 1]
+        },
+        {
+            "unit": "npc_player_buffs_naibor"
+        }]
+    }],
+    "buildable_strikecraft": [
+        "trader_interceptor_strikecraft",
+        "trader_bomber_strikecraft"
+    ],
+    "unit_limits":
+    {
+        "global": [
+        {
+            "tag": "starbase",
+            "unit_limit": 1
+        }]
+    },
+    "buildable_units": [
+        "trader_scout_corvette",
+        "trader_skirmisher_corvette_frigate",
+		"trader_missile_corvette",
+        "trader_light_frigate",
+        "trader_antifighter_frigate",
+        "trader_siege_frigate",
+        "trader_colony_frigate",
+        "trader_heavy_cruiser",
+        "trader_long_range_cruiser",
+        "trader_torpedo_cruiser",
+		"trader_battle_capital_ship_n",
+		"trader_siege_capital_ship_n",
+		"trader_carrier_capital_ship_n",
+		"trader_support_capital_ship_n",
+		"trader_colony_capital_ship_n"
+    ],
+    "structure_builder":
+    {
+        "ship": "trader_constructor_ship",
+        "special_operation_unit_kind": "structure_builder"
+    },
+    "structures": [
+        "trader_capital_ship_factory_structure",
+        "trader_frigate_factory_structure",
+        "trader_autocannon_defense_structure",
+        "trader_gauss_defense_structure",
+        "trader_hangar_defense_structure",
+        "trader_culture_center_structure",
+        "trader_starbase_n"
+    ],
+    "ship_components": [
+        "trader_salvage_kit",
+        "trader_radiation_bomb",
+        "trader_starbase_planetary_shield_array",
+        "trader_starbase_unlock_beam_weapon",
+        "trader_starbase_unlock_torpedo_weapon"
+    ],
+    "ship_component_build_groups": [
+    {
+        "id": "consumable",
+        "name": "ship_component_build_group_name_consumable",
+        "column_count": 2
+    },
+    {
+        "id": "offense",
+        "name": "ship_component_build_group_name_offense",
+        "column_count": 4
+    },
+    {
+        "id": "defense",
+        "name": "ship_component_build_group_name_defense",
+        "column_count": 4
+    },
+    {
+        "id": "utility",
+        "name": "ship_component_build_group_name_utility",
+        "column_count": 4
+    }],
+    "culture":
+    {
+        "base_allegiance_growth_rate_from_neutral": 0.1,
+        "base_allegiance_growth_rate_from_other_players": 0.025,
+        "base_max_allegiance_factor": 0.25,
+        "base_per_population_bonus_per_allied_population_percentage_scalar": 1.0,
+        "base_per_population_penalty_per_other_population_percentage_scalar": 1.0,
+        "base_allegiance_decay_rate": 0.05,
+        "allegiance_decay_exponent": 2.0,
+        "allegiance_decay_minimum_percentage": 0.01,
+        "decay_rates": [
+        {
+            "decay_rate": 0.02
+        }],
+        "propagation_rates": [
+        {
+            "propagation_rate_scalar": -2.0
+        }]
+    },
+    "npc":
+    {
+        "visuals": [
+        {
+            "name": "npc_player.naibor_liberation_front.name",
+            "description": "npc_player.naibor_liberation_front.description",
+            "portrait": "miner_0",
+            "icon": "faction_3",
+            "color_group": "npc_naibor_liberation_front",
+            "reputation_panel": "naibor_liberation_front_panel"
+        }],
+        "sounds":
+        {
+            "sounds":
+            {
+                "use_ability_generic": "aluxian_npc_use_ability_generic_0",
+                "use_ability_raid_0": "aluxian_npc_use_ability_raid_0_0",
+                "use_ability_raid_1": "aluxian_npc_use_ability_raid_1_0",
+                "use_ability_purchase_item": "aluxian_npc_use_ability_purchase_item_0",
+                "reputation_level_increased": "aluxian_npc_reputation_level_increased_0",
+                "insufficient_influence_points": "aluxian_npc_insufficient_influence_points_0",
+                "auction_started": "aluxian_npc_auction_started_0",
+                "auction_won": "aluxian_npc_auction_won_0",
+                "auction_lost": "aluxian_npc_auction_lost_0",
+                "auction_ignored": "aluxian_npc_auction_ignored_0",
+                "attacking": "aluxian_npc_attacking_0"
+            }
+        },
+		"ai_difficulty": "hard",
+        "ai_params":
+        {
+            "will_fleet_colonize": true,
+			"will_fleet_retreat": true,
+			"fleet_will_probably_defeat_ratio_range": [0.8, 1.2],
+            "max_jumps_from_home_planet_for_fleets": 99,
+            "chaos_factor_range": [0.8, 1.00],
+            "chaos_factor_update_interval": 100,
+			"defense_to_offsense_spend_ratio": 0.2,
+            "pick_another_buildable_attack_ship_type_interval_in_minutes": [10, 20],
+            "desired_explore_ship_count":
+            {
+                "type": "constant",
+                "value": 4
+            }
+        },
+        "max_fleet_supply":
+        {
+            "roam": [94, 187, 375, 625],
+            "defend": [312, 625, 875, 1250]
+        },
+        "npc_tags": [
+            "naibor"
+        ],
+        "start_allied_to_playable_players": false,
+        "start_allied_to_other_npc_players": false,
+        "start_allied_to_militia_npc_players": false,
+        "auctions": [
+        {
+            "weight": 1.0,
+            "bid_duration": 75.0,
+            "rewards": [
+                "metal_stockpile_auction_0",
+                "metal_stockpile_auction_1",
+                "metal_stockpile_auction_2",
+                "metal_stockpile_auction_3"
+            ]
+        },
+        {
+            "weight": 0.8,
+            "bid_duration": 75.0,
+            "rewards": [
+                "defense_exotic_stockpile_0",
+                "defense_exotic_stockpile_1",
+                "defense_exotic_stockpile_2",
+                "defense_exotic_stockpile_3"
+            ]
+        },
+        {
+            "weight": 0.8,
+            "bid_duration": 75.0,
+            "rewards": [
+                "utility_exotic_stockpile_0",
+                "utility_exotic_stockpile_1",
+                "utility_exotic_stockpile_2",
+                "utility_exotic_stockpile_3"
+            ]
+        },
+        {
+            "weight": 0.5,
+            "bid_duration": 75.0,
+            "rewards": [
+                "",
+                "",
+                "naibor_home_front_advantage",
+                "naibor_home_front_advantage"]
+        },
+        {
+            "weight": 0.5,
+            "bid_duration": 75.0,
+            "rewards": [
+                "",
+                "",
+                "naibor_naibor_tacticians",
+                "naibor_naibor_tacticians"]
+        },
+        {
+            "weight": 0.1,
+            "bid_duration": 300.0,
+            "rewards": [
+                "",
+                "",
+                "",
+                "relativistic_factories_planet_artifact"]
+        },
+        {
+            "weight": 0.1,
+            "bid_duration": 300.0,
+            "rewards": [
+                "",
+                "",
+                "",
+                "shield_capacitors_ship_artifact"]
+        }],		
+        "simple_can_ever_be_colonized_planet_types": [
+            "asteroid",
+			"crystalline",
+            "desert",
+			"desert_home",
+            "ferrous",
+			"ferrous_home",
+			"ice_asteroid",
+            "ice",
+            "moon",
+            "oceanic",
+			"pirate_base",
+			"swamp",
+            "terran",
+			"terran_home",
+            "volcanic",
+			"ship_graveyard",
+			"greenhouse",
+			"barren",
+			"city",
+			"magnetic",
+			"ice_moon",
+			"volcanic_moon",
+			"gas_giant",
+			"hive_asteroid",
+			"irradiated"
+        ],
+        "simple_planet_level": 10,
+        "simple_planet_tracks":
+        {
+            "defense":
+            {
+                "max_military_structure_slots": 12,
+                "max_health_points": 3000.0,
+                "health_points_restore_rate": 2.0
+            },
+            "logistics":
+            {
+                "max_civilian_structure_slots": 8,
+                "structure_builder_count": 2
+            },
+            "commerce":
+            {
+                "credits_income_rate": 5
+            },
+            "mining":
+            {
+                "metal_income_rate": 3.0,
+                "crystal_income_rate": 1.5
+            },
+            "research":
+            {},
+            "surveying":
+            {},
+			"focus":
+			{}
+        },
+        "simple_trade_capacity":
+        {
+            "export_points":
+            {
+                "credits": 2,
+                "metal": 1
+            }
+        },
+        "reputation":
+        {
+            "reward_between_gravity_well_range": 10.0,
+            "rewards": [
+            {
+                "reward": "naibor_isolationist_propaganda",
+                "required_reputation_level": 0,
+                "influence_point_cost": 2,
+                "cooldown_duration": 300
+            },
+            {
+                "reward": "naibor_xeno_assault_raid",
+                "required_reputation_level": 1,
+                "influence_point_cost": 4,
+                "cooldown_duration": 600
+            },
+            {
+                "reward": "naibor_open_rebellion",
+                "required_reputation_level": 2,
+                "influence_point_cost": 6,
+                "cooldown_duration": 300
+            },
+            {
+                "reward": "naibor_liberated_populace",
+                "required_reputation_level": 3,
+                "influence_point_cost": 10,
+                "cooldown_duration": 480
+            }],
+            "levels": [
+            {
+                "influence_point_cost": 1,
+                "npc_modifiers":
+                {}
+            },
+            {
+                "influence_point_cost": 2,
+                "npc_modifiers":
+                {}
+            },
+            {
+                "influence_point_cost": 4,
+                "npc_modifiers":
+                {}
+            },
+            {
+                "influence_point_cost": 6,
+                "npc_modifiers":
+                {}
+            }]
+        }
+    },
+    "planet_elevators":
+    {
+        "elevator_meshes": [
+            "space_elevator"
+        ],
+        "starting_elevator_count": 3,
+        "per_level_elevator_count": 0.4,
+        "explosion_effect": "trader_planet_elevator_explosion",
+        "explosion_sound": "explosion_frigateshipdeath",
+        "car_count_per_elevator_connection": 35,
+        "car_max_travel_time": 80.0,
+        "car_max_travel_time_offset": 20.0,
+        "car_tangent_offset_distance": 2.0,
+        "car_path_count": 250,
+        "car_path_min_t_delta": 0.4,
+        "cars_texture_animation": "planet_elevator_cars_trader",
+        "car_width": 40.0,
+        "car_height": 64.0,
+        "car_basic_constants":
+        {
+            "emissive_factor": 0.1
+        }
+    }
+}

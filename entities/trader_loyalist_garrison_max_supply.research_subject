@@ -1,0 +1,30 @@
+{
+    "version": 0,
+    "domain": "military",
+    "tier": 4,
+    "field": "military_mobilization",
+    "field_coord": [9, 3],
+    "research_time": 600.0,
+    "price":
+    {
+        "credits": 2250.0,
+        "metal": 425.0,
+        "crystal": 750.0
+    },
+    "exotic_price": [
+    {
+        "exotic_type": "ultimate",
+        "count": 1
+    }],
+    "prerequisites": [
+        ["trader_garrison_max_supply"]
+    ],
+    "name": "trader_loyalist_garrison_max_supply_research_subject_name",
+    "name_uppercase": "trader_loyalist_garrison_max_supply_research_subject_name_uppercase",
+    "description": "trader_loyalist_garrison_max_supply_research_subject_description",
+    "hud_icon": "trader_loyalist_garrison_max_supply_research_subject_hud_icon",
+    "tooltip_picture": "trader_loyalist_garrison_max_supply_research_subject_tooltip_picture",
+    "extra_text_filter_strings": [
+        "research_text_filter_faction",
+        "research_text_filter_loyalist"]
+}

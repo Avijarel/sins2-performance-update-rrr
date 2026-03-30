@@ -1,0 +1,41 @@
+{
+    "version": 0,
+    "item_type": "planet_component",
+    "build_group_id": "defense",
+    "hud_icon": "trader_garrison_recruitment_center_unit_item_hold_hud_icon",
+    "tooltip_icon": "trader_garrison_recruitment_center_unit_item_hold_hud_icon",
+    "name": "trader_loyalist_homeworld_garrison_recruitment_center_unit_item_name",
+    "description": "trader_loyalist_homeworld_garrison_recruitment_center_unit_item_desc",
+    "item_level_count": 3,
+    "item_level_source": "research_prerequisites_per_level",
+    "item_level_prerequisites": [
+        [
+			["trader_garrison_max_supply"]
+        ],
+        [
+			["trader_loyalist_garrison_max_supply"]
+        ]
+    ],
+    "price":
+    {},
+    "planet_type_groups": [
+    {
+        "planet_types": [
+			"terran_home"
+		]
+    }],
+    "is_planet_garrison": true,
+    "planet_garrison_hud_icons":
+    {
+        "hold": "trader_garrison_recruitment_center_unit_item_hold_hud_icon",
+        "roam_defensive": "trader_garrison_recruitment_center_unit_item_roam_defensive_hud_icon",
+        "roam_offensive": "trader_garrison_recruitment_center_unit_item_roam_offensive_hud_icon"
+    },
+    "planet_modifiers": [
+    {
+        "modifier_type": "max_garrison_supply",
+        "value_behavior": "additive",
+        "values": [20.0, 30.0, 40.0]
+    }],
+    "ability": "trader_garrison_buff"
+}

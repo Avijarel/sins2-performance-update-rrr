@@ -1,0 +1,31 @@
+{
+    "version": 0,
+    "domain": "military",
+    "tier": 2,
+    "field": "military_trader_repeatables",
+    "field_coord": [5, 0],
+    "research_time": 627.5,
+    "price":
+    {
+        "credits": 3500.0,
+        "metal": 1312.5,
+        "crystal": 1312.5
+    },
+    "planet_modifiers": [
+    {
+        "modifier_type": "max_garrison_supply",
+        "value_behavior": "additive",
+        "value": 10
+    },
+    {
+        "modifier_type": "structure_builder_count",
+        "value_behavior": "additive",
+        "value": 1
+    }],
+    "prerequisites": [["trader_garrison_tier_0"]],
+    "name": "research_subject.trader_garrison_name",
+    "name_uppercase": "research_subject.trader_garrison_name_upper",
+    "description": "research_subject.trader_garrison_description",
+    "hud_icon": "trader_unlock_garrison_recruitment_center_research_subject_hud_icon",
+    "tooltip_picture": "trader_unlock_garrison_recruitment_center_research_subject_tooltip_picture"
+}
