@@ -76,11 +76,12 @@
             "hull_point_restore_rate": 3.0,
             "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
             "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "max_armor_points": 1000.0,
             "armor_point_restore_rate": 4.0,
             "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
             "armor_point_restore_scalar_after_damage_taken": 0.0,
             "armor_strength": 40.0,
-            "max_shield_points": 2000.0,
+            "max_shield_points": 1000.0,
             "shield_point_restore_rate": 5.0,
             "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
             "shield_point_restore_scalar_after_damage_taken": 0.0,
@@ -97,13 +98,10 @@
         "build_time": 60.0,
         "price":
         {
-            "credits": 450.0,
-            "metal": 95.0,
-            "crystal": 95.0
+            "credits": 300.0,
+            "metal": 125.0,
+            "crystal": 120.0
         },
-        "prerequisites": [
-            ["advent_unlock_population_structure"]
-        ],
         "build_kind": "structure",
         "build_radius": 575.192078
     },
