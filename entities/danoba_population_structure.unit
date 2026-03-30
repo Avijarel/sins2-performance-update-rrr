@@ -1,0 +1,135 @@
+{
+    "version": 0,
+    "spatial":
+    {
+        "radius": 696.848022,
+        "box":
+        {
+            "center": [-0.155853, -34.311096, 0.201233],
+            "extents": [634.50708, 662.34845, 633.255005]
+        },
+        "can_be_displaced_on_collision": false
+    },
+    "physics":
+    {},
+    "ai":
+    {
+        "attack_target_type_groups_to_ignore": [
+            "torpedo_strikecraft"]
+    },
+    "ai_attack_target":
+    {
+        "attack_priority": 25.0,
+        "is_always_a_threat": false,
+        "attack_target_type": "civilian"
+    },
+    "user_interface":
+    {
+        "pip_type": "frigate",
+        "can_ever_be_selected": true,
+        "selection_priority": 100,
+        "selection_group_unit_type": "civilian_structure"
+    },
+    "structure":
+    {
+        "slot_type": "civilian",
+        "slots_required": 1,
+        "roles": [],
+        "build_group_id": "civilian"
+    },
+    "formation":
+    {
+        "leader_priority": 3,
+        "offsets_per_formation_type":
+        {
+            "ships_and_structures":
+            {
+                "rank": 4,
+                "group": 5
+            }
+        }
+    },
+    "spawn_debris":
+    {
+        "spawn_debris_time": 3.95,
+        "generic_group_name": "trader",
+        "generic_counts":
+        {
+            "small_debris": [14, 18],
+            "large_debris": [3, 5]
+        }
+    },
+    "health":
+    {
+        "release_time_after_death": 60.0,
+        "can_collide_duration_after_death": 3.95,
+        "durability": 500.0,
+        "levels": [
+        {
+            "max_hull_points": 3250.0,
+            "hull_point_restore_rate": 3.0,
+            "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "hull_point_restore_scalar_after_damage_taken": 0.0,
+            "max_armor_points": 1250.0,
+            "armor_point_restore_rate": 4.0,
+            "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+            "armor_point_restore_scalar_after_damage_taken": 0.0,
+            "armor_strength": 40.0,
+            "experience_given_on_death": 25.0
+        }]
+    },
+    "traffic_port":
+    {
+        "max_traffic_ship_count": 1,
+        "traffic_ship_construction_time": 60.0,
+        "traffic_ship": "trader_refinery_ship",
+        "allowed_destination_units": 
+        [
+            "danoba_population_structure", 
+            "advent_crystal_extractor_structure", 
+            "advent_metal_extractor_structure",
+            "trader_crystal_extractor_structure", 
+            "trader_metal_extractor_structure",
+            "vasari_crystal_extractor_structure", 
+            "vasari_metal_extractor_structure",
+			"neutral_crystal_asteroid",
+			"neutral_metal_asteroid"
+        ],
+        "special_operation_unit_kind": "traffic_ship",
+        "create_traffic_ship_offset": [0.0, 0.0, 1500.0],
+        "force_stay_in_gravity_well": false
+    },
+    "build":
+    {
+        "build_time": 60.0,
+        "price":
+        {
+            "credits": 750.0,
+            "metal": 125.0,
+            "crystal": 100.0
+        },
+        "prerequisites": [
+            ["trader_unlock_population_structure"]
+        ],
+        "build_kind": "structure",
+        "build_radius": 896.443604
+    },
+    "passive_income":
+    {},
+    "target_filter_unit_type": "structure",
+    "tags": [
+        "structure"
+    ],
+    "virtual_supply_cost": 10,
+    "abilities": [
+    {
+        "abilities": [
+			"danoba_population_structure"]
+    }],
+    "skin_groups": [
+    {
+        "skins": [
+            "danoba_population_structure"]
+    }],
+    "action_effect_size": "medium_unit"
+}
