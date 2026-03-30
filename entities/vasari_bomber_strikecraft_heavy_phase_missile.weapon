@@ -1,0 +1,40 @@
+{
+    "version": 0,
+    "name": "weapon_name.light_phase_missile",
+    "pitch_speed": 0.0,
+    "yaw_speed": 0.0,
+    "range": 5100.0,
+    "cooldown_duration": 16.0,
+    "uniforms_target_filter_id": "common_weapon",
+    "attack_target_type_groups": [
+        "heavy_capital",
+        "defense"
+    ],
+    "weapon_type": "normal",
+    "damage_affect_type": "hull_and_armor_and_shields",
+    "damage": 192.0,
+    "penetration": 470.0,
+    "tags": [
+        "phasemissile",
+	"missile",
+        "physical",
+	"bomber"
+    ],
+    "acquire_target_logic": "order_target_only",
+    "target_acquired_duration_required_to_fire": 0.5,
+    "firing": {
+        "firing_type": "spawn_torpedo",
+        "torpedo_firing_definition": {
+            "spawned_unit": "vasari_phase_missile",
+            "duration": 12.0,
+            "bypass_shields_chance": 0.3
+        }
+    },
+    "burst_pattern": [0.0],
+    "effects":
+    {
+        "muzzle_picking_behavior": "random",
+        "muzzle_effect": "vasari_bomber_strikecraft_heavy_phase_missile_weapon_muzzle",
+        "hit_shield_impact_radius_t": 0.487033
+    }
+}

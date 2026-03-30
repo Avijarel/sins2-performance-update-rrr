@@ -1,0 +1,41 @@
+{
+    "version": 0,
+    "name": "weapon_name.very_heavy_plasma",
+    "pitch_speed": 0.0,
+    "yaw_speed": 0.0,
+    "range": 12000.0,
+    "cooldown_duration": 8.0,
+    "uniforms_target_filter_id": "big_target_only_weapon",
+    "attack_target_type_groups": [
+        "defense_starbase_titan",
+        "capital"
+    ],
+    "weapon_type": "normal",
+    "damage_affect_type": "hull_and_armor_and_shields",
+    "damage": 140.0,
+    "penetration": 1000.0,
+    "tags": [
+        "plasma",
+        "energy"
+    ],
+    "acquire_target_logic": "order_target_or_best_target_in_range",
+    "target_acquired_duration_required_to_fire": 0.10,
+    "firing": {
+        "firing_type": "spawn_torpedo",
+        "torpedo_firing_definition": {
+            "spawned_unit": "advent_antimodule_cruiser_plamsa_missile",
+            "duration": 81.0
+        }
+    },
+    "burst_pattern": [
+        0.0,
+        0.950,
+        1.90,
+        2.850
+    ],
+    "effects": {
+        "muzzle_picking_behavior": "sequential",
+        "muzzle_effect": "advent_plasma_bolt_super_heavy_muzzle",
+        "hit_shield_impact_radius_t": 0.10
+    }
+}

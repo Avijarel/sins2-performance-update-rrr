@@ -1,0 +1,41 @@
+{
+    "version": 0,
+    "name": "weapon_name.medium_phase_missile",
+    "pitch_speed": 0.0,
+    "yaw_speed": 0.0,
+    "range": 5000.0,
+    "cooldown_duration": 14.0,
+    "uniforms_target_filter_id": "common_weapon",
+    "attack_target_type_groups": [
+        "heavy_capital",
+        "defense"
+    ],
+    "weapon_type": "normal",
+    "damage_affect_type": "hull_and_armor_and_shields",
+    "damage": 154.0,
+    "penetration": 450.0,
+    "tags": [
+        "phasemissile",
+		"missile",
+        "physical"
+    ],
+    "acquire_target_logic": "order_target_only",
+    "firing": {
+        "firing_type": "spawn_torpedo",
+        "torpedo_firing_definition": {
+            "spawned_unit": "vasari_phase_missile_medium",
+            "duration": 21.0,
+            "bypass_shields_chance": 0.30
+        }
+    },
+    "burst_pattern": [
+        0.0,
+        0.250,
+        0.50
+    ],
+    "effects": {
+        "muzzle_picking_behavior": "sequential",
+        "muzzle_effect": "vasari_long_range_frigate_medium_phase_missile_weapon_muzzle",
+        "hit_shield_impact_radius_t": 0.520
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "version": 0,
+    "name": "weapon_name.medium_missile",
+    "pitch_speed": 0.0,
+    "yaw_speed": 15.0,
+    "yaw_firing_tolerance": 5.0,
+    "range": 7500.0,
+    "cooldown_duration": 18.0,
+    "uniforms_target_filter_id": "common_weapon",
+    "attack_target_type_groups": [
+        "heavy_capital"
+    ],
+    "weapon_type": "normal",
+    "damage_affect_type": "hull_and_armor_and_shields",
+    "damage": 150.0,
+    "penetration": 400.0,
+    "tags": [
+        "missile",
+        "physical"
+    ],
+    "acquire_target_logic": "order_target_or_best_target_in_range",
+    "firing":
+    {
+        "firing_type": "spawn_torpedo",
+        "torpedo_firing_definition":
+        {
+            "spawned_unit": "trader_medium_torpedo",
+            "duration": 15.0
+        }
+    },
+    "effects":
+    {
+        "muzzle_picking_behavior": "sequential",
+        "muzzle_effect": "trader_support_capital_ship_medium_missile_weapon_muzzle",
+        "hit_shield_impact_radius_t": 0.75
+    },
+    "turret":
+    {
+        "type": "biaxial",
+        "biaxial_base_mesh": "pirate_misturret_mount_1",
+        "biaxial_barrel_mesh": "pirate_misturret_barrel_1",
+        "barrel_position": [-0.000977, 2.555561, 0.002934],
+        "muzzle_positions": [
+            [-0.300568, 13.608318, 16.067177],
+            [-4.08194, 8.326328, 16.067177],
+            [3.548004, 8.326328, 16.067177]
+        ]
+    }
+}
