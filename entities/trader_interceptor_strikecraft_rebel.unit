@@ -50,8 +50,7 @@
     {
         "attack_target_type_groups": [
             "strikecraft_torpedo",
-            "corvette",
-            "light"
+            "corvette"
         ],
         "attack_target_type_groups_matching_weapon": "trader_interceptor_strikecraft_light_autocannon",
         "auto_follow_target_priority": -1.0,
