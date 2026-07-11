@@ -1,0 +1,37 @@
+{
+    "version": 0,
+    "gui":
+    {
+        "hud_icon": "advent_guardian_cruiser_hud_icon",
+        "name": "npc_reward.alutar_support_fleet.name",
+        "description": "npc_reward.alutar_support_fleet.description",
+        "gravity_well_fixture_target_filter_description": "npc_reward.gravity_well_target_filter_description.detected_planets"
+    },
+    "gravity_well_fixture_target_filter_id": "uniforms_friendly_planets",
+    "uses_range": false,
+    "type": "spawn_units",
+    "spawn_units":
+    {
+        "player_ai_usage": "defend_planet",
+        "spawn_units":
+        {
+            "random_units": [
+            {
+                "unit": "advent_defense_cruiser",
+                "weight": 2.0
+            },
+            {
+                "unit": "advent_guardian_cruiser",
+                "weight": 2.0
+            },
+            {
+                "unit": "advent_subjugator_cruiser",
+                "weight": 1.0
+            }]
+        },
+        "arrival_delay_duration": 1,
+        "special_operation_unit_kind": "alutar_support_fleet",
+        "target_alert": "targeted_by_ability",
+        "supply": 250
+    }
+}

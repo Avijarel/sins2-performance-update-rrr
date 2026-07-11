@@ -1,0 +1,36 @@
+{
+    "version": 0,
+    "make_dead_on_parent_buff_made_dead": true,
+    "make_dead_on_distance_to_parent_buff_exceeded":
+    {
+        "distance": "missile_guidance_computer_radius_value"
+    },
+    "stacking_limit":
+    {
+        "stacking_limit": "fixed_one",
+        "stacking_limit_met_behavior": "restart_existing_buff"
+    },
+    "stacking_ownership_type": "for_all_players",
+    "restart_other_stacked_buffs_when_started": true,
+    "weapon_modifiers": [
+    {
+        "buff_weapon_modifier_id": "weapon_damage_modifier"
+    }],
+    "unit_mutations": [
+        "enable_can_create_retargeting_torpedoes"
+    ],
+    "gui":
+    {
+        "hud_icon": "trader_missile_guidance_computer_unit_item_hud_icon",
+        "name": "trader_missile_guidance_computer_unit_item_name",
+        "visibility_scope": "positive",
+        "tooltip_line_groups": [
+        {
+            "lines": [
+            {
+                "rendering_type": "buff_weapon_modifier",
+                "weapon_modifier_id": "weapon_damage_modifier"
+            }]
+        }]
+    }
+}

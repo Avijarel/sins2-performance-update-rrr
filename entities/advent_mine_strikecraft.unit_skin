@@ -1,0 +1,68 @@
+{
+    "version": 0,
+    "skin_stages": [
+        {
+            "is_main_view_icon_visible_camera_distance": 4604.111,
+            "min_camera_distance": 31.976197,
+            "gui": {
+                "hud_icon": "advent_mine_strikecraft_hud_icon",
+                "hud_monochrome_icon": "advent_mine_strikecraft_main_view_icon",
+                "hud_picture": "advent_mine_strikecraft_hud_picture",
+                "name": "advent_mine_strikecraft_name",
+                "description": "advent_mine_strikecraft_desc"
+            },
+            "unit_mesh": {
+                "mesh": "advent_mine_strikecraft",
+                "shader": "ship",
+                "is_shadow_blocker": true
+            },
+            "main_view_icon": {
+                "group": "ship",
+                "icon": "advent_mine_strikecraft_main_view_icon"
+            },
+            "effects": {
+                "exhaust_effects": {
+                    "particle_effects": [
+                        {
+                            "particle_effect": "exhaustsmall"
+                        }
+                    ],
+                    "trail_effects": [
+                        {
+                            "trail_effect": "fighterpsicombat"
+                        }
+                    ]
+                },
+                "flair_effects": [
+                    {
+                        "mesh_point_name": "hangar.0",
+                        "particle_effect": "advent_psicoreblink_small"
+                    }
+                ]
+            },
+            "sounds": {
+                "move_sounds": {
+                    "engine": "ambient_loop_psi_engine_strikecraft"
+                },
+                "dialogue": {
+                    "selected": {
+                        "neutral": [
+                            "advent_mine_strikecraft_selected"
+                        ]
+                    },
+                    "order_issued": {
+                        "neutral": [
+                            "advent_mine_strikecraft_selected"
+                        ]
+                    },
+                    "attack_order_issued": {
+                        "neutral": [
+                            "advent_mine_strikecraft_selected"
+                        ]
+                    }
+                }
+            },
+            "death_sequence_group": "advent_mine"
+        }
+    ]
+}

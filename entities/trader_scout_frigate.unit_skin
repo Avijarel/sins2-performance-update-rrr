@@ -1,0 +1,282 @@
+{
+    "version": 0,
+    "skin_stages": [
+    {
+        "is_main_view_icon_visible_camera_distance": 3340.724453,
+        "min_camera_distance": 186.673838,
+        "gui":
+        {
+            "hud_icon": "trader_scout_frigate_hud_icon",
+            "hud_monochrome_icon": "trader_scout_frigate_main_view_icon",
+            "hud_picture": "trader_scout_frigate_hud_picture",
+            "tooltip_picture": "trader_scout_frigate_tooltip_picture",
+            "name": "trader_scout_frigate_name",
+            "description": "trader_scout_frigate_description",
+			"show_description_in_unit_tooltip": true
+        },
+        "unit_mesh":
+        {
+            "mesh": "trader_scout_frigate",
+            "shader": "ship",
+            "is_shadow_blocker": true
+        },
+        "child_mesh_alias_bindings":
+        {
+            "map": [
+            {
+                "mesh_alias_name": "pdturret_barrel_0",
+                "mesh_definition":
+                {
+                    "mesh": "trader_asset_frigate_pdturret_barrel_0",
+                    "shader": "ship",
+                    "is_shadow_blocker": true
+                }
+            },
+            {
+                "mesh_alias_name": "pdturret_mount_0",
+                "mesh_definition":
+                {
+                    "mesh": "trader_asset_frigate_pdturret_mount_0",
+                    "shader": "ship",
+                    "is_shadow_blocker": true
+                }
+            }]
+        },
+        "main_view_icon":
+        {
+            "group": "ship",
+            "icon": "trader_scout_frigate_main_view_icon",
+            "selected_icon": "trader_scout_frigate_main_view_icon_selected",
+            "sub_selected_icon": "trader_scout_frigate_main_view_icon_sub_selected"
+        },
+        "effects":
+        {
+            "exhaust_effects":
+            {
+                "particle_effects": [
+                {
+                    "particle_effect": "exhaust_tech_medium_01"
+                }]
+            },
+            "hyperspace_effects":
+            {
+                "charge_effect": "hyperspace_tech_frigate_chargeup",
+                "charge_effect_between_stars": "hyperspace_tech_frigate_chargeup_interstellar",
+                "charge_effect_destabilized": "hyperspace_tech_frigate_chargeup_unstable",
+                "travel_effect": "hyperspace_tech_frigate_travel",
+                "travel_effect_between_stars": "hyperspace_tech_frigate_travel_interstellar",
+                "travel_effect_destabilized": "hyperspace_tech_frigate_travel_unstable",
+                "exit_effect": "hyperspace_tech_frigate_exit",
+                "charge_sound": "hyperspace_chargeup",
+                "enter_sound": "hyperspace_entry",
+                "exit_sound": "hyperspace_exit"
+            },
+            "damage_effects":
+            {
+                "max_damage_effect_count": 4,
+                "damage_effects": [
+                {
+                    "max_count": 2,
+                    "weight": 4.0,
+                    "hull_percentage_threshold": 0.99,
+                    "particle_effect": "tec_damage_embers"
+                },
+                {
+                    "max_count": 2,
+                    "weight": 4.0,
+                    "hull_percentage_threshold": 0.99,
+                    "particle_effect": "damage_smoke_1"
+                },
+                {
+                    "max_count": 1,
+                    "weight": 3.0,
+                    "hull_percentage_threshold": 0.75,
+                    "particle_effect": "tec_damage_plasma_sparks"
+                },
+                {
+                    "max_count": 1,
+                    "weight": 3.0,
+                    "hull_percentage_threshold": 0.75,
+                    "particle_effect": "damage_electricity_2",
+                    "sound": "ambient_loop_electrical_damage_01"
+                },
+                {
+                    "max_count": 1,
+                    "weight": 2.0,
+                    "hull_percentage_threshold": 0.75,
+                    "particle_effect": "damage_air_decompression",
+                    "sound": "ambient_loop_airdecompression"
+                }]
+            },
+            "flair_effects": [
+            {
+                "mesh_point_name": "center",
+                "particle_effect": "tec_damage_frigate",
+                "constraint": "is_crippled"
+            }],
+            "shield_effect": "trader_scout_frigate",
+            "effect_alias_bindings": [
+            {
+                "alias_name": "trader_scout_frigate_autocannon_weapon_hit_hull",
+                "alias_binding":
+                {
+                    "particle_effect": "medium_autocannon_impact",
+                    "sounds": [
+                        "weapon_impact_physical_medium_hithull",
+                        "weapon_impact_physical_medium_hithull_01",
+                        "weapon_impact_physical_medium_hithull_02",
+                        "weapon_impact_physical_medium_hithull_03",
+                        "weapon_impact_physical_medium_hithull_04"
+                    ]
+                }
+            },
+            {
+                "alias_name": "trader_scout_frigate_autocannon_weapon_hit_shield",
+                "alias_binding":
+                {
+                    "particle_effect": "medium_autocannon_impact",
+                    "sounds": [
+                        "weapon_impact_generic_medium_hitshields",
+                        "weapon_impact_generic_medium_hitshields_01",
+                        "weapon_impact_generic_medium_hitshields_02",
+                        "weapon_impact_generic_medium_hitshields_03"
+                    ]
+                }
+            },
+            {
+                "alias_name": "trader_scout_frigate_autocannon_weapon_muzzle",
+                "alias_binding":
+                {
+                    "particle_effect": "trader_medium_autocannon_weapon_muzzle",
+                    "sounds": [
+                        "weapon_muzzle_tech_medium_autocannon",
+                        "weapon_muzzle_tech_medium_autocannon_01",
+                        "weapon_muzzle_tech_medium_autocannon_02",
+                        "weapon_muzzle_tech_medium_autocannon_03",
+                        "weapon_muzzle_tech_medium_autocannon_04"
+                    ]
+                }
+            },
+            {
+                "alias_name": "trader_scout_frigate_autocannon_weapon_projectile_travel",
+                "alias_binding":
+                {
+                    "particle_effect": "trader_medium_autocannon_weapon_projectile_travel"
+                }
+            },
+            {
+                "alias_name": "trader_scout_frigate_point_defense_autocannon_weapon_hit_hull",
+                "alias_binding":
+                {
+                    "particle_effect": "pd_autocannon_impact",
+                    "sounds": [
+                        "weapon_impact_physical_pointdefense_hithull",
+                        "weapon_impact_physical_pointdefense_hithull_01",
+                        "weapon_impact_physical_pointdefense_hithull_02",
+                        "weapon_impact_physical_pointdefense_hithull_03"
+                    ]
+                }
+            },
+            {
+                "alias_name": "trader_scout_frigate_point_defense_autocannon_weapon_hit_shield",
+                "alias_binding":
+                {
+                    "particle_effect": "pd_autocannon_impact",
+                    "sounds": [
+                        "weapon_impact_generic_pointdefense_hitshields",
+                        "weapon_impact_generic_pointdefense_hitshields_01",
+                        "weapon_impact_generic_pointdefense_hitshields_02"
+                    ]
+                }
+            },
+            {
+                "alias_name": "trader_scout_frigate_point_defense_autocannon_weapon_muzzle",
+                "alias_binding":
+                {
+                    "particle_effect": "trader_point_defense_autocannon_weapon_muzzle",
+                    "sounds": [
+                        "weapon_muzzle_tech_pointdefense_autocannon",
+                        "weapon_muzzle_tech_pointdefense_autocannon_01",
+                        "weapon_muzzle_tech_pointdefense_autocannon_02",
+                        "weapon_muzzle_tech_pointdefense_autocannon_03"
+                    ]
+                }
+            },
+            {
+                "alias_name": "trader_scout_frigate_point_defense_autocannon_weapon_projectile_travel",
+                "alias_binding":
+                {
+                    "particle_effect": "trader_point_defense_autocannon_weapon_projectile_travel"
+                }
+            }]
+        },
+        "sounds":
+        {
+            "move_sounds":
+            {
+                "engine": "engine_techfrigateship",
+                "hyperspace_travel": "hyperspace_travel"
+            },
+            "dialogue":
+            {
+                "spawned":
+                {
+                    "neutral": [
+                        "Frigate_TechScout_OnCreation"]
+                },
+                "selected":
+                {
+                    "neutral": [
+                        "Frigate_TechScout_OnSelected_0",
+                        "Frigate_TechScout_OnSelected_1",
+                        "Frigate_TechScout_OnSelected_2",
+						"Frigate_TechScout_OnSelected_3"
+                    ],
+                    "scared": [
+                        "Frigate_TechScout_OnSelected_0",
+                        "Frigate_TechScout_OnSelected_1",
+                        "Frigate_TechScout_OnSelected_2",
+						"Frigate_TechScout_OnSelected_3"
+                    ]
+                },
+                "order_issued":
+                {
+                    "neutral": [
+                        "Frigate_TechScout_OnGeneralOrderIssued_0",
+                        "Frigate_TechScout_OnGeneralOrderIssued_1",
+                        "Frigate_TechScout_OnGeneralOrderIssued_2"
+                    ],
+                    "scared": [
+                        "Frigate_TechScout_OnGeneralOrderIssued_0",
+                        "Frigate_TechScout_OnGeneralOrderIssued_1",
+                        "Frigate_TechScout_OnGeneralOrderIssued_2"
+                    ]
+                },
+                "attack_order_issued":
+                {
+                    "neutral": [
+                        "Frigate_TechScout_OnAttackOrderIssued_0",
+                        "Frigate_TechScout_OnAttackOrderIssued_1",
+                        "Frigate_TechScout_OnAttackOrderIssued_2"
+                    ],
+                    "scared": [
+                        "Frigate_TechScout_OnAttackOrderIssued_0",
+                        "Frigate_TechScout_OnAttackOrderIssued_1",
+                        "Frigate_TechScout_OnAttackOrderIssued_2"
+                    ],
+                    "smug": [
+                        "Frigate_TechScout_OnAttackOrderIssued_0",
+                        "Frigate_TechScout_OnAttackOrderIssued_1",
+                        "Frigate_TechScout_OnAttackOrderIssued_2"
+                    ]
+                },
+                "hyperspace_charge_started":
+                {
+                    "neutral": [
+                        "Frigate_TechScout_OnStartPhaseJump_0"]
+                }
+            }
+        },
+        "death_sequence_group": "frigate0"
+    }]
+}

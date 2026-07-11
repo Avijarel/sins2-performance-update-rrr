@@ -1,0 +1,43 @@
+{
+    "version": 0,
+    "name": "weapon_name.heavy_phase_missile",
+    "pitch_speed": 0.0,
+    "yaw_speed": 0.0,
+    "range": 8000.0,
+    "cooldown_duration": 12.0,
+    "uniforms_target_filter_id": "common_weapon",
+    "attack_target_type_groups": [
+        "heavy_capital",
+        "defense"
+    ],
+    "weapon_type": "normal",
+    "damage_affect_type": "hull_and_armor_and_shields",
+    "damage": 2880.0,
+    "penetration": 600.0,
+    "tags": [
+        "phasemissile",
+		"missile",
+        "physical"
+    ],
+    "acquire_target_logic": "order_target_only",
+    "firing":
+    {
+        "firing_type": "spawn_torpedo",
+        "torpedo_firing_definition":
+        {
+            "spawned_unit": "vasari_phase_missile_large",
+            "duration": 21.0,
+            "bypass_shields_chance": 0.3
+        }
+    },
+    "burst_pattern": [0.0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72, 0.84, 0.96, 1.08, 1.2, 1.32, 1.44,
+        1.56, 1.68, 1.8, 1.92, 2.04, 2.16, 2.28, 2.4, 2.52, 2.64, 2.76, 2.88, 3.0, 3.12, 3.24,
+        3.36, 3.48, 3.6, 3.72
+    ],
+    "effects":
+    {
+        "muzzle_picking_behavior": "sequential",
+        "muzzle_effect": "vasari_rebel_titan_missile_weapon_muzzle",
+        "hit_shield_impact_radius_t": 0.75
+    }
+}

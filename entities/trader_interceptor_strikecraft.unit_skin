@@ -1,0 +1,174 @@
+{
+    "version": 0,
+    "skin_stages": [
+    {
+        "is_main_view_icon_visible_camera_distance": 2897.056275,
+        "min_camera_distance": 28.987115,
+        "gui":
+        {
+            "hud_icon": "trader_interceptor_strikecraft_hud_icon",
+            "hud_monochrome_icon": "trader_interceptor_strikecraft_main_view_icon",
+            "hud_picture": "trader_interceptor_strikecraft_hud_picture",
+            "tooltip_picture": "trader_interceptor_strikecraft_tooltip_picture",
+            "name": "trader_interceptor_strikecraft_name",
+            "description": "trader_interceptor_strikecraft_description"
+        },
+        "unit_mesh":
+        {
+            "mesh": "trader_interceptor_strikecraft",
+            "shader": "ship",
+            "is_shadow_blocker": true
+        },
+        "main_view_icon":
+        {
+            "group": "ship",
+            "icon": "trader_interceptor_strikecraft_main_view_icon",
+            "selected_icon": "trader_interceptor_strikecraft_main_view_icon_selected",
+            "sub_selected_icon": "trader_interceptor_strikecraft_main_view_icon_sub_selected"
+        },
+        "effects":
+        {
+            "exhaust_effects":
+            {
+                "particle_effects": [
+                {
+                    "particle_effect": "exhaust_tech_tiny_01"
+                }],
+                "trail_effects": [
+                {
+                    "trail_effect": "fightertechcombat"
+                }]
+            },
+            "effect_alias_bindings": [
+            {
+                "alias_name": "trader_point_defense_beam_weapon_beam",
+                "alias_binding":
+                {
+                    "beam": "trader_point_defense_beam_weapon_beam",
+                    "sounds": ["weapon_psisupportbeamlight_travel"]
+                }
+            },
+            {
+                "alias_name": "trader_point_defense_beam_weapon_hit_hull",
+                "alias_binding":
+                {
+                    "particle_effect": "light_autocannon_impact"
+                }
+            },
+            {
+                "alias_name": "trader_point_defense_beam_weapon_hit_shield",
+                "alias_binding":
+                {
+                    "particle_effect": "light_autocannon_impact"
+                }
+            },
+            {
+                "alias_name": "trader_point_defense_beam_weapon_muzzle",
+                "alias_binding":
+                {
+                    "particle_effect": "trader_beam_muzzle"
+                }
+            },
+            {
+                "alias_name": "trader_interceptor_strikecraft_light_autocannon_weapon_hit_hull",
+                "alias_binding":
+                {
+                    "particle_effect": "light_autocannon_impact",
+                    "sounds": [
+                        "weapon_impact_physical_light_hithull",
+                        "weapon_impact_physical_light_hithull_01",
+                        "weapon_impact_physical_light_hithull_02",
+                        "weapon_impact_physical_light_hithull_03",
+                        "weapon_impact_physical_light_hithull_04"
+                    ]
+                }
+            },
+            {
+                "alias_name": "trader_interceptor_strikecraft_light_autocannon_weapon_hit_shield",
+                "alias_binding":
+                {
+                    "particle_effect": "light_autocannon_impact",
+                    "sounds": [
+                        "weapon_impact_generic_light_hitshields"]
+                }
+            },
+            {
+                "alias_name": "trader_interceptor_strikecraft_light_autocannon_weapon_muzzle",
+                "alias_binding":
+                {
+                    "particle_effect": "trader_light_autocannon_weapon_muzzle",
+                    "sounds": [
+                        "weapon_techsupportautocannonlight_muzzle",
+                        "weapon_techsupportautocannonlight_muzzle_alt1",
+                        "weapon_techsupportautocannonlight_muzzle_alt2"
+                    ]
+                }
+            },
+            {
+                "alias_name": "trader_interceptor_strikecraft_light_autocannon_weapon_projectile_travel",
+                "alias_binding":
+                {
+                    "particle_effect": "trader_light_autocannon_weapon_projectile_travel"
+                }
+            }]
+        },
+        "sounds":
+        {
+            "move_sounds":
+            {
+                "engine": "engine_techstrikecraft"
+            },
+            "dialogue":
+            {
+                "selected":
+                {
+                    "neutral": [
+                        "trader_interceptor_strikecraft_selected_neutral_0",
+                        "trader_interceptor_strikecraft_selected_neutral_1",
+                        "trader_interceptor_strikecraft_selected_neutral_2"
+                    ],
+                    "scared": [
+                        "trader_interceptor_strikecraft_selected_scared_0_placeholder",
+                        "trader_interceptor_strikecraft_selected_scared_1_placeholder",
+                        "trader_interceptor_strikecraft_selected_scared_2_placeholder"
+                    ]
+                },
+                "order_issued":
+                {
+                    "neutral": [
+                        "trader_interceptor_strikecraft_order_issued_neutral_0",
+                        "trader_interceptor_strikecraft_order_issued_neutral_1",
+                        "trader_interceptor_strikecraft_order_issued_neutral_2"
+                    ],
+                    "scared": [
+                        "trader_interceptor_strikecraft_order_issued_scared_0_placeholder",
+                        "trader_interceptor_strikecraft_order_issued_scared_1_placeholder",
+                        "trader_interceptor_strikecraft_order_issued_scared_2_placeholder"
+                    ]
+                },
+                "attack_order_issued":
+                {
+                    "neutral": [
+                        "trader_interceptor_strikecraft_attack_order_issued_neutral_0",
+                        "trader_interceptor_strikecraft_attack_order_issued_neutral_1",
+                        "trader_interceptor_strikecraft_attack_order_issued_neutral_2",
+                        "trader_interceptor_strikecraft_attack_order_issued_neutral_3"
+                    ],
+                    "scared": [
+                        "trader_interceptor_strikecraft_attack_order_issued_scared_0_placeholder",
+                        "trader_interceptor_strikecraft_attack_order_issued_scared_1_placeholder",
+                        "trader_interceptor_strikecraft_attack_order_issued_scared_2_placeholder",
+                        "trader_interceptor_strikecraft_attack_order_issued_scared_3_placeholder"
+                    ],
+                    "smug": [
+                        "trader_interceptor_strikecraft_attack_order_issued_smug_0_placeholder",
+                        "trader_interceptor_strikecraft_attack_order_issued_smug_1_placeholder",
+                        "trader_interceptor_strikecraft_attack_order_issued_smug_2_placeholder",
+                        "trader_interceptor_strikecraft_attack_order_issued_smug_3_placeholder"
+                    ]
+                }
+            }
+        },
+        "death_sequence_group": "strikecraft0"
+    }]
+}

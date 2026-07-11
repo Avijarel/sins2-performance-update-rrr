@@ -1,0 +1,39 @@
+{
+    "version": 0,
+    "name": "weapon_name.heavy_missile",
+    "pitch_speed": 0.0,
+    "yaw_speed": 0.0,
+    "range": 12000.0,
+    "cooldown_duration": 15.0,
+    "uniforms_target_filter_id": "common_weapon",
+    "attack_target_type_groups": [
+        "heavy_capital",
+        "defense"
+    ],
+    "weapon_type": "normal",
+    "damage_affect_type": "hull_and_armor_and_shields",
+    "damage": 600.0,
+    "penetration": 1000.0,
+    "tags": [
+        "missile",
+        "physical"
+    ],
+    "acquire_target_logic": "order_target_or_best_target_in_range",
+    "firing":
+    {
+        "firing_type": "spawn_torpedo",
+        "torpedo_firing_definition":
+        {
+            "spawned_unit": "pirate_large_torpedo",
+            "duration": 25.0,
+            "enable_steering_distance_as_radius_scalar": 1.5
+        }
+    },
+    "burst_pattern": [0.0, 0.6],
+    "effects":
+    {
+        "muzzle_picking_behavior": "sequential",
+        "muzzle_effect": "pirate_king_capital_ship_missile_weapon_muzzle",
+        "hit_shield_impact_radius_t": 0.75
+    }
+}

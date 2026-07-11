@@ -1,0 +1,40 @@
+{
+    "version": 0,
+    "gui":
+    {
+        "hud_icon": "advent_siege_frigate_hud_icon",
+        "name": "npc_reward.nilari_eradication_fleet.name",
+        "description": "npc_reward.nilari_eradication_fleet.description",
+        "gravity_well_fixture_target_filter_description": "npc_reward.gravity_well_target_filter_description.uniforms_npc_raid_targets"
+    },
+    "gravity_well_fixture_target_filter_id": "uniforms_npc_raid_targets",
+    "uses_range": false,
+    "type": "spawn_units",
+    "spawn_units":
+    {
+        "player_ai_usage": "raid_enemy_planet",
+        "special_operation_unit_kind": "nilari_cult_attack_ships",
+        "spawn_units":
+        {
+            "required_units": [
+            {
+                "unit": "advent_siege_frigate",
+                "count": [2, 2]
+            }],
+            "random_units": [
+            {
+                "unit": "advent_light_frigate",
+                "weight": 0.4
+            },
+            {
+                "unit": "advent_siege_frigate",
+                "weight": 0.2
+            },
+            {
+                "unit": "advent_heavy_cruiser",
+                "weight": 0.4
+            }]
+        },
+        "supply": 125
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 485.697968,
+        "box": {
+            "center": [
+                10.309204,
+                0.0,
+                -6.912323
+            ],
+            "extents": [
+                349.556915,
+                303.566376,
+                386.520355
+            ]
+        },
+        "collision_rank": 0
+    },
+    "physics": {
+        "can_move_linear": true,
+        "max_linear_speed": 500.0,
+        "time_to_max_linear_speed": 25.0,
+        "can_move_angular": true
+    },
+    "debris": {
+        "lifetime": [
+            5.0,
+            5.0
+        ],
+        "linear_speed": [
+            5.0,
+            20.0
+        ],
+        "angular_speed": [
+            0.06,
+            0.3
+        ]
+    },
+    "target_filter_unit_type": "debris",
+    "skin_groups": [
+        {
+            "skins": [
+                "dlc2_vasari_rebel_super_capital_ship_debris_mid"
+            ]
+        }
+    ],
+    "action_effect_size": "small_unit"
+}

@@ -920,6 +920,10 @@
             "count": [3, 5]
         },
         {
+            "unit": "vasari_minelayer_cruiser",
+            "count": [1, 1]
+        },
+        {
             "unit": "vasari_starbase_n",
             "count": [1, 1]
         }]
@@ -1025,18 +1029,20 @@
         "vasari_scout_corvette",
         "vasari_anticorvette_corvette",
         "vasari_light_frigate",
-		"vasari_antifighter_frigate",
+        "vasari_antifighter_frigate",
         "vasari_raider_corvette",
         "vasari_siege_cruiser",
         "vasari_heavy_cruiser",
-		"vasari_fabricator_cruiser",
+        "vasari_fabricator_cruiser",
         "vasari_long_range_frigate",
+        "vasari_carrier_cruiser",
         "vasari_antiarmor_cruiser",
-		"vasari_offensive_support_cruiser"
+        "vasari_offensive_support_cruiser",
+	"vasari_minelayer_cruiser"
     ],
     "structure_builder":
     {
-        "ship": "vasari_constructor_ship",
+        "ship": "vasari_constructor_ship_npc",
         "special_operation_unit_kind": "structure_builder"
     },
     "structures": [
@@ -1052,11 +1058,12 @@
     ],
     "npc":
     {
+        "can_survey_planets": false,
         "visuals": [
         {
             "name": "npc_player.korvaska_war_profiteers.name",
             "description": "npc_player.korvaska_war_profiteers.description",
-            "portrait": "miner_0",
+            "portrait": "npc_korvaska_0",
             "icon": "faction_7",
             "color_group": "npc_korvaska_war_profiteers",
             "reputation_panel": "korvaska_war_profiteers_panel"
@@ -1078,17 +1085,13 @@
                 "attacking": "viturak_npc_attacking_0"
             }
         },
-		"ai_difficulty": "hard",
         "ai_params":
         {
-            "max_jumps_from_home_planet_for_fleets": 99,
+            "will_fleet_colonize": false,
             "will_fleet_retreat": false,
-			"will_fleet_colonize": false,
-            "fleet_will_probably_defeat_ratio_range": [0.7, 1.1],
-            "chaos_factor_range": [0.8, 1.00],
-            "chaos_factor_update_interval": 100,
-			"defense_to_offsense_spend_ratio": 0.2,
-            "pick_another_buildable_attack_ship_type_interval_in_minutes": [10, 20],
+            "fleet_will_probably_defeat_ratio_range": [0.9, 1.1],
+            "max_jumps_from_home_planet_for_fleets": 1,
+            "pick_another_buildable_attack_ship_type_interval_in_minutes": [0, 0],
             "desired_explore_ship_count":
             {
                 "type": "constant",
@@ -1097,8 +1100,8 @@
         },
         "max_fleet_supply":
         {
-            "roam": [625, 625, 625, 625],
-            "defend": [1250, 1250, 1250, 1250]
+            "roam": [94, 187, 375, 625],
+            "defend": [312, 625, 875, 1250]
         },
         "npc_tags": [
             "korvaska"
@@ -1106,6 +1109,34 @@
         "start_allied_to_playable_players": false,
         "start_allied_to_other_npc_players": false,
         "start_allied_to_militia_npc_players": false,
+        "bounty_market":
+        {
+            "market_weight": 12,
+            "bounty_cut": 0.5,
+            "metal_credit_value": 3.0,
+            "crystal_credit_value": 3.0,
+            "exotic_credit_values": [
+            {
+                "exotic_name": "offense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "defense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "utility",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "economic",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "ultimate",
+                "credit_value": 1500
+            }]
+        },
         "auctions": [
         {
             "weight": 1.0,
@@ -1164,96 +1195,369 @@
                 "",
                 "integrated_target_core_ship_artifact"]
         }],
-		"events": [
-		{
-			"cooldown_duration": [9999999999, 9999999999],
-			"initial_cooldown": [3300, 3300],
-			"running_duration": 300,
-			"weight": 1,
-			"event_type": "raid",
-			"raid_levels": [
-			{
-				"raid":
-				{
-                    "units":
+        "raid_arrival_taunt_chance": 0.4,
+        "raid_arrival_messages": [
+            "npc_korvaska_raid_arrival_taunt.0",
+            "npc_korvaska_raid_arrival_taunt.1",
+            "npc_korvaska_raid_arrival_taunt.2",
+            "npc_korvaska_raid_arrival_taunt.3",
+            "npc_korvaska_raid_arrival_taunt.4",
+            "npc_korvaska_raid_arrival_taunt.5"
+        ],
+        "max_concurrent_raids": 4,
+        "raid_types": [
+        {
+            "raid_type": "collect_bounty",
+            "awakening_cooldown": [120.0, 240.0],
+            "standard_cooldown": [450.0, 720.0],
+            "initial_delay_from_game_start": [900.0, 1200.0],
+            "max_jump_distance": 25,
+            "dormant_target_search_interval": 10.0,
+            "arrival_delay_duration": 30.0,
+            "target_reevaluation_interval": 2.0,
+            "composition_brackets": [
+            {
+                "value_threshold": [0.0, 5000.0],
+                "units":
+                {
+                    "required_units": [
                     {
-						"random_units": [
-						{
-							"unit": "vasari_antifighter_frigate",
-							"weight": 1.0
-						}]
-                    },
-					"supply": 1
-				}
-			},
-			{
-				"raid":
-				{
-                    "units":
+                        "unit": "vasari_siege_cruiser",
+                        "count": [1, 2]
+                    }],
+                    "random_units": [
                     {
-						"random_units": [
-						{
-							"unit": "vasari_antifighter_frigate",
-							"weight": 1.0
-						}]
+                        "unit": "vasari_long_range_frigate",
+                        "weight": 2.0
                     },
-					"supply": 1
-				}
-			},
-			{
-				"raid":
-				{
-                    "units":
                     {
-						"random_units": [
-						{
-							"unit": "vasari_antifighter_frigate",
-							"weight": 1.0
-						}]
+                        "unit": "vasari_raider_corvette",
+                        "weight": 4.0
                     },
-					"supply": 1
-				}
-			},
-			{
-				"raid":
-				{
-                    "units":
                     {
-						"random_units": [
-						{
-							"unit": "vasari_antifighter_frigate",
-							"weight": 1.0
-						}]
+                        "unit": "vasari_offensive_support_cruiser",
+                        "weight": 0.5
+                    }]
+                },
+                "supply_cap": 100,
+                "threat_level": "low"
+            },
+            {
+                "value_threshold": [5000.0, 10000.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "vasari_siege_cruiser",
+                        "count": [3, 4]
                     },
-					"supply": 1
-				}
-			}]
-		}],
+                    {
+                        "unit": "vasari_fabricator_cruiser",
+                        "count": [1, 1]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "vasari_long_range_frigate",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "vasari_offensive_support_cruiser",
+                        "weight": 1.0
+                    }]
+                },
+                "supply_cap": 150,
+                "threat_level": "moderate"
+            },
+            {
+                "value_threshold": [10000.0, 25000.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "vasari_siege_cruiser",
+                        "count": [5, 6]
+                    },
+                    {
+                        "unit": "vasari_fabricator_cruiser",
+                        "count": [2, 2]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "vasari_long_range_frigate",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "vasari_offensive_support_cruiser",
+                        "weight": 1.0
+                    }]
+                },
+                "supply_cap": 225,
+                "threat_level": "medium"
+            },
+            {
+                "value_threshold": [25000.0, 50000.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "vasari_siege_cruiser",
+                        "count": [7, 8]
+                    },
+                    {
+                        "unit": "vasari_fabricator_cruiser",
+                        "count": [3, 3]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "vasari_antiarmor_cruiser",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "vasari_long_range_frigate",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "vasari_offensive_support_cruiser",
+                        "weight": 1.0
+                    }]
+                },
+                "supply_cap": 425,
+                "threat_level": "high"
+            },
+            {
+                "value_threshold": [50000.0, 1000000.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "vasari_siege_cruiser",
+                        "count": [9, 10]
+                    },
+                    {
+                        "unit": "vasari_fabricator_cruiser",
+                        "count": [4, 4]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "vasari_antiarmor_cruiser",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "vasari_long_range_frigate",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "vasari_offensive_support_cruiser",
+                        "weight": 1.0
+                    }]
+                },
+                "supply_cap": 825,
+                "threat_level": "extreme"
+            }]
+        },
+        {
+            "raid_type": "destroy_infrastructure",
+            "target_structure_threshold": 5,
+            "awakening_cooldown": [30.0, 60.0],
+            "standard_cooldown": [240.0, 300.0],
+            "initial_delay_from_game_start": [3600.0, 3600.0],
+            "max_jump_distance": 99,
+            "dormant_target_search_interval": 10.0,
+            "arrival_delay_duration": 10.0,
+            "composition_brackets": [
+            {
+                "value_threshold": [0.0, 100.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "count": [18, 24]
+                    },
+                    {
+                        "unit": "vasari_fabricator_cruiser",
+                        "count": [3, 3]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "vasari_long_range_frigate",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "weight": 4.0
+                    },
+                    {
+                        "unit": "vasari_offensive_support_cruiser",
+                        "weight": 0.5
+                    }]
+                },
+                "supply_cap": 600,
+                "threat_level": "low"
+            },
+            {
+                "value_threshold": [100.0, 500.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "count": [18, 24]
+                    },
+                    {
+                        "unit": "vasari_fabricator_cruiser",
+                        "count": [3, 3]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "vasari_long_range_frigate",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "vasari_offensive_support_cruiser",
+                        "weight": 1.0
+                    }]
+                },
+                "supply_cap": 650,
+                "threat_level": "moderate"
+            },
+            {
+                "value_threshold": [100.0, 500.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "count": [18, 24]
+                    },
+                    {
+                        "unit": "vasari_fabricator_cruiser",
+                        "count": [3, 3]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "vasari_long_range_frigate",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "vasari_offensive_support_cruiser",
+                        "weight": 1.0
+                    }]
+                },
+                "supply_cap": 700,
+                "threat_level": "medium"
+            },
+            {
+                "value_threshold": [500.0, 1000.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "count": [18, 24]
+                    },
+                    {
+                        "unit": "vasari_fabricator_cruiser",
+                        "count": [3, 3]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "vasari_long_range_frigate",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "vasari_offensive_support_cruiser",
+                        "weight": 1.0
+                    }]
+                },
+                "supply_cap": 750,
+                "threat_level": "high"
+            },
+            {
+                "value_threshold": [1000.0, 100000.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "count": [18, 24]
+                    },
+                    {
+                        "unit": "vasari_fabricator_cruiser",
+                        "count": [3, 3]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "vasari_long_range_frigate",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "vasari_raider_corvette",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "vasari_offensive_support_cruiser",
+                        "weight": 1.0
+                    }]
+                },
+                "supply_cap": 800,
+                "threat_level": "extreme"
+            }]
+        }],
         "simple_can_ever_be_colonized_planet_types": [
             "asteroid",
-			"crystalline",
+            "barren",
+            "city",
+            "crystalline",
             "desert",
-			"desert_home",
+            "desert_home",
             "ferrous",
-			"ferrous_home",
-			"ice_asteroid",
+            "ferrous_home",
+            "gas_giant",
+            "greenhouse",
+            "hive_asteroid",
             "ice",
+            "ice_asteroid",
+            "ice_moon",
+            "irradiated",
+            "magnetic",
             "moon",
             "oceanic",
-			"pirate_base",
-			"swamp",
+            "pirate_base",
+            "ship_graveyard",
+            "swamp",
             "terran",
-			"terran_home",
+            "terran_home",
             "volcanic",
-			"ship_graveyard",
-			"greenhouse",
-			"barren",
-			"city",
-			"magnetic",
-			"ice_moon",
-			"volcanic_moon",
-			"gas_giant",
-			"hive_asteroid"
+            "volcanic_moon"
         ],
         "simple_planet_level": 10,
         "simple_planet_tracks":
@@ -1261,13 +1565,14 @@
             "defense":
             {
                 "max_military_structure_slots": 10,
-                "max_health_points": 3000.0,
+                "max_health_points": 4000.0,
                 "health_points_restore_rate": 2.0
             },
             "logistics":
             {
                 "max_civilian_structure_slots": 6,
-                "structure_builder_count": 2
+                "structure_builder_count": 2,
+				"max_planet_component_slots": 2
             },
             "commerce":
             {
@@ -1285,8 +1590,8 @@
             {},
             "surveying":
             {},
-			"focus":
-			{}
+            "focus":
+            {}
         },
         "simple_trade_capacity":
         {},
@@ -1322,22 +1627,46 @@
             {
                 "influence_point_cost": 2,
                 "npc_modifiers":
-                {}
+                {
+                    "npc_bounty_fee":
+                    {
+                        "value_behavior": "additive",
+                        "value": -0.05
+                    }
+		}
             },
             {
                 "influence_point_cost": 4,
                 "npc_modifiers":
-                {}
+                {
+                    "npc_bounty_fee":
+                    {
+                        "value_behavior": "additive",
+                        "value": -0.1
+                    }
+		}
             },
             {
                 "influence_point_cost": 6,
                 "npc_modifiers":
-                {}
+                {
+                    "npc_bounty_fee":
+                    {
+                        "value_behavior": "additive",
+                        "value": -0.15
+                    }
+		}
             },
             {
                 "influence_point_cost": 10,
                 "npc_modifiers":
-                {}
+                {
+                    "npc_bounty_fee":
+                    {
+                        "value_behavior": "additive",
+                        "value": -0.25
+                    }
+		}
             }]
         }
     },

@@ -278,11 +278,12 @@
         "trader_light_frigate",
         "trader_heavy_cruiser",
         "trader_long_range_cruiser",
+        "trader_carrier_cruiser",
 		"trader_battle_capital_ship_n"
     ],
     "structure_builder":
     {
-        "ship": "trader_constructor_ship",
+        "ship": "trader_constructor_ship_npc",
         "special_operation_unit_kind": "structure_builder"
     },
     "structures": [
@@ -294,6 +295,7 @@
     ],
     "npc":
     {
+		"can_survey_planets": false,
         "visuals": [
         {
             "name": "npc_player.guardians.name",
@@ -301,7 +303,7 @@
             "portrait": "merchant_0",
             "icon": "guardian_0",
             "color_group": "militia",
-            "reputation_panel": "hyperion_guardian_panel"
+            "reputation_panel": "renzos_resistance_fighters_panel"
         }],
         "sounds":
         {

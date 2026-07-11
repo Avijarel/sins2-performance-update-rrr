@@ -1,0 +1,151 @@
+{
+    "version": 0,
+    "skin_stages": [
+    {
+        "is_main_view_icon_visible_camera_distance": 10579.109705,
+        "min_camera_distance": 864.159883,
+        "gui":
+        {
+            "hud_icon": "vasari_minelayer_cruiser_hud_icon",
+            "hud_monochrome_icon": "vasari_minelayer_cruiser_main_view_icon",
+            "hud_picture": "vasari_minelayer_cruiser_hud_picture",
+            "name": "vasari_minelayer_cruiser_name",
+            "description": "vasari_minelayer_cruiser_desc"
+        },
+        "unit_mesh":
+        {
+            "mesh": "vasari_minelayer_cruiser",
+            "shader": "ship",
+            "is_shadow_blocker": true
+        },
+        "main_view_icon":
+        {
+            "group": "ship",
+            "icon": "vasari_minelayer_cruiser_main_view_icon"
+        },
+        "effects":
+        {
+            "exhaust_effects":
+            {
+                "particle_effects": [
+                {
+                    "particle_effect": "vasari_exhaust"
+                }]
+            },
+            "hyperspace_effects":
+            {
+                "charge_effect": "vasari_portal_start_cruiser",
+                "charge_effect_between_stars": "hyperspace_vasari_frigate_chargeup_interstellar",
+                "charge_effect_destabilized": "hyperspace_vasari_frigate_chargeup_unstable",
+                "travel_effect": "vasari_cruiser_portal_travel",
+                "travel_effect_between_stars": "hyperspace_vasari_frigate_travel_interstellar",
+                "travel_effect_destabilized": "hyperspace_vasari_frigate_travel_unstable",
+                "exit_effect": "vasari_cruiser_portal_exit",
+                "charge_sound": "hyperspace_chargeup",
+                "enter_sound": "hyperspace_entry",
+                "exit_sound": "hyperspace_exit"
+            },
+            "damage_effects":
+            {
+                "max_damage_effect_count": 8,
+                "damage_effects": [
+                {
+                    "max_count": 2,
+                    "weight": 4.0,
+                    "hull_percentage_threshold": 0.99,
+                    "particle_effect": "vasari_damage_embers"
+                },
+                {
+                    "max_count": 2,
+                    "weight": 4.0,
+                    "hull_percentage_threshold": 0.99,
+                    "particle_effect": "damage_smoke_1"
+                },
+                {
+                    "max_count": 2,
+                    "weight": 4.0,
+                    "hull_percentage_threshold": 0.99,
+                    "particle_effect": "damage_smoke_2"
+                },
+                {
+                    "max_count": 1,
+                    "weight": 3.0,
+                    "hull_percentage_threshold": 0.99,
+                    "particle_effect": "damage_electricity",
+                    "sound": "ambient_loop_electrical_damage"
+                },
+                {
+                    "max_count": 1,
+                    "weight": 2.0,
+                    "hull_percentage_threshold": 0.75,
+                    "particle_effect": "damage_electricity_2",
+                    "sound": "ambient_loop_electrical_damage_01"
+                },
+                {
+                    "max_count": 1,
+                    "weight": 3.0,
+                    "hull_percentage_threshold": 0.75,
+                    "particle_effect": "vasari_damage_plasma_sparks"
+                },
+                {
+                    "max_count": 2,
+                    "weight": 2.0,
+                    "hull_percentage_threshold": 0.75,
+                    "particle_effect": "vasari_damage_clouds"
+                },
+                {
+                    "max_count": 3,
+                    "hull_percentage_threshold": 0.75,
+                    "particle_effect": "vasari_damage_fire",
+                    "sound": "ambient_loop_firedamage"
+                }]
+            },
+            "flair_effects": [
+            {
+                "mesh_point_name": "center",
+                "particle_effect": "vasari_damage_cruiser",
+                "constraint": "is_crippled"
+            }]
+        },
+        "sounds":
+        {
+            "move_sounds":
+            {
+                "engine": "engine_phasesupportship",
+                "hyperspace_travel": "hyperspace_travel"
+            },
+            "dialogue":
+            {
+                "spawned":
+                {
+                    "neutral": [
+                        "Frigate_PhaseMineLayer_OnCreation"]
+                },
+                "selected":
+                {
+                    "neutral": [
+                        "Frigate_PhaseMineLayer_OnSelected_0",
+                        "Frigate_PhaseMineLayer_OnSelected_1",
+                        "Frigate_PhaseMineLayer_OnSelected_2"
+                    ]
+                },
+                "order_issued":
+                {
+                    "neutral": [
+                        "Frigate_PhaseMineLayer_OnGeneralOrderIssued_0",
+                        "Frigate_PhaseMineLayer_OnGeneralOrderIssued_1",
+                        "Frigate_PhaseMineLayer_OnGeneralOrderIssued_2",
+						"Frigate_PhaseMineLayer_OnGeneralOrderIssued_3"
+                    ]
+                },
+                "hyperspace_charge_started":
+                {
+                    "neutral": [
+                        "Frigate_PhaseMineLayer_OnStartPhaseJump_0"
+                    ]
+                }
+            }
+        },
+        "death_sequence_group": "vasari_cruiser0"
+    }]
+}

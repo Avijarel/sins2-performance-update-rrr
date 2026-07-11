@@ -1,0 +1,48 @@
+{
+    "version": 0,
+    "domain": "military",
+    "tier": 1,
+    "field": "military_protection",
+    "field_coord": [2, 1],
+    "research_time": 135.0,
+    "price":
+    {
+        "credits": 500.0,
+        "metal": 125.0,
+        "crystal": 300.0
+    },
+    "prerequisites": [
+        ["advent_upgrade_missile_weapon_damage_0"]
+    ],
+    "buff_providers": [
+    {
+        "scope": "all_owned_units",
+        "all_owned_units_target_filter":
+        {
+            "unit_types": [
+                "capital_ship",
+                "starbase",
+                "super_capital_ship",
+                "titan"
+            ],
+            "ownerships": [
+                "self"
+            ],
+            "constraints": [
+            {
+                "constraint_type": "has_weapon",
+                "tag": "missile"
+            }]
+        },
+        "action_data_source": "advent_upgrade_missile_weapon_targeting",
+        "buff": "advent_upgrade_missile_weapon_targeting"
+    }],
+    "name": "advent_upgrade_missile_weapon_targeting_research_subject_name",
+    "name_uppercase": "advent_upgrade_missile_weapon_targeting_research_subject_name_uppercase",
+    "description": "advent_upgrade_missile_weapon_targeting_research_subject_description",
+    "hud_icon": "advent_upgrade_missile_weapon_targeting_research_subject_hud_icon",
+    "tooltip_picture": "advent_upgrade_missile_weapon_targeting_research_subject_tooltip_picture",
+    "extra_text_filter_strings": [
+        "research_text_filter_missile"
+    ]
+}

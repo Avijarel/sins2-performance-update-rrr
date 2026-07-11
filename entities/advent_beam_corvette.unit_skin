@@ -1,0 +1,201 @@
+{
+    "version": 0,
+    "skin_stages": [
+        {
+            "is_main_view_icon_visible_camera_distance": 6106.42152,
+            "min_camera_distance": 160.059139,
+            "gui": {
+                "hud_icon": "advent_beam_corvette_hud_icon",
+                "hud_monochrome_icon": "advent_beam_corvette_main_view_icon",
+                "hud_picture": "advent_beam_corvette_hud_picture",
+                "tooltip_picture": "advent_beam_corvette_tooltip_picture",
+                "name": "advent_beam_corvette_name",
+                "description": "advent_beam_corvette_description"
+            },
+            "unit_mesh": {
+                "mesh": "advent_beam_corvette",
+                "shader": "ship",
+                "is_shadow_blocker": true
+            },
+            "main_view_icon": {
+                "group": "ship",
+                "icon": "advent_beam_corvette_main_view_icon"
+            },
+            "effects": {
+                "exhaust_effects": {
+                    "particle_effects": [
+                        {
+                            "particle_effect": "advent_corvette_trail"
+                        }
+                    ]
+                },
+                "hyperspace_effects": {
+                    "charge_effect": "advent_corvette_phase_portal",
+                    "charge_effect_between_stars": "advent_corvette_interstellar_phase_portal",
+                    "charge_effect_destabilized": "advent_corvette_phase_portal",
+                    "travel_effect": "advent_corvette_phase_travel",
+                    "travel_effect_between_stars": "advent_corvette_interstellar_phase_travel",
+                    "travel_effect_destabilized": "advent_corvette_phase_travel",
+                    "exit_effect": "advent_corvette_phase_exit",
+                    "charge_sound": "hyperspace_chargeup",
+                    "enter_sound": "hyperspace_entry",
+                    "exit_sound": "hyperspace_exit"
+                },
+                "damage_effects": {
+                    "max_damage_effect_count": 3,
+                    "damage_effects": [
+                        {
+                            "max_count": 2,
+                            "weight": 2.0,
+                            "hull_percentage_threshold": 0.50,
+                            "particle_effect": "advent_damage_plasma_sparks"
+                        },
+                        {
+                            "max_count": 1,
+                            "weight": 2.0,
+                            "hull_percentage_threshold": 0.450,
+                            "particle_effect": "advent_damage_smoke_1"
+                        },
+                        {
+                            "max_count": 1,
+                            "weight": 3.0,
+                            "hull_percentage_threshold": 0.450,
+                            "particle_effect": "advent_damage_smoke_2"
+                        },
+                        {
+                            "max_count": 1,
+                            "weight": 3.0,
+                            "hull_percentage_threshold": 0.450,
+                            "particle_effect": "advent_damage_smoke_3"
+                        },
+                        {
+                            "max_count": 1,
+                            "weight": 4.0,
+                            "hull_percentage_threshold": 0.40,
+                            "particle_effect": "damage_electricity",
+                            "sound": "ambient_loop_electrical_damage"
+                        },
+                        {
+                            "max_count": 1,
+                            "weight": 4.0,
+                            "hull_percentage_threshold": 0.40,
+                            "particle_effect": "damage_electricity_2",
+                            "sound": "ambient_loop_electrical_damage_01"
+                        }
+                    ]
+                },
+                "shield_effect": "advent_beam_corvette",
+                "effect_alias_bindings": [
+                    {
+                        "alias_name": "advent_battle_capital_ship_medium_plasma_weapon_hit_hull",
+                        "alias_binding": {
+                            "particle_effect": "advent_plasma_bolt_impact",
+                            "sounds": [
+                                "weapon_impact_energy_medium_hithull",
+                                "weapon_impact_energy_medium_hithull_01",
+                                "weapon_impact_energy_medium_hithull_02"
+                            ]
+                        }
+                    },
+                    {
+                        "alias_name": "advent_battle_capital_ship_medium_plasma_weapon_hit_shield",
+                        "alias_binding": {
+                            "particle_effect": "advent_plasma_bolt_impact",
+                            "sounds": [
+                                "weapon_impact_generic_medium_hitshields",
+                                "weapon_impact_generic_medium_hitshields_01",
+                                "weapon_impact_generic_medium_hitshields_02",
+                                "weapon_impact_generic_medium_hitshields_03"
+                            ]
+                        }
+                    },
+                    {
+                        "alias_name": "advent_battle_capital_ship_medium_plasma_weapon_muzzle",
+                        "alias_binding": {
+                            "particle_effect": "advent_plasma_bolt_muzzle",
+                            "sounds": [
+                                "weapon_muzzle_psi_energy_medium_plasma",
+                                "weapon_muzzle_psi_energy_medium_plasma_01",
+                                "weapon_muzzle_psi_energy_medium_plasma_02",
+                                "weapon_muzzle_psi_energy_medium_plasma_03"
+                            ]
+                        }
+                    },
+                    {
+                        "alias_name": "advent_battle_capital_ship_medium_plasma_weapon_projectile_travel",
+                        "alias_binding": {
+                            "particle_effect": "advent_plasma_bolt_corvette"
+                        }
+                    },
+                    {
+                        "alias_name": "advent_bomber_strikecraft_heavy_beam_weapon_beam",
+                        "alias_binding": {
+                            "beam": "advent_light_beam",
+                            "sounds": [
+                                "weapon_loop_psi_energy_heavy_beam"
+                            ]
+                        }
+                    },
+                    {
+                        "alias_name": "advent_bomber_strikecraft_heavy_beam_weapon_hit_hull",
+                        "alias_binding": {
+                            "particle_effect": "advent_beam_light_impact"
+                        }
+                    },
+                    {
+                        "alias_name": "advent_bomber_strikecraft_heavy_beam_weapon_hit_shield",
+                        "alias_binding": {
+                            "particle_effect": "advent_beam_light_impact"
+                        }
+                    },
+                    {
+                        "alias_name": "advent_bomber_strikecraft_heavy_beam_weapon_muzzle",
+                        "alias_binding": {
+                            "particle_effect": "advent_beam_light_muzzle"
+                        }
+                    }
+                ]
+            },
+            "sounds": {
+                "move_sounds": {
+                    "engine": "ambient_loop_psi_engine_corvette",
+                    "hyperspace_travel": "hyperspace_travel"
+                },
+                "dialogue": {
+                    "spawned": {
+                        "neutral": [
+                            "Corvette_PsiRebel_OnCreation_0"
+                        ]
+                    },
+                    "selected": {
+                        "neutral": [
+                            "Corvette_PsiRebel_OnSelected_0",
+                            "Corvette_PsiRebel_OnSelected_1",
+                            "Corvette_PsiRebel_OnSelected_2"
+                        ]
+                    },
+                    "order_issued": {
+                        "neutral": [
+                            "Corvette_PsiRebel_OnGeneralOrderIssued_0",
+                            "Corvette_PsiRebel_OnGeneralOrderIssued_1",
+                            "Corvette_PsiRebel_OnGeneralOrderIssued_2"
+                        ]
+                    },
+                    "attack_order_issued": {
+                        "neutral": [
+                            "Corvette_PsiRebel_OnAttackOrderIssued_0",
+                            "Corvette_PsiRebel_OnAttackOrderIssued_1",
+                            "Corvette_PsiRebel_OnAttackOrderIssued_2"
+                        ]
+                    },
+                    "hyperspace_charge_started": {
+                        "neutral": [
+                            "Corvette_PsiRebel_OnStartPhaseJump_0"
+                        ]
+                    }
+                }
+            },
+            "death_sequence_group": "advent_corvette0"
+        }
+    ]
+}

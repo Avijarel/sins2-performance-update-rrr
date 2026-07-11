@@ -4,7 +4,7 @@
     "pitch_speed": 0.0,
     "yaw_speed": 0.0,
     "range": 12500.0,
-    "cooldown_duration": 15.0,
+    "cooldown_duration": 7.5,
     "uniforms_target_filter_id": "common_weapon",
     "attack_target_type_groups": [
         "heavy_capital",
@@ -12,7 +12,7 @@
     ],
     "weapon_type": "normal",
     "damage_affect_type": "hull_and_armor_and_shields",
-    "damage": 2100.0,
+    "damage": 1050.0,
     "penetration": 750.0,
     "tags": [
         "missile",

@@ -1,0 +1,143 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 619.896912,
+        "box": {
+            "center": [
+                0.0,
+                -0.543365,
+                2.372131
+            ],
+            "extents": [
+                433.139343,
+                580.597656,
+                452.844025
+            ]
+        },
+        "can_be_displaced_on_collision": false
+    },
+    "physics": {},
+    "ai": {
+        "attack_target_type_groups_to_ignore": [
+            "torpedo_strikecraft"
+        ]
+    },
+    "ai_attack_target": {
+        "attack_priority": 25.0,
+        "is_always_a_threat": false,
+        "attack_target_type": "civilian"
+    },
+    "user_interface": {
+        "pip_type": "frigate",
+        "can_ever_be_selected": true,
+        "selection_priority": 100,
+        "selection_group_unit_type": "civilian_structure"
+    },
+    "structure": {
+        "slot_type": "civilian",
+        "slots_required": 1,
+        "roles": [],
+        "planet_modifiers": [
+            {
+                "modifier_type": "population_growth_rate",
+                "value_behavior": "additive",
+                "value": 0.05
+            }
+        ],
+        "build_group_id": "civilian"
+    },
+    "formation": {
+        "leader_priority": 3,
+        "offsets_per_formation_type": {
+            "ships_and_structures": {
+                "rank": 4,
+                "group": 5
+            }
+        }
+    },
+    "spawn_debris": {
+        "spawn_debris_time": 1.0,
+        "generic_group_name": "vasari",
+        "generic_counts": {
+            "small_debris": [
+                14,
+                18
+            ],
+            "large_debris": [
+                3,
+                5
+            ]
+        }
+    },
+    "health": {
+        "release_time_after_death": 60.0,
+        "can_collide_duration_after_death": 3.8,
+        "durability": 510.0,
+        "levels": [
+            {
+                "max_hull_points": 3600.0,
+                "hull_point_restore_rate": 3.0,
+                "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "hull_point_restore_scalar_after_damage_taken": 0.0,
+                "max_armor_points": 960.0,
+                "armor_point_restore_rate": 4.0,
+                "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "armor_point_restore_scalar_after_damage_taken": 0.0,
+                "armor_strength": 48.0,
+                "experience_given_on_death": 25.0
+            }
+        ]
+    },
+    "build": {
+        "build_time": 60.0,
+        "price": {
+            "metal": 240.0,
+            "crystal": 90.0
+        },
+        "build_kind": "structure",
+        "build_radius": 819.639771
+    },
+    "passive_income": {},
+    "culture_provider": {
+        "has_ability_providing_culture_rate": true
+    },
+    "target_filter_unit_type": "structure",
+    "tags": [
+        "structure"
+    ],
+    "virtual_supply_cost": 10,
+    "abilities": [
+        {
+            "abilities": [
+                "vasari_population_structure_growth",
+                "vasari_population_structure_planet_buffs"
+            ]
+        }
+    ],
+    "skin_groups": [
+        {
+            "skins": [
+                "vasari_population_structure"
+            ]
+        }
+    ],
+    "action_effect_size": "medium_unit",
+    "traffic_port": {
+        "max_traffic_ship_count": 1,
+        "traffic_ship_construction_time": 1800.0,
+        "traffic_ship": "vasari_traffic_ship",
+        "allowed_destination_units": [
+            "advent_population_structure",
+            "trader_population_structure",
+            "vasari_population_structure"
+        ],
+        "special_operation_unit_kind": "traffic_ship",
+        "create_traffic_ship_offset": [
+            0.0,
+            0.0,
+            1500.0
+        ],
+        "force_stay_in_gravity_well": false,
+        "traffic_ship_per_hundred_pop": 0.75
+    }
+}

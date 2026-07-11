@@ -831,7 +831,7 @@
             "count": [3, 6]
         },
         {
-            "unit": "trader_gauss_defense_structure",
+            "unit": "pranast_gauss_defense_structure",
             "count": [5, 8]
         },
         {
@@ -921,19 +921,21 @@
         "trader_colony_frigate",
         "trader_heavy_cruiser",
         "trader_long_range_cruiser",
+        "trader_carrier_cruiser",
         "trader_torpedo_cruiser"
     ],
     "structure_builder":
     {
-        "ship": "trader_constructor_ship",
+        "ship": "trader_constructor_ship_npc",
         "special_operation_unit_kind": "structure_builder"
     },
     "structures": [
         "trader_capital_ship_factory_structure",
         "trader_frigate_factory_structure",
         "trader_autocannon_defense_structure",
-        "trader_gauss_defense_structure",
+        "pranast_gauss_defense_structure",
         "trader_hangar_defense_structure",
+        "trader_culture_center_structure",
         "trader_starbase_n"
     ],
     
@@ -950,11 +952,12 @@
     ],
     "npc":
     {
+        "can_survey_planets": false,
         "visuals": [
         {
             "name": "npc_player.pranast_united.name",
             "description": "npc_player.pranast_united.description",
-            "portrait": "miner_0",
+            "portrait": "npc_pranast_0",
             "icon": "faction_4",
             "color_group": "npc_pranast_united",
             "reputation_panel": "pranast_united_panel"
@@ -976,7 +979,6 @@
                 "attacking": "pranast_npc_attacking_0"
             }
         },
-		"ai_difficulty": "hard",
         "ai_params":
         {
             "will_fleet_colonize": false,
@@ -991,7 +993,7 @@
         },
         "max_fleet_supply":
         {
-            "roam": [125, 250, 375, 500],
+            "roam": [0, 0, 0, 0],
             "defend": [312, 625, 875, 1250]
         },
         "npc_tags": [
@@ -1066,6 +1068,15 @@
                 "",
                 "",
                 "",
+                "safety_bulkhead_systems_artifact"]
+        },
+	{
+            "weight": 0.1,
+            "bid_duration": 300.0,
+            "rewards": [
+                "",
+                "",
+                "",
                 "goliath_superconductor_starbase_artifact"]
         },
 	{
@@ -1088,6 +1099,34 @@
             "market_weight": 10,
             "sell_price": 1.5,
             "buy_price": 3.0
+        },
+        "bounty_market":
+        {
+            "market_weight": 2,
+            "bounty_cut": 0.4,
+            "metal_credit_value": 3.0,
+            "crystal_credit_value": 3.0,
+            "exotic_credit_values": [
+            {
+                "exotic_name": "offense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "defense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "utility",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "economic",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "ultimate",
+                "credit_value": 1500
+            }]
         },
         "exotic_market":
         {
@@ -1131,29 +1170,30 @@
         },
         "simple_can_ever_be_colonized_planet_types": [
             "asteroid",
-			"crystalline",
+            "barren",
+            "city",
+            "crystalline",
             "desert",
-			"desert_home",
+            "desert_home",
             "ferrous",
-			"ferrous_home",
-			"ice_asteroid",
+            "ferrous_home",
+            "gas_giant",
+            "greenhouse",
+            "hive_asteroid",
             "ice",
+            "ice_asteroid",
+            "ice_moon",
+            "irradiated",
+            "magnetic",
             "moon",
             "oceanic",
-			"pirate_base",
-			"swamp",
+            "pirate_base",
+            "ship_graveyard",
+            "swamp",
             "terran",
-			"terran_home",
+            "terran_home",
             "volcanic",
-			"ship_graveyard",
-			"greenhouse",
-			"barren",
-			"city",
-			"magnetic",
-			"ice_moon",
-			"volcanic_moon",
-			"gas_giant",
-			"hive_asteroid"
+            "volcanic_moon"
         ],
         "simple_planet_level": 10,
         "simple_planet_tracks":
@@ -1229,24 +1269,67 @@
             {
                 "influence_point_cost": 1,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.02,
+                        "value_behavior": "scalar"
+                    }
+		}
             },
             {
                 "influence_point_cost": 2,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.04,
+                        "value_behavior": "scalar"
+                    }
+		}
             },
             {
                 "influence_point_cost": 4,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.06,
+                        "value_behavior": "scalar"
+                    }
+		}
             },
             {
                 "influence_point_cost": 6,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.08,
+                        "value_behavior": "scalar"
+                    }
+		}
             }]
         }
+    },
+    "culture":
+    {
+        "base_allegiance_growth_rate_from_neutral": 0.1,
+        "base_allegiance_growth_rate_from_other_players": 0.025,
+        "base_max_allegiance_factor": 0.05,
+        "base_per_population_bonus_per_allied_population_percentage_scalar": 1.0,
+        "base_per_population_penalty_per_other_population_percentage_scalar": 1.0,
+        "base_allegiance_decay_rate": 0.05,
+        "allegiance_decay_exponent": 2.0,
+        "allegiance_decay_minimum_percentage": 0.01,
+        "decay_rates": [
+        {
+            "decay_rate": 0.02
+        }],
+        "propagation_rates": [
+        {
+            "propagation_rate_scalar": -2.0
+        }]
     },
     "planet_elevators":
     {

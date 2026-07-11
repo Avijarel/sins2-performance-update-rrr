@@ -1,0 +1,45 @@
+{
+    "version": 0,
+    "gui":
+    {
+        "hud_icon": "hobari_send_support_raid_hud_icon",
+        "name": "npc_reward.hobari_send_support_raid.name",
+        "description": "npc_reward.hobari_send_support_raid.description",
+        "gravity_well_fixture_target_filter_description": "npc_reward.gravity_well_target_filter_description.owned_planets"
+    },
+    "gravity_well_fixture_target_filter_id": "uniforms_friendly_planets",
+    "uses_range": false,
+    "type": "spawn_units",
+    "spawn_units":
+    {
+        "player_ai_usage": "defend_planet",
+        "spawn_units":
+        {
+            "random_units": [
+            {
+                "unit": "advent_guardian_cruiser",
+                "weight": 1.0
+            },
+            {
+                "unit": "advent_subjugator_cruiser",
+                "weight": 0.8
+            },
+            {
+                "unit": "advent_defense_cruiser",
+                "weight": 0.6
+            },
+            {
+                "unit": "advent_long_range_cruiser",
+                "weight": 0.4
+            },
+            {
+                "unit": "advent_carrier_cruiser",
+                "weight": 0.4
+            }]
+        },
+        "arrival_delay_duration": 1,
+        "special_operation_unit_kind": "hobari_support_raid",
+        "target_alert": "targeted_by_ability",
+        "supply": 350
+    }
+}

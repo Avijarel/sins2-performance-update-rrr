@@ -1,0 +1,48 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 606.003845,
+        "box": {
+            "center": [
+                -3.1e-05,
+                0.0,
+                0.0
+            ],
+            "extents": [
+                264.87677,
+                195.667496,
+                555.821899
+            ]
+        },
+        "collision_rank": 0
+    },
+    "physics": {
+        "can_move_linear": true,
+        "max_linear_speed": 500.0,
+        "time_to_max_linear_speed": 25.0,
+        "can_move_angular": true
+    },
+    "debris": {
+        "lifetime": [
+            5.0,
+            5.0
+        ],
+        "linear_speed": [
+            10.0,
+            40.0
+        ],
+        "angular_speed": [
+            0.05,
+            0.2
+        ]
+    },
+    "target_filter_unit_type": "debris",
+    "skin_groups": [
+        {
+            "skins": [
+                "dlc2_trader_loyalist_super_capital_ship_debris_mid"
+            ]
+        }
+    ],
+    "action_effect_size": "small_unit"
+}

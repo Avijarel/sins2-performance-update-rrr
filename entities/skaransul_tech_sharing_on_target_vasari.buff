@@ -1,0 +1,51 @@
+{
+    "version": 0,
+    "make_dead_on_source_ability_released": true,
+    "stacking_limit":
+    {
+        "stacking_limit": "fixed_one",
+        "stacking_limit_met_behavior": "preserve_existing_buff"
+    },
+    "stacking_ownership_type": "for_all_players",
+    "restart_other_stacked_buffs_when_started": true,
+    "unit_mutations": [
+        "enable_can_create_retargeting_torpedoes"
+    ],
+    "trigger_event_actions": [
+    {
+        "trigger_event_type": "on_buff_started",
+        "action_group":
+        {
+            "actions": [
+            {
+                "action_type": "make_buff_dead",
+                "buff": "parent_buff"
+            }]
+        }
+    }],
+    "unit_modifiers": [
+    {
+        "buff_unit_modifier_id": "vasari_shield_burst_restore_points_restore_modifier"
+    },
+    {
+        "buff_unit_modifier_id": "vasari_shield_burst_restore_cooldown_duration_modifier"
+    }],
+    "gui":
+    {
+        "hud_icon": "skaransul_tech_sharing_hud_icon",
+        "name": "npc_reward.skaransul_tech_sharing.name",
+        "visibility_scope": "positive",
+        "tooltip_line_groups": [
+        {
+            "lines": [
+            {
+                "rendering_type": "buff_unit_modifier",
+                "unit_modifier_id": "vasari_shield_burst_restore_points_restore_modifier"
+            },
+            {
+                "rendering_type": "buff_unit_modifier",
+                "unit_modifier_id": "vasari_shield_burst_restore_cooldown_duration_modifier"
+            }]
+        }]
+    }
+}

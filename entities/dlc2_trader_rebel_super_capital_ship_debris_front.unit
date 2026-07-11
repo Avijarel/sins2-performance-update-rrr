@@ -1,0 +1,48 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 291.844391,
+        "box": {
+            "center": [
+                0.0,
+                0.0,
+                -2.3e-05
+            ],
+            "extents": [
+                166.467621,
+                86.582924,
+                252.563629
+            ]
+        },
+        "collision_rank": 0
+    },
+    "physics": {
+        "can_move_linear": true,
+        "max_linear_speed": 25.0,
+        "time_to_max_linear_speed": 10.0,
+        "can_move_angular": true
+    },
+    "debris": {
+        "lifetime": [
+            5.0,
+            5.0
+        ],
+        "linear_speed": [
+            2.0,
+            10.0
+        ],
+        "angular_speed": [
+            0.1,
+            0.3
+        ]
+    },
+    "target_filter_unit_type": "debris",
+    "skin_groups": [
+        {
+            "skins": [
+                "dlc2_trader_rebel_super_capital_ship_debris_front"
+            ]
+        }
+    ],
+    "action_effect_size": "small_unit"
+}

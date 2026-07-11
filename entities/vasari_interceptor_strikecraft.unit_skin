@@ -1,0 +1,142 @@
+{
+    "version": 0,
+    "skin_stages": [
+    {
+        "is_main_view_icon_visible_camera_distance": 1629.594155,
+        "min_camera_distance": 41.496881,
+        "gui":
+        {
+            "hud_icon": "vasari_interceptor_strikecraft_hud_icon",
+            "hud_monochrome_icon": "vasari_interceptor_strikecraft_main_view_icon",
+            "hud_picture": "vasari_interceptor_strikecraft_hud_picture",
+            "tooltip_picture": "vasari_interceptor_strikecraft_tooltip_picture",
+            "name": "vasari_interceptor_strikecraft_name",
+            "description": "vasari_interceptor_strikecraft_description"
+        },
+        "unit_mesh":
+        {
+            "mesh": "vasari_interceptor_strikecraft",
+            "shader": "ship",
+            "is_shadow_blocker": true
+        },
+        "main_view_icon":
+        {
+            "group": "ship",
+            "icon": "vasari_interceptor_strikecraft_main_view_icon",
+            "selected_icon": "vasari_interceptor_strikecraft_main_view_icon_selected",
+            "sub_selected_icon": "vasari_interceptor_strikecraft_main_view_icon_sub_selected"
+        },
+        "effects":
+        {
+            "exhaust_effects":
+            {
+                "particle_effects": [
+                {
+                    "particle_effect": "vasari_exhaust_strikecraft"
+                }],
+                "trail_effects": [
+                {
+                    "trail_effect": "fighterphasebomber"
+                }]
+            },
+            "shield_effect": "vasari_interceptor_strikecraft",
+            "effect_alias_bindings": [
+            {
+                "alias_name": "vasari_interceptor_strikecraft_beam_weapon_beam",
+                "alias_binding":
+                {
+                    "beam": "vasari_tiny_beam",
+                    "sounds": [
+                        "weapon_loop_phase_tiny_beam"]
+                }
+            },
+            {
+                "alias_name": "vasari_interceptor_strikecraft_beam_weapon_hit_hull",
+                "alias_binding":
+                {
+                    "particle_effect": "vasari_tiny_beam_impact",
+                    "sounds": [
+                        "weapon_impact_energy_light_hithull",
+                        "weapon_impact_energy_light_hithull_01",
+                        "weapon_impact_energy_light_hithull_02"
+                    ]
+                }
+            },
+            {
+                "alias_name": "vasari_interceptor_strikecraft_beam_weapon_hit_shield",
+                "alias_binding":
+                {
+                    "particle_effect": "vasari_tiny_beam_impact",
+                    "sounds": [
+                        "weapon_impact_generic_light_hitshields",
+                        "weapon_impact_generic_light_hitshields_01",
+                        "weapon_impact_generic_light_hitshields_02",
+                        "weapon_impact_generic_light_hitshields_03"
+                    ]
+                }
+            },
+            {
+                "alias_name": "vasari_interceptor_strikecraft_beam_weapon_muzzle",
+                "alias_binding":
+                {
+                    "particle_effect": "vasari_tiny_beam_muzzle"
+                }
+            }]
+        },
+        "sounds":
+        {
+            "move_sounds":
+            {
+                "engine": "engine_phasestrikecraft"
+            },
+            "dialogue":
+            {
+                "selected":
+                {
+                    "neutral": [
+                        "vasari_interceptor_strikecraft_selected_neutral_0",
+                        "vasari_interceptor_strikecraft_selected_neutral_1",
+                        "vasari_interceptor_strikecraft_selected_neutral_2"
+                    ],
+                    "scared": [
+                        "vasari_interceptor_strikecraft_selected_scared_0",
+                        "vasari_interceptor_strikecraft_selected_scared_1",
+                        "vasari_interceptor_strikecraft_selected_scared_2"
+                    ]
+                },
+                "order_issued":
+                {
+                    "neutral": [
+                        "vasari_interceptor_strikecraft_order_issued_neutral_0",
+                        "vasari_interceptor_strikecraft_order_issued_neutral_1",
+                        "vasari_interceptor_strikecraft_order_issued_neutral_2"
+                    ],
+                    "scared": [
+                        "vasari_interceptor_strikecraft_order_issued_scared_0",
+                        "vasari_interceptor_strikecraft_order_issued_scared_1",
+                        "vasari_interceptor_strikecraft_order_issued_scared_2"
+                    ]
+                },
+                "attack_order_issued":
+                {
+                    "neutral": [
+                        "vasari_interceptor_strikecraft_attack_order_issued_neutral_0",
+                        "vasari_interceptor_strikecraft_attack_order_issued_neutral_1",
+                        "vasari_interceptor_strikecraft_attack_order_issued_neutral_2"
+                    ],
+                    "scared": [
+                        "vasari_interceptor_strikecraft_attack_order_issued_scared_0",
+                        "vasari_interceptor_strikecraft_attack_order_issued_scared_1",
+                        "vasari_interceptor_strikecraft_attack_order_issued_scared_2"
+                    ],
+                    "smug": [
+                        "vasari_interceptor_strikecraft_attack_order_issued_smug_0",
+                        "vasari_interceptor_strikecraft_attack_order_issued_smug_1",
+                        "vasari_interceptor_strikecraft_attack_order_issued_smug_2"
+                    ]
+                }
+            }
+        },
+        "death_sequence_group": "vasari_strikecraft0"
+    }]
+}

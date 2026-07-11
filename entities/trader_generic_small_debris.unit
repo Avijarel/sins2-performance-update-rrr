@@ -1,0 +1,71 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 4.410255,
+        "box": {
+            "center": [
+                0.997553,
+                -0.398091,
+                -0.015424
+            ],
+            "extents": [
+                3.327802,
+                1.114039,
+                1.562395
+            ]
+        },
+        "can_collide": false
+    },
+    "health": {
+        "release_time_after_death": 60.0,
+        "round_max_points_up_to_5": false,
+        "levels": [
+            {
+                "max_hull_points": 1.0,
+                "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "hull_crippled_percentage": 0.2,
+                "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "shield_point_restore_rate": 1.9,
+                "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+                "shield_burst_restore": {
+                    "cooldown_duration": 60.0,
+                    "restore_percentage": 0.5
+                }
+            }
+        ]
+    },
+    "physics": {
+        "can_move_linear": true,
+        "max_linear_speed": 500.0,
+        "time_to_max_linear_speed": 25.0,
+        "can_move_angular": true
+    },
+    "debris": {
+        "lifetime": [
+            5.0,
+            5.0
+        ],
+        "linear_speed": [
+            40.0,
+            60.0
+        ],
+        "angular_speed": [
+            0.8,
+            0.95
+        ]
+    },
+    "target_filter_unit_type": "debris",
+    "skin_groups": [
+        {
+            "skins": [
+                "trader_generic_small_debris_0",
+                "trader_generic_small_debris_1",
+                "trader_generic_small_debris_2",
+                "trader_generic_small_debris_3",
+                "trader_generic_small_debris_4",
+                "trader_generic_small_debris_5"
+            ]
+        }
+    ],
+    "action_effect_size": "small_unit"
+}

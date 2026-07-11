@@ -4,14 +4,14 @@
     "pitch_speed": 0.0,
     "yaw_speed": 0.0,
     "range": 8800.0,
-    "cooldown_duration": 2.0,
+    "cooldown_duration": 1.0,
     "uniforms_target_filter_id": "common_weapon",
     "attack_target_type_groups": [
         "corvette_light"
     ],
     "weapon_type": "normal",
     "damage_affect_type": "hull_and_armor_and_shields",
-    "damage": 36.0,
+    "damage": 18.0,
     "penetration": 50.0,
     "tags": [
         "missile",

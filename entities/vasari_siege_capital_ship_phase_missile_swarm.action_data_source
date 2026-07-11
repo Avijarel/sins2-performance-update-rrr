@@ -1,0 +1,174 @@
+{
+    "version": 0,
+    "level_count": 5,
+    "target_filters": [
+    {
+        "target_filter_id": "phase_missile_swarm_auto_cast_high_priority_target_filter",
+        "target_filter":
+        {
+            "unit_types": [
+                "capital_ship",
+                "starbase",
+                "super_capital_ship",
+                "titan"
+            ],
+            "ownerships": [
+                "enemy"
+            ],
+            "constraints": [
+            {
+                "constraint_type": "is_always_a_threat"
+            }]
+        }
+    },
+    {
+        "target_filter_id": "phase_missile_swarm_auto_cast_low_priority_target_filter",
+        "target_filter":
+        {
+            "unit_types": [
+                "cruiser",
+                "frigate",
+                "structure"
+            ],
+            "ownerships": [
+                "enemy"
+            ],
+            "constraints": [
+            {
+                "constraint_type": "is_always_a_threat"
+            }]
+        }
+    },
+    {
+        "target_filter_id": "phase_missile_swarm_target_filter",
+        "target_filter":
+        {
+            "unit_types": [
+                "capital_ship",
+                "corvette",
+                "cruiser",
+                "frigate",
+                "starbase",
+                "structure",
+                "super_capital_ship",
+                "titan"
+            ],
+            "ownerships": [
+                "enemy"
+            ]
+        }
+    }],
+    "action_values": [
+    {
+        "action_value_id": "phase_missile_swarm_antimatter_cost_value",
+        "action_value":
+        {
+            "values": [120.0, 132.0, 144.0, 156.0, 168.0]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_armor_penetration_value",
+        "action_value":
+        {
+            "values": [600.0, 600.0, 600.0, 600.0, 600.0]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_bypass_shields_chance_value",
+        "action_value":
+        {
+            "values": [0.3, 0.3, 0.3, 0.3, 0.3]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_cooldown_time_value",
+        "action_value":
+        {
+            "values": [66.0, 63.0, 60.0, 57.0, 54.0]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_damage_value",
+        "action_value":
+        {
+            "values": [270.0, 270.0, 270.0, 270.0, 270.0]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_range_value",
+        "action_value":
+        {
+            "values": [8000.0, 8300.0, 8600.0, 8900.0, 9200.0]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_execution_interval_value",
+        "action_value":
+        {
+            "values": [0.18, 0.18, 0.18, 0.18, 0.18]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_torpedoes_per_interval_value",
+        "action_value":
+        {
+            "values": [1.0, 1.0, 1.0, 1.0, 1.0]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_interval_count_value",
+        "action_value":
+        {
+            "values": [5.0, 6.0, 7.0, 8.0, 9.0]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_torpedo_count_value",
+        "action_value":
+        {
+            "values": [5.0, 6.0, 7.0, 8.0, 9.0]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_torpedo_lifetime_value",
+        "action_value":
+        {
+            "values": [47.25, 47.25, 47.25, 47.25, 47.25]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_torpedo_speed_value",
+        "action_value":
+        {
+            "values": [2100.0, 2100.0, 2100.0, 2100.0, 2100.0]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_torpedo_hull_value",
+        "action_value":
+        {
+            "values": [27.0, 27.0, 27.0, 27.0, 27.0]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_torpedo_armor_value",
+        "action_value":
+        {
+            "values": [30.0, 30.0, 30.0, 30.0, 30.0]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_torpedo_armor_strength_value",
+        "action_value":
+        {
+            "values": [18.0, 18.0, 18.0, 18.0, 18.0]
+        }
+    },
+    {
+        "action_value_id": "phase_missile_swarm_torpedo_steering_distance_radius_scalar_value",
+        "action_value":
+        {
+            "values": [1.0, 1.0, 1.0, 1.0, 1.0]
+        }
+    }]
+}

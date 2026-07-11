@@ -1,0 +1,26 @@
+{
+    "version": 0,
+    "gui":
+    {
+        "hud_icon": "vasari_fabricator_cruiser_hud_icon",
+        "name": "npc_reward.viturak_remote_fabrication.name",
+        "description": "npc_reward.viturak_remote_fabrication.description",
+        "gravity_well_fixture_target_filter_description": "npc_reward.gravity_well_target_filter_description.detected_planets"
+    },
+    "gravity_well_fixture_target_filter_id": "uniforms_detected_planets_any_owner",
+    "uses_range": false,
+    "type": "spawn_units",
+    "spawn_units":
+    {
+        "player_ai_usage": "missing_ship_component_shop",
+        "special_operation_unit_kind": "viturak_cabal_remote_fabrication",
+        "spawn_units":
+        {
+            "required_units": [
+            {
+                "unit": "vasari_fabricator_cruiser",
+                "count": [3, 3]
+            }]
+        }    
+    }
+}

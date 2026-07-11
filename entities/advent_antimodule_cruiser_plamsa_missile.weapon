@@ -4,7 +4,7 @@
     "pitch_speed": 0.0,
     "yaw_speed": 0.0,
     "range": 12000.0,
-    "cooldown_duration": 8.0,
+    "cooldown_duration": 4.0,
     "uniforms_target_filter_id": "big_target_only_weapon",
     "attack_target_type_groups": [
         "defense_starbase_titan",
@@ -12,7 +12,7 @@
     ],
     "weapon_type": "normal",
     "damage_affect_type": "hull_and_armor_and_shields",
-    "damage": 140.0,
+    "damage": 70.0,
     "penetration": 1000.0,
     "tags": [
         "plasma",
@@ -36,6 +36,7 @@
     "effects": {
         "muzzle_picking_behavior": "sequential",
         "muzzle_effect": "advent_plasma_bolt_super_heavy_muzzle",
+        "projectile_travel_effect": "weapon_psi_plasmastarbase_travel",
         "hit_shield_impact_radius_t": 0.10
     }
 }

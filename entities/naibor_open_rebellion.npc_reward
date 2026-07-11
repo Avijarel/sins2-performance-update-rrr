@@ -1,0 +1,45 @@
+{
+    "version": 0,
+    "gui":
+    {
+        "hud_icon": "naibor_open_rebellion_hud_icon",
+        "name": "npc_reward.naibor_open_rebellion.name",
+        "description": "npc_reward.naibor_open_rebellion.description",
+        "gravity_well_fixture_target_filter_description": "npc_reward.gravity_well_target_filter_description.uniforms_npc_raid_targets_culture"
+    },
+    "gravity_well_fixture_target_filter_id": "uniforms_npc_raid_targets_under_friendly_culture",
+    "type": "spawn_units",
+    "uses_range": false,
+    "spawn_units":
+    {
+        "player_ai_usage": "raid_enemy_planet",
+        "spawn_units":
+        {
+            "random_units": [
+            {
+                "unit": "trader_light_frigate",
+                "weight": 0.3
+            },
+            {
+                "unit": "trader_carrier_cruiser",
+                "weight": 0.3
+            },
+            {
+                "unit": "trader_long_range_cruiser",
+                "weight": 0.3
+            },
+            {
+                "unit": "trader_heavy_cruiser",
+                "weight": 0.3
+            },
+            {
+                "unit": "trader_antifighter_frigate",
+                "weight": 0.2
+            }]
+        },
+        "arrival_delay_duration": 1,
+        "special_operation_unit_kind": "naibor_raid",
+        "supply": 400,
+        "target_alert": "targeted_by_ability"
+    }
+}

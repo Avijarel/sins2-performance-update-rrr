@@ -1,0 +1,41 @@
+{
+    "version": 0,
+    "skin_stages": [
+    {
+        "is_main_view_icon_visible_camera_distance": 46911.688245,
+        "min_camera_distance": 8.659952,
+		"unit_radius_when_mesh_visible": 10.0,
+        "gui":
+        {
+            "hud_icon": "advent_antimodule_cruiser_ability_hud_icon",
+            "hud_monochrome_icon": "vasari_small_phase_missile_main_view_icon",
+			"hud_picture": "advent_super_plasma_missile_hud_picture",
+            "name": "weapon_name.very_heavy_plasma",
+			"description": "advent_antimodule_cruiser_ability_name"
+        },
+        "unit_mesh":
+        {
+            "mesh": "advent_super_plasma_missile",
+            "shader": "ship",
+            "is_shadow_blocker": false
+        },
+        "main_view_icon":
+        {
+            "group": "strikecraft",
+            "icon": "vasari_small_phase_missile_main_view_icon",
+            "selected_icon": "vasari_small_phase_missile_main_view_icon_selected",
+            "sub_selected_icon": "vasari_small_phase_missile_main_view_icon_sub_selected"
+        },
+        "effects":
+        {
+            "exhaust_effects":
+            {
+                "particle_effects": [
+                {
+                    "particle_effect": "advent_plasma_super_heavy_bolt"
+                }]
+            }
+        },
+        "death_sequence_group": "advent_plasma_missile"
+    }]
+}

@@ -1,0 +1,40 @@
+{
+    "version": 0,
+    "gui":
+    {
+        "hud_icon": "vasari_siege_cruiser_hud_icon",
+        "name": "npc_reward.viturak_spawn_attack_ships.name",
+        "description": "npc_reward.viturak_spawn_attack_ships.description",
+        "gravity_well_fixture_target_filter_description": "npc_reward.gravity_well_target_filter_description.uniforms_npc_raid_targets"
+    },
+    "gravity_well_fixture_target_filter_id": "uniforms_npc_raid_targets",
+    "uses_range": false,
+    "type": "spawn_units",
+    "spawn_units":
+    {
+        "player_ai_usage": "raid_enemy_planet",
+        "special_operation_unit_kind": "viturak_cabal_attack_ships",
+        "spawn_units":
+        {
+            "required_units": [
+            {
+                "unit": "vasari_siege_cruiser",
+                "count": [2, 2]
+            }],
+            "random_units": [
+            {
+                "unit": "vasari_raider_corvette",
+                "weight": 0.4
+            },
+            {
+                "unit": "vasari_heavy_cruiser",
+                "weight": 0.4
+            },
+            {
+                "unit": "vasari_carrier_cruiser",
+                "weight": 0.2
+            }]
+        },
+        "supply": 300
+    }
+}

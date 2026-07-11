@@ -1,0 +1,48 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 229.068481,
+        "box": {
+            "center": [
+                -11.501034,
+                0.0,
+                -42.708
+            ],
+            "extents": [
+                113.625397,
+                44.515442,
+                181.420837
+            ]
+        },
+        "collision_rank": 0
+    },
+    "physics": {
+        "can_move_linear": true,
+        "max_linear_speed": 500.0,
+        "time_to_max_linear_speed": 25.0,
+        "can_move_angular": true
+    },
+    "debris": {
+        "lifetime": [
+            5.0,
+            5.0
+        ],
+        "linear_speed": [
+            10.0,
+            40.0
+        ],
+        "angular_speed": [
+            0.1,
+            0.6
+        ]
+    },
+    "target_filter_unit_type": "debris",
+    "skin_groups": [
+        {
+            "skins": [
+                "advent_large_debris_0"
+            ]
+        }
+    ],
+    "action_effect_size": "small_unit"
+}

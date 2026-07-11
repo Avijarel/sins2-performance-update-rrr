@@ -1,0 +1,205 @@
+{
+    "version": 0,
+    "target_filters": [
+    {
+        "target_filter_id": "tech_sharing_trader_target_filter",
+        "target_filter":
+        {
+            "unit_definitions": [
+                "trader_battle_capital_ship_rebel",
+                "trader_battle_capital_ship_loyalist",
+                "trader_colony_capital_ship_rebel",
+                "trader_colony_capital_ship_loyalist",
+                "trader_support_capital_ship_rebel",
+                "trader_support_capital_ship_loyalist",
+                "trader_carrier_capital_ship_rebel",
+                "trader_carrier_capital_ship_loyalist",
+                "trader_siege_capital_ship_rebel",
+                "trader_siege_capital_ship_loyalist",
+                "trader_transport_capital_ship_secret",
+                "trader_starbase",
+                "trader_starbase_rebel",
+                "trader_starbase_loyalist",
+		"trader_loyalist_titan",
+		"trader_loyalist_titan_spawned",
+                "dlc2_trader_loyalist_super_capital_ship",
+		"trader_rebel_titan",
+		"trader_rebel_titan_spawned",
+                "dlc2_trader_rebel_super_capital_ship"
+            ],
+            "ownerships": [
+                "self"
+            ]
+        }
+    },
+    {
+        "target_filter_id": "tech_sharing_advent_target_filter",
+        "target_filter":
+        {
+            "unit_definitions": [
+                "advent_battle_capital_ship",
+                "advent_battle_capital_ship_loyalist",
+		"advent_battle_psionic_capital_ship_rebel",
+		"advent_battle_psionic_capital_ship_loyalist",
+		"advent_colony_capital_ship",
+		"advent_colony_capital_ship_loyalist",
+		"advent_carrier_capital_ship",
+		"advent_carrier_capital_ship_loyalist",
+		"advent_missile_capital_ship",
+		"advent_planet_psionic_capital_ship_rebel",
+		"advent_planet_psionic_capital_ship_loyalist",
+                "advent_harassment_battle_capital_ship",
+		"advent_starbase",
+		"advent_starbase_rebel",
+		"advent_starbase_loyalist",
+		"advent_loyalist_titan",
+		"advent_loyalist_titan_spawned",
+		"advent_rebel_titan",
+		"advent_rebel_titan_spawned",
+                "dlc2_advent_loyalist_super_capital_ship",
+		"dlc2_advent_rebel_super_capital_ship"
+            ],
+            "ownerships": [
+                "self"
+            ]
+        }
+    },
+    {
+        "target_filter_id": "tech_sharing_vasari_target_filter",
+        "target_filter":
+        {
+            "unit_definitions": [
+                "vasari_battle_capital_ship_rebel",
+                "vasari_battle_capital_ship_loyalist",
+                "vasari_colony_capital_ship_rebel",
+                "vasari_colony_capital_ship_loyalist",
+                "vasari_carrier_capital_ship",
+                "vasari_carrier_capital_ship_loyalist",
+                "vasari_marauder_capital_ship_rebel",
+                "vasari_marauder_capital_ship_loyalist",
+                "vasari_siege_capital_ship_rebel",
+                "vasari_siege_capital_ship_loyalist",
+                "vasari_loyalist_titan",
+                "vasari_loyalist_titan_spawned",
+                "vasari_nanite_battle_capital_ship",
+                "vasari_starbase",
+                "vasari_starbase_rebel",
+                "vasari_starbase_loyalist",
+                "vasari_rebel_titan",
+                "vasari_rebel_titan_spawned",
+                "dlc2_vasari_loyalist_super_capital_ship",
+                "dlc2_vasari_rebel_super_capital_ship"
+            ],
+            "ownerships": [
+                "self"
+            ]
+        }
+    },
+    {
+        "target_filter_id": "tech_sharing_enemy_target_filter",
+        "target_filter":
+        {
+            "unit_types": [
+                "structure",
+                "starbase",
+                "capital_ship",
+                "corvette",
+                "cruiser",
+                "frigate",
+                "super_capital_ship",
+                "titan"
+            ],
+            "ownerships": [
+                "enemy"
+            ]
+        }
+    },
+    {
+        "target_filter_id": "tech_sharing_friendly_target_filter",
+        "target_filter":
+        {
+            "unit_types": [
+                "structure",
+                "starbase",
+                "capital_ship",
+                "corvette",
+                "cruiser",
+                "frigate",
+                "super_capital_ship",
+                "titan"
+            ],
+            "ownerships": [
+                "friendly"
+            ]
+        }
+    }],
+    "action_values": [
+    {
+        "action_value_id": "advent_damage_radius",
+        "action_value":
+        {
+            "values": [8000.0]
+        }
+    },
+    {
+        "action_value_id": "trader_restore_radius",
+        "action_value":
+        {
+            "values": [5000.0]
+        }
+    },
+    {
+        "action_value_id": "advent_damage_rate",
+        "action_value":
+        {
+            "values": [2.0]
+        }
+    },
+    {
+        "action_value_id": "advent_damage_penetration",
+        "action_value":
+        {
+            "values": [400.0]
+        }
+    },
+    {
+        "action_value_id": "trader_restore_rate",
+        "action_value":
+        {
+            "values": [2.0]
+        }
+    },
+    {
+        "action_value_id": "vasari_shield_burst_restore_points_restore_scalar",
+        "action_value":
+        {
+            "values": [0.1]
+        }
+    },
+    {
+        "action_value_id": "vasari_shield_burst_restore_cooldown_duration_scalar",
+        "action_value":
+        {
+            "values": [-0.1]
+        }
+    }],
+    "buff_unit_modifiers": [
+    {
+        "buff_unit_modifier_id": "vasari_shield_burst_restore_points_restore_modifier",
+        "buff_unit_modifier":
+        {
+            "modifier_type": "shield_burst_restore_points",
+            "value_behavior": "scalar",
+            "value_id": "vasari_shield_burst_restore_points_restore_scalar"
+        }
+    },
+    {
+        "buff_unit_modifier_id": "vasari_shield_burst_restore_cooldown_duration_modifier",
+        "buff_unit_modifier":
+        {
+            "modifier_type": "shield_burst_restore_cooldown_duration",
+            "value_behavior": "scalar",
+            "value_id": "vasari_shield_burst_restore_cooldown_duration_scalar"
+        }
+    }]
+}

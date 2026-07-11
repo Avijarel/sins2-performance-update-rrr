@@ -8,14 +8,26 @@
     "price":
     {
         "credits": 0.0,
-        "metal": 0.0,
-        "crystal": 0.0
+        "metal": 5100.0,
+        "crystal": 5100.0
     },
-    "strikecraft_modifiers": [
+    "exotic_price": [
     {
-        "value_behavior": "additive",
-        "modifier_type": "squadron_size",
-        "value": 0
+        "exotic_type": "research",
+        "count": 4
+    }],
+    "weapon_modifiers": [
+    {
+        "value_behavior": "scalar",
+        "modifier_type": "damage",
+        "value": 0.33,
+        "tags": ["fighter", "bomber"]
+    }],
+    "unit_modifiers": [
+    {
+        "modifier_type": "strikecraft_build_time",
+        "value_behavior": "scalar",
+        "value": -0.33
     }],
     "name": "research_subject.squad_size_name",
     "name_uppercase": "research_subject.squad_size_name_upper",

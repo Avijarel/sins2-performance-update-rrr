@@ -1,9 +1,9 @@
 {
     "version": 0,
     "domain": "military",
-    "tier": 6,
+    "tier": 2,
     "field": "military_revival",
-    "field_coord": [12, 0],
+    "field_coord": [4, 7],
     "research_time": 225.0,
     "price":
     {

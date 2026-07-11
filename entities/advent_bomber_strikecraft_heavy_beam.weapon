@@ -1,0 +1,36 @@
+{
+    "version": 0,
+    "name": "weapon_name.light_beam",
+    "pitch_speed": 0.0,
+    "yaw_speed": 0.0,
+    "range": 5000.0,
+    "cooldown_duration": 12.0,
+    "uniforms_target_filter_id": "common_weapon",
+    "attack_target_type_groups": [
+        "heavy_capital",
+        "defense"
+    ],
+    "weapon_type": "normal",
+    "damage_affect_type": "hull_and_armor_and_shields",
+    "damage": 75.0,
+    "penetration": 520.0,
+    "tags": [
+        "beam",
+        "energy",
+        "bomber"
+    ],
+    "acquire_target_logic": "order_target_only",
+    "target_acquired_duration_required_to_fire": 0.5,
+    "firing": {
+        "firing_type": "beam",
+        "beam_duration": 0.75
+    },
+    "effects": {
+        "muzzle_picking_behavior": "sequential",
+        "muzzle_effect": "advent_bomber_strikecraft_heavy_beam_weapon_muzzle",
+        "beam_effect": "advent_bomber_strikecraft_heavy_beam_weapon_beam",
+        "hit_hull_effect": "advent_bomber_strikecraft_heavy_beam_weapon_hit_hull",
+        "hit_shield_effect": "advent_bomber_strikecraft_heavy_beam_weapon_hit_shield",
+        "hit_shield_impact_radius_t": 0.5
+    }
+}

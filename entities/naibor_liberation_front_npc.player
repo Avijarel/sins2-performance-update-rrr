@@ -912,7 +912,17 @@
         },
         {
             "unit": "trader_battle_capital_ship_n",
-            "count": [1, 2]
+            "count": [1, 2],
+            "options":
+            {
+                "level": 2,
+                "items": [
+                    "trader_tactical_analyst",
+                    "naibor_home_front_advantage",
+                    "trader_heavy_gauss_slugs",
+                    "trader_heavy_armor"
+                ]
+            }
         },
         {
             "unit": "trader_antifighter_frigate",
@@ -931,7 +941,17 @@
         },
         {
             "unit": "trader_siege_capital_ship_n",
-            "count": [1, 2]
+            "count": [1, 2],
+            "options":
+            {
+                "level": 2,
+                "items": [
+                    "trader_tactical_analyst",
+                    "naibor_home_front_advantage",
+                    "trader_heavy_gauss_slugs",
+                    "trader_heavy_armor"
+                ]
+            }
         },
         {
             "unit": "npc_trader_trade_port_structure",
@@ -954,7 +974,17 @@
         },
         {
             "unit": "trader_carrier_capital_ship_n",
-            "count": [1, 2]
+            "count": [1, 2],
+            "options":
+            {
+                "level": 2,
+                "items": [
+                    "trader_tactical_analyst",
+                    "naibor_home_front_advantage",
+                    "trader_heavy_gauss_slugs",
+                    "trader_heavy_armor"
+                ]
+            }
         },
         {
             "unit": "trader_retrofit_bay_structure",
@@ -983,23 +1013,24 @@
     "buildable_units": [
         "trader_scout_corvette",
         "trader_skirmisher_corvette_frigate",
-		"trader_missile_corvette",
+        "trader_missile_corvette",
         "trader_light_frigate",
         "trader_antifighter_frigate",
         "trader_siege_frigate",
         "trader_colony_frigate",
         "trader_heavy_cruiser",
         "trader_long_range_cruiser",
+        "trader_carrier_cruiser",
         "trader_torpedo_cruiser",
-		"trader_battle_capital_ship_n",
-		"trader_siege_capital_ship_n",
-		"trader_carrier_capital_ship_n",
-		"trader_support_capital_ship_n",
-		"trader_colony_capital_ship_n"
+        "trader_battle_capital_ship_n",
+        "trader_siege_capital_ship_n",
+        "trader_carrier_capital_ship_n",
+        "trader_support_capital_ship_n",
+        "trader_colony_capital_ship_n"
     ],
     "structure_builder":
     {
-        "ship": "trader_constructor_ship",
+        "ship": "trader_constructor_ship_npc",
         "special_operation_unit_kind": "structure_builder"
     },
     "structures": [
@@ -1060,11 +1091,12 @@
     },
     "npc":
     {
+	"can_survey_planets": false,
         "visuals": [
         {
             "name": "npc_player.naibor_liberation_front.name",
             "description": "npc_player.naibor_liberation_front.description",
-            "portrait": "miner_0",
+            "portrait": "npc_naibor_0",
             "icon": "faction_3",
             "color_group": "npc_naibor_liberation_front",
             "reputation_panel": "naibor_liberation_front_panel"
@@ -1073,30 +1105,394 @@
         {
             "sounds":
             {
-                "use_ability_generic": "aluxian_npc_use_ability_generic_0",
-                "use_ability_raid_0": "aluxian_npc_use_ability_raid_0_0",
-                "use_ability_raid_1": "aluxian_npc_use_ability_raid_1_0",
-                "use_ability_purchase_item": "aluxian_npc_use_ability_purchase_item_0",
-                "reputation_level_increased": "aluxian_npc_reputation_level_increased_0",
-                "insufficient_influence_points": "aluxian_npc_insufficient_influence_points_0",
-                "auction_started": "aluxian_npc_auction_started_0",
-                "auction_won": "aluxian_npc_auction_won_0",
-                "auction_lost": "aluxian_npc_auction_lost_0",
-                "auction_ignored": "aluxian_npc_auction_ignored_0",
-                "attacking": "aluxian_npc_attacking_0"
+                "use_ability_generic": "pranast_npc_use_ability_generic_0",
+                "use_ability_raid_0": "pranast_npc_use_ability_raid_0_0",
+                "use_ability_raid_1": "pranast_npc_use_ability_raid_1_0",
+                "use_ability_purchase_item": "pranast_npc_use_ability_purchase_item_0",
+                "reputation_level_increased": "pranast_npc_reputation_level_increased_0",
+                "insufficient_influence_points": "pranast_npc_insufficient_influence_points_0",
+                "auction_started": "pranast_npc_auction_started_0",
+                "auction_won": "pranast_npc_auction_won_0",
+                "auction_lost": "pranast_npc_auction_lost_0",
+                "auction_ignored": "pranast_npc_auction_ignored_0",
+                "attacking": "pranast_npc_attacking_0"
             }
         },
-		"ai_difficulty": "hard",
+	"ai_difficulty": "hard",
+        "raid_arrival_taunt_chance": 0.0,
+        "max_concurrent_raids": 2,
+        "raid_types": [
+        {
+            "raid_type": "claim_planet",
+            "awakening_cooldown": [120.0, 180.0],
+            "standard_cooldown": [480.0, 780.0],
+            "initial_delay_from_game_start": [540.0, 660.0],
+            "max_jump_distance": 5,
+            "dormant_target_search_interval": 10.0,
+            "arrival_delay_duration": 30.0,
+            "composition_brackets": [
+            {
+                "value_threshold": [0.0, 100.0],
+                "units": {
+                    "required_units": [
+                    {
+                        "unit": "trader_siege_frigate",
+                        "count": [3, 3]
+                    },
+                    {
+                        "unit": "trader_colony_frigate",
+                        "count": [2, 2]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "trader_light_frigate",
+                        "weight": 6.0
+                    },
+                    {
+                        "unit": "trader_antifighter_frigate",
+                        "weight": 4.0
+                    },
+                    {
+                        "unit": "trader_missile_corvette",
+                        "weight": 4.0
+                    }]
+                },
+                "supply_cap": 100,
+                "threat_level": "low"
+            },
+            {
+                "value_threshold": [101.0, 200.0],
+                "units": {
+                    "required_units": [
+                    {
+                        "unit": "trader_siege_frigate",
+                        "count": [4, 4]
+                    },
+                    {
+                        "unit": "trader_colony_frigate",
+                        "count": [2, 2]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "trader_skirmisher_corvette_frigate",
+                        "weight": 4.0
+                    },
+                    {
+                        "unit": "trader_missile_corvette",
+                        "weight": 4.0
+                    },
+                    {
+                        "unit": "trader_light_frigate",
+                        "weight": 6.0
+                    },
+                    {
+                        "unit": "trader_antifighter_frigate",
+                        "weight": 4.0
+                    }]
+                },
+                "supply_cap": 200,
+                "threat_level": "moderate"
+            },
+            {
+                "value_threshold": [201.0, 400.0],
+                "units": {
+                    "required_units": [
+                    {
+                        "unit": "trader_siege_frigate",
+                        "count": [5, 5]
+                    },
+                    {
+                        "unit": "trader_colony_frigate",
+                        "count": [2, 2]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "trader_missile_corvette",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "trader_light_frigate",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "trader_antifighter_frigate",
+                        "weight": 4.0
+                    },
+                    {
+                        "unit": "trader_heavy_cruiser",
+                        "weight": 5.0
+                    },
+                    {
+                        "unit": "trader_carrier_cruiser",
+                        "weight": 1.0
+                    },
+                    {
+                        "unit": "trader_long_range_cruiser",
+                        "weight": 5.0
+                    }]
+                },
+                "supply_cap": 300,
+                "threat_level": "medium"
+            },
+            {
+                "value_threshold": [401.0, 750.0],
+                "units": {
+                    "required_units": [
+                    {
+                        "unit": "trader_siege_frigate",
+                        "count": [8, 8]
+                    },
+                    {
+                        "unit": "trader_colony_frigate",
+                        "count": [2, 2]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "trader_light_frigate",
+                        "weight": 4.0
+                    },
+                    {
+                        "unit": "trader_antifighter_frigate",
+                        "weight": 4.0
+                    },
+                    {
+                        "unit": "trader_heavy_cruiser",
+                        "weight": 5.0
+                    },
+                    {
+                        "unit": "trader_carrier_cruiser",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "trader_long_range_cruiser",
+                        "weight": 6.0
+                    },
+                    {
+                        "unit": "trader_torpedo_cruiser",
+                        "weight": 2.0
+                    }]
+                },
+                "supply_cap": 500,
+                "threat_level": "high"
+            },
+            {
+                "value_threshold": [751.0, 10000.0],
+                "units": {
+                    "required_units": [
+                    {
+                        "unit": "trader_siege_frigate",
+                        "count": [12, 12]
+                    },
+                    {
+                        "unit": "trader_colony_frigate",
+                        "count": [2, 2]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "trader_light_frigate",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "trader_antifighter_frigate",
+                        "weight": 4.0
+                    },
+                    {
+                        "unit": "trader_heavy_cruiser",
+                        "weight": 5.0
+                    },
+                    {
+                        "unit": "trader_carrier_cruiser",
+                        "weight": 4.0
+                    },
+                    {
+                        "unit": "trader_long_range_cruiser",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "trader_torpedo_cruiser",
+                        "weight": 8.0
+                    }]
+                },
+                "supply_cap": 1000,
+                "threat_level": "extreme"
+            }]
+        },
+        {
+            "raid_type": "destroy_planet",
+            "awakening_cooldown": [120.0, 180.0],
+            "standard_cooldown": [600.0, 1200.0],
+            "initial_delay_from_game_start": [1200.0, 1500.0],
+            "dormant_target_search_interval": 10.0,
+            "max_jump_distance": 25,
+            "arrival_delay_duration": 30.0,
+            "target_reevaluation_interval": 2.0,
+            "composition_brackets": [
+            {
+                "value_threshold": [0.0, 50.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "trader_siege_frigate",
+                        "count": [2, 3]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "trader_light_frigate",
+                        "weight": 9.0
+                    },
+                    {
+                        "unit": "trader_missile_corvette",
+                        "weight": 1.0
+                    }]
+                },
+                "supply_cap": 75,
+                "threat_level": "low"
+            },
+            {
+                "value_threshold": [51.0, 100.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "trader_siege_frigate",
+                        "count": [3, 4]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "trader_light_frigate",
+                        "weight": 5.0
+                    },
+                    {
+                        "unit": "trader_skirmisher_corvette_frigate",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "trader_missile_corvette",
+                        "weight": 1.0
+                    }]
+                },
+                "supply_cap": 125,
+                "threat_level": "moderate"
+            },
+            {
+                "value_threshold": [101.0, 250.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "trader_siege_frigate",
+                        "count": [4, 5]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "trader_light_frigate",
+                        "weight": 1.0
+                    },
+                    {
+                        "unit": "trader_skirmisher_corvette_frigate",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "trader_missile_corvette",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "trader_heavy_cruiser",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "trader_long_range_cruiser",
+                        "weight": 2.0
+                    }]
+                },
+                "supply_cap": 200,
+                "threat_level": "medium"
+            },
+            {
+                "value_threshold": [251.0, 500.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "trader_siege_frigate",
+                        "count": [5, 6]
+                    },
+                    {
+                        "unit": "trader_long_range_cruiser",
+                        "count": [2, 3]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "trader_light_frigate",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "trader_heavy_cruiser",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "trader_carrier_cruiser",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "trader_long_range_cruiser",
+                        "weight": 3.0
+                    }]
+                },
+                "supply_cap": 400,
+                "threat_level": "high"
+            },
+            {
+                "value_threshold": [501.0, 1000000.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "trader_light_frigate",
+                        "count": [5, 6]
+                    },
+                    {
+                        "unit": "trader_siege_frigate",
+                        "count": [6, 7]
+                    },
+                    {
+                        "unit": "trader_torpedo_cruiser",
+                        "count": [4, 5]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "trader_light_frigate",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "trader_heavy_cruiser",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "trader_carrier_cruiser",
+                        "weight": 3.0
+                    },
+                    {
+                        "unit": "trader_siege_frigate",
+                        "weight": 1.0
+                    },
+                    {
+                        "unit": "trader_torpedo_cruiser",
+                        "weight": 2.0
+                    }]
+                },
+                "supply_cap": 800,
+                "threat_level": "extreme"
+            }]
+        }],
         "ai_params":
         {
-            "will_fleet_colonize": true,
-			"will_fleet_retreat": true,
-			"fleet_will_probably_defeat_ratio_range": [0.8, 1.2],
-            "max_jumps_from_home_planet_for_fleets": 99,
-            "chaos_factor_range": [0.8, 1.00],
-            "chaos_factor_update_interval": 100,
-			"defense_to_offsense_spend_ratio": 0.2,
-            "pick_another_buildable_attack_ship_type_interval_in_minutes": [10, 20],
+            "will_fleet_colonize": false,
+            "will_fleet_retreat": false,
+            "fleet_will_probably_defeat_ratio_range": [0.9, 1.1],
+            "max_jumps_from_home_planet_for_fleets": 1,
+            "pick_another_buildable_attack_ship_type_interval_in_minutes": [0, 0],
             "desired_explore_ship_count":
             {
                 "type": "constant",
@@ -1114,6 +1510,34 @@
         "start_allied_to_playable_players": false,
         "start_allied_to_other_npc_players": false,
         "start_allied_to_militia_npc_players": false,
+        "bounty_market":
+        {
+            "market_weight": 6,
+            "bounty_cut": 0.4,
+            "metal_credit_value": 3.0,
+            "crystal_credit_value": 3.0,
+            "exotic_credit_values": [
+            {
+                "exotic_name": "offense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "defense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "utility",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "economic",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "ultimate",
+                "credit_value": 1500
+            }]
+        },
         "auctions": [
         {
             "weight": 1.0,
@@ -1183,30 +1607,30 @@
         }],		
         "simple_can_ever_be_colonized_planet_types": [
             "asteroid",
-			"crystalline",
+            "barren",
+            "city",
+            "crystalline",
             "desert",
-			"desert_home",
+            "desert_home",
             "ferrous",
-			"ferrous_home",
-			"ice_asteroid",
+            "ferrous_home",
+            "gas_giant",
+            "greenhouse",
+            "hive_asteroid",
             "ice",
+            "ice_asteroid",
+            "ice_moon",
+            "irradiated",
+            "magnetic",
             "moon",
             "oceanic",
-			"pirate_base",
-			"swamp",
+            "pirate_base",
+            "ship_graveyard",
+            "swamp",
             "terran",
-			"terran_home",
+            "terran_home",
             "volcanic",
-			"ship_graveyard",
-			"greenhouse",
-			"barren",
-			"city",
-			"magnetic",
-			"ice_moon",
-			"volcanic_moon",
-			"gas_giant",
-			"hive_asteroid",
-			"irradiated"
+            "volcanic_moon"
         ],
         "simple_planet_level": 10,
         "simple_planet_tracks":
@@ -1214,7 +1638,7 @@
             "defense":
             {
                 "max_military_structure_slots": 12,
-                "max_health_points": 3000.0,
+                "max_health_points": 4000.0,
                 "health_points_restore_rate": 2.0
             },
             "logistics":
@@ -1278,22 +1702,46 @@
             {
                 "influence_point_cost": 1,
                 "npc_modifiers":
-                {}
+		{
+                    "send_raid_supply":
+                    {
+                        "value_behavior": "additive",
+                        "value": 20.0
+                    }
+		}
             },
             {
                 "influence_point_cost": 2,
                 "npc_modifiers":
-                {}
+		{
+                    "send_raid_supply":
+                    {
+                        "value_behavior": "additive",
+                        "value": 40.0
+                    }
+		}
             },
             {
                 "influence_point_cost": 4,
                 "npc_modifiers":
-                {}
+		{
+                    "send_raid_supply":
+                    {
+                        "value_behavior": "additive",
+                        "value": 60.0
+                    }
+		}
             },
             {
                 "influence_point_cost": 6,
                 "npc_modifiers":
-                {}
+		{
+                    "send_raid_supply":
+                    {
+                        "value_behavior": "additive",
+                        "value": 80.0
+                    }
+		}
             }]
         }
     },

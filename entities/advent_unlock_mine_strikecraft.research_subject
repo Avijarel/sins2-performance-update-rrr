@@ -1,9 +1,9 @@
 {
     "version": 0,
     "domain": "military",
-    "tier": 6,
+    "tier": 1,
     "field": "military_ascension",
-    "field_coord": [12, 1],
+    "field_coord": [3, 4],
     "research_time": 150.0,
     "price":
     {

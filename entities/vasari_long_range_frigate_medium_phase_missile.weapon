@@ -3,8 +3,8 @@
     "name": "weapon_name.medium_phase_missile",
     "pitch_speed": 0.0,
     "yaw_speed": 0.0,
-    "range": 11000.0,
-    "cooldown_duration": 14.4,
+    "range": 9000.0,
+    "cooldown_duration": 4.8,
     "uniforms_target_filter_id": "common_weapon",
     "attack_target_type_groups": [
         "heavy_capital",
@@ -12,8 +12,8 @@
     ],
     "weapon_type": "normal",
     "damage_affect_type": "hull_and_armor_and_shields",
-    "damage": 150.0,
-    "penetration": 510.0,
+    "damage": 72.0,
+    "penetration": 420.0,
     "tags": [
         "phasemissile",
 	"missile",

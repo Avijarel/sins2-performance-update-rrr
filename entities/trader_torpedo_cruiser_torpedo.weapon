@@ -1,0 +1,37 @@
+{
+    "version": 0,
+    "name": "weapon_name.heavy_torpedo",
+    "pitch_speed": 0.0,
+    "yaw_speed": 0.0,
+    "range": 12000.0,
+    "cooldown_duration": 30.0,
+    "uniforms_target_filter_id": "common_weapon",
+    "attack_target_type_groups": [
+        "defense_starbase_titan",
+        "capital"
+    ],
+    "weapon_type": "normal",
+    "damage_affect_type": "hull_and_armor_and_shields",
+    "damage": 750.0,
+    "penetration": 1000.0,
+    "tags": [
+        "missile",
+        "physical"
+    ],
+    "acquire_target_logic": "order_target_only",
+    "firing":
+    {
+        "firing_type": "spawn_torpedo",
+        "torpedo_firing_definition":
+        {
+            "spawned_unit": "trader_torpedo_cruiser_torpedo",
+            "duration": 30.0
+        }
+    },
+    "effects":
+    {
+        "muzzle_picking_behavior": "sequential",
+        "muzzle_effect": "trader_torpedo_cruiser_torpedo_weapon_muzzle",
+        "hit_shield_impact_radius_t": 1.0
+    }
+}

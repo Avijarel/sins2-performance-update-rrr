@@ -1,0 +1,48 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 450.805634,
+        "box": {
+            "center": [
+                -1.5e-05,
+                3.1e-05,
+                -1.5e-05
+            ],
+            "extents": [
+                329.400146,
+                347.081299,
+                307.130432
+            ]
+        },
+        "collision_rank": 0
+    },
+    "physics": {
+        "can_move_linear": true,
+        "max_linear_speed": 500.0,
+        "time_to_max_linear_speed": 25.0,
+        "can_move_angular": true
+    },
+    "debris": {
+        "lifetime": [
+            5.0,
+            5.0
+        ],
+        "linear_speed": [
+            10.0,
+            40.0
+        ],
+        "angular_speed": [
+            0.1,
+            0.3
+        ]
+    },
+    "target_filter_unit_type": "debris",
+    "skin_groups": [
+        {
+            "skins": [
+                "dlc2_advent_rebel_super_capital_ship_debris_front"
+            ]
+        }
+    ],
+    "action_effect_size": "small_unit"
+}

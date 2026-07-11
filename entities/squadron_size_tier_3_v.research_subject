@@ -8,14 +8,19 @@
     "price":
     {
         "credits": 0.0,
-        "metal": 0,
-        "crystal": 0
+        "metal": 6375,
+        "crystal": 6375
     },
+    "exotic_price": [
+    {
+        "exotic_type": "research",
+        "count": 5
+    }],
     "strikecraft_modifiers": [
     {
         "value_behavior": "additive",
         "modifier_type": "squadron_size",
-        "value": 0.0
+        "value": 1.0
     }],
     "prerequisites": [["squadron_size_tier_2_v"]],
     "name": "research_subject.squad_size_name",

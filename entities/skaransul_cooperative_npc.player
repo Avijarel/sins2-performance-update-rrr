@@ -906,7 +906,11 @@
                     "additive": 25.0
                 }
             }
-        }]
+        }],
+		"starting_planet_components": [
+            "skaransul_coalition_embassy",
+			"skaransul_coalition_response_center"
+        ]
     },
     "starting_units_in_gravity_well":
     {
@@ -953,7 +957,14 @@
         },
         {
             "unit": "trader_support_capital_ship",
-            "count": [1, 1]
+            "count": [1, 1],
+			"options":
+			{
+				"level": 3,
+                "items": [
+                    "skaransul_tech_sharing"
+                ]
+			}
         },
         {
             "unit": "vasari_exotic_factory_structure",
@@ -964,7 +975,20 @@
         "required_units": [
         {
             "unit": "vasari_rebel_titan_n",
-            "count": [1, 1]
+            "count": [1, 1],
+			"options":
+			{
+				"level": 5,
+                "items": [
+                    "skaransul_tech_sharing",
+					"skaransul_indomitable_spirit",
+					"vasari_rebel_titan_improve_gravity_pulse",
+					"vasari_rebel_titan_improve_nano_emitters",
+					"vasari_rebel_titan_unlock_extra_phase_missile_weapons",
+					"vasari_rebel_titan_unlock_phase_cannon_weapon",
+					"vasari_rebel_titan_hull_plating_0"
+                ]
+			}
         },
         {
             "unit": "trader_heavy_cruiser",
@@ -972,7 +996,14 @@
         },
         {
             "unit": "advent_battle_capital_ship_n",
-            "count": [1, 1]
+            "count": [1, 1],
+			"options":
+			{
+				"level": 3,
+                "items": [
+                    "skaransul_tech_sharing"
+                ]
+			}
         },
         {
             "unit": "trader_antifighter_frigate",
@@ -1024,22 +1055,23 @@
         "advent_light_frigate",
         "trader_antifighter_frigate",
         "advent_siege_frigate",
-        "vasari_colony_cruiser",
         "trader_heavy_cruiser",
         "vasari_long_range_frigate",
-		"advent_guardian_cruiser",
-		"trader_robotics_cruiser",
+	"advent_guardian_cruiser",
+	"trader_robotics_cruiser",
+        "advent_carrier_cruiser",
         "trader_torpedo_cruiser",
-		"advent_battle_capital_ship_n",
-		"vasari_carrier_capital_ship_n",
-		"vasari_colony_capital_ship_n",
-		"trader_siege_capital_ship_n",
-		"trader_support_capital_ship_n",
-		"vasari_rebel_titan_n"
+	"advent_battle_capital_ship_n",
+	"trader_battle_capital_ship_n",
+	"vasari_battle_capital_ship_n",
+	"vasari_carrier_capital_ship_n",
+	"trader_siege_capital_ship_n",
+	"trader_support_capital_ship_n",
+	"vasari_rebel_titan_n"
     ],
     "structure_builder":
     {
-        "ship": "vasari_constructor_ship",
+        "ship": "vasari_constructor_ship_npc",
         "special_operation_unit_kind": "structure_builder"
     },
     "structures": [
@@ -1054,6 +1086,23 @@
 		"vasari_exotic_factory_structure",
 		"vasari_phase_gate_structure"
     ],
+    "allowed_traffic_ports": [
+        "trader_population_structure",
+        "advent_population_structure",
+        "vasari_population_structure",
+        "vasari_exotic_factory_structure",
+		"advent_exotic_factory_structure",
+		"trader_exotic_factory_structure",
+        "vasari_crystal_extractor_structure",
+        "vasari_metal_extractor_structure",
+        "advent_crystal_extractor_structure",
+        "advent_metal_extractor_structure",
+        "trader_crystal_extractor_structure",
+        "trader_metal_extractor_structure",
+		"trader_capturable_crystal_extractor_structure",
+		"trader_capturable_metal_extractor_structure",
+		"danoba_population_structure"
+    ],
     "ship_components": [
 		"vasari_starbase_unlock_extra_phase_missile_weapons",
 		"vasari_starbase_unlock_extra_wave_weapons",
@@ -1062,11 +1111,12 @@
     ],
     "npc":
     {
+	"can_survey_planets": false,
         "visuals": [
         {
             "name": "npc_player.skaransul_cooperative.name",
             "description": "npc_player.skaransul_cooperative.description",
-            "portrait": "miner_0",
+            "portrait": "npc_skaransul_0",
             "icon": "militia_11",
             "color_group": "npc_skaransul_cooperative",
             "reputation_panel": "skaransul_cooperative_panel"
@@ -1088,13 +1138,14 @@
                 "attacking": "jiskun_npc_attacking_0"
             }
         },
-		"ai_difficulty": "hard",
         "ai_params":
         {
-            "will_fleet_colonize": true,
-            "max_jumps_from_home_planet_for_fleets": 2,
-            "pick_another_buildable_attack_ship_type_interval_in_minutes": [5, 10],
-            "enable_build_starbase_delay_in_minutes": [5, 10],
+            "will_use_npcs": true,
+            "will_fleet_colonize": false,
+            "fleet_will_probably_defeat_ratio_range": [0.9, 1.1],
+            "max_jumps_from_home_planet_for_fleets": 99,
+            "pick_another_buildable_attack_ship_type_interval_in_minutes": [1, 2],
+            "enable_build_starbase_delay_in_minutes": [0, 0],
             "desired_explore_ship_count":
             {
                 "type": "constant",
@@ -1103,8 +1154,8 @@
         },
         "max_fleet_supply":
         {
-            "roam": [500, 625, 750, 1000],
-            "defend": [500, 625, 750, 1000]
+            "roam": [94, 187, 375, 625],
+            "defend": [312, 625, 875, 1250]
         },
         "npc_tags": [
             "skaransul"
@@ -1112,6 +1163,34 @@
         "start_allied_to_playable_players": true,
         "start_allied_to_other_npc_players": true,
         "start_allied_to_militia_npc_players": false,
+        "bounty_market":
+        {
+            "market_weight": 1,
+            "bounty_cut": 0.4,
+            "metal_credit_value": 3.0,
+            "crystal_credit_value": 3.0,
+            "exotic_credit_values": [
+            {
+                "exotic_name": "offense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "defense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "utility",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "economic",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "ultimate",
+                "credit_value": 1500
+            }]
+        },
         "auctions": [
         {
             "weight": 1.0,
@@ -1163,7 +1242,16 @@
                 "skaransul_one_for_all"
             ]
         },
-		{
+	{
+            "weight": 0.1,
+            "bid_duration": 300.0,
+            "rewards": [
+                "",
+                "",
+                "",
+                "nanobot_repair_systems_artifact"]
+        },
+	{
             "weight": 0.1,
             "bid_duration": 300.0,
             "rewards": [
@@ -1235,29 +1323,30 @@
         },						
         "simple_can_ever_be_colonized_planet_types": [
             "asteroid",
-			"crystalline",
+            "barren",
+            "city",
+            "crystalline",
             "desert",
-			"desert_home",
+            "desert_home",
             "ferrous",
-			"ferrous_home",
-			"ice_asteroid",
+            "ferrous_home",
+            "gas_giant",
+            "greenhouse",
+            "hive_asteroid",
             "ice",
+            "ice_asteroid",
+            "ice_moon",
+            "irradiated",
+            "magnetic",
             "moon",
             "oceanic",
-			"pirate_base",
-			"swamp",
+            "pirate_base",
+            "ship_graveyard",
+            "swamp",
             "terran",
-			"terran_home",
+            "terran_home",
             "volcanic",
-			"ship_graveyard",
-			"greenhouse",
-			"barren",
-			"city",
-			"magnetic",
-			"ice_moon",
-			"volcanic_moon",
-			"gas_giant",
-			"hive_asteroid"
+            "volcanic_moon"
         ],
         "simple_planet_level": 10,
         "simple_planet_tracks":
@@ -1271,7 +1360,8 @@
             "logistics":
             {
                 "max_civilian_structure_slots": 12,
-                "structure_builder_count": 3
+                "structure_builder_count": 3,
+				"max_planet_component_slots": 3
             },
             "commerce":
             {

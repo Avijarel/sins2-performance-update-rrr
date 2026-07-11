@@ -725,7 +725,7 @@
             },
             "alliance_broken_cease_fire":
             {
-                "sound": "aluxian_npc_attacking_0",
+                "sound": "nilari_npc_attacking_0",
                 "is_dialogue": true
             },
             "alliance_offered_share_vision_aggressive":
@@ -887,9 +887,9 @@
         {
             "income_rates":
             {
-                "credits": 15.0,
-                "metal": 4.0,
-                "crystal": 3.0
+                "credits": 32.5,
+                "metal": 6.25,
+                "crystal": 5.7
             },
             "modifier_values":
             {
@@ -945,7 +945,15 @@
         },
         {
             "unit": "advent_planet_psionic_capital_ship_n",
-            "count": [1, 1]
+            "count": [1, 1],
+			"options":
+			{
+				"level": 3,
+                "items": [
+                    "laesinda_spawn_illusions",
+					"anundi_reincarnation"
+                ]
+			}
         },
         {
             "unit": "advent_hangar_defense_structure",
@@ -1008,12 +1016,13 @@
         "advent_antimodule_cruiser",
         "advent_siege_frigate",
         "advent_colony_frigate",
+        "advent_carrier_cruiser",
 		"advent_heavy_cruiser",
 		"advent_planet_psionic_capital_ship_n"
     ],
     "structure_builder":
     {
-        "ship": "advent_constructor_ship",
+        "ship": "advent_constructor_ship_npc",
         "special_operation_unit_kind": "structure_builder"
     },
     "structures": [
@@ -1032,11 +1041,12 @@
     ],
     "npc":
     {
+	"can_survey_planets": false,
         "visuals": [
         {
             "name": "npc_player.laesinda_dominion.name",
             "description": "npc_player.laesinda_dominion.description",
-            "portrait": "miner_0",
+            "portrait": "npc_laesinda_0",
             "icon": "faction_5",
             "color_group": "npc_laesinda_dominion",
             "reputation_panel": "laesinda_dominion_panel"
@@ -1045,30 +1055,27 @@
         {
             "sounds":
             {
-                "use_ability_generic": "aluxian_npc_use_ability_generic_0",
-                "use_ability_raid_0": "aluxian_npc_use_ability_raid_0_0",
-                "use_ability_raid_1": "aluxian_npc_use_ability_raid_1_0",
-                "use_ability_purchase_item": "aluxian_npc_use_ability_purchase_item_0",
-                "reputation_level_increased": "aluxian_npc_reputation_level_increased_0",
-                "insufficient_influence_points": "aluxian_npc_insufficient_influence_points_0",
-                "auction_started": "aluxian_npc_auction_started_0",
-                "auction_won": "aluxian_npc_auction_won_0",
-                "auction_lost": "aluxian_npc_auction_lost_0",
-                "auction_ignored": "aluxian_npc_auction_ignored_0",
-                "attacking": "aluxian_npc_attacking_0"
+                "use_ability_generic": "nilari_npc_use_ability_generic_0",
+                "use_ability_raid_0": "nilari_npc_use_ability_raid_0",
+                "use_ability_raid_1": "nilari_npc_use_ability_raid_0",
+                "use_ability_purchase_item": "nilari_npc_use_ability_purchase_item_0",
+                "reputation_level_increased": "nilari_npc_reputation_level_increased_0",
+                "insufficient_influence_points": "nilari_npc_insufficient_influence_points_0",
+                "auction_started": "nilari_npc_auction_started_0",
+                "auction_won": "nilari_npc_auction_won_0",
+                "auction_lost": "nilari_npc_auction_lost_0",
+                "auction_ignored": "nilari_npc_auction_ignored_0",
+                "attacking": "nilari_npc_attacking_0"
             }
         },
-		"ai_difficulty": "hard",
         "ai_params":
         {
-            "will_fleet_colonize": false,
-            "max_jumps_from_home_planet_for_fleets": 99,
-			"will_fleet_retreat": false,
+            "will_fleet_colonize": true,
+            "will_fleet_retreat": false,
             "fleet_will_probably_defeat_ratio_range": [0.9, 1.1],
-            "chaos_factor_range": [0.8, 1.00],
-            "chaos_factor_update_interval": 100,
-			"defense_to_offsense_spend_ratio": 0.2,
-            "pick_another_buildable_attack_ship_type_interval_in_minutes": [10, 20],
+            "max_jumps_from_home_planet_for_fleets": 1,
+            "pick_another_buildable_attack_ship_type_interval_in_minutes": [1, 2],
+            "enable_build_starbase_delay_in_minutes": [0, 0],
             "desired_explore_ship_count":
             {
                 "type": "constant",
@@ -1086,6 +1093,34 @@
         "start_allied_to_playable_players": false,
         "start_allied_to_other_npc_players": false,
         "start_allied_to_militia_npc_players": false,
+        "bounty_market":
+        {
+            "market_weight": 4,
+            "bounty_cut": 0.4,
+            "metal_credit_value": 3.0,
+            "crystal_credit_value": 3.0,
+            "exotic_credit_values": [
+            {
+                "exotic_name": "offense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "defense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "utility",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "economic",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "ultimate",
+                "credit_value": 1500
+            }]
+        },
         "auctions": [
         {
             "weight": 1.0,
@@ -1151,32 +1186,244 @@
                 "",
                 "",
                 "energy_transformer_artifact"]
-        }],				
+        }],
+        "raid_arrival_taunt_chance": 0.4,
+        "raid_arrival_messages": [
+            "npc_laesinda_raid_arrival_taunt.0",
+            "npc_laesinda_raid_arrival_taunt.1",
+            "npc_laesinda_raid_arrival_taunt.2",
+            "npc_laesinda_raid_arrival_taunt.3",
+            "npc_laesinda_raid_arrival_taunt.4",
+            "npc_laesinda_raid_arrival_taunt.5"
+        ],
+        "max_concurrent_raids": 12,
+        "raid_types": [
+        {
+            "raid_type": "kill_population",
+			"target_population_threshold": 39,
+            "awakening_cooldown": [30.0, 60.0],
+            "standard_cooldown": [360.0, 600.0],
+            "initial_delay_from_game_start": [1800.0, 1800.0],
+            "max_jump_distance": 99,
+            "dormant_target_search_interval": 10.0,
+            "arrival_delay_duration": 10.0,
+            "composition_brackets": [
+            {
+                "value_threshold": [0.0, 100.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "advent_siege_frigate",
+                        "count": [2, 4]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "advent_antimodule_cruiser",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "advent_light_frigate",
+                        "weight": 8.0
+                    },
+                    {
+                        "unit": "advent_siege_frigate",
+                        "weight": 0.5
+                    }]
+                },
+                "supply_cap": 200,
+                "threat_level": "low"
+            },
+            {
+                "value_threshold": [100.0, 500.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "advent_siege_frigate",
+                        "count": [3, 5]
+                    },
+                    {
+                        "unit": "advent_planet_psionic_capital_ship",
+                        "options":
+                        {
+                            "level": 0,
+                            "forced_leveled_up_abilities": [
+								"advent_planet_psionic_capital_ship_quell"
+							],
+							"items": [
+								"laesinda_spawn_illusions",
+								"anundi_reincarnation",
+								"laesinda_parting_the_way"
+							]
+                        },
+                        "count": [1, 1]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "advent_antimodule_cruiser",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "advent_light_frigate",
+                        "weight": 6.0
+                    },
+                    {
+                        "unit": "advent_siege_frigate",
+                        "weight": 0.5
+                    }]
+                },
+                "supply_cap": 400,
+                "threat_level": "moderate"
+            },
+            {
+                "value_threshold": [100.0, 500.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "advent_siege_frigate",
+                        "count": [3, 5]
+                    },
+                    {
+                        "unit": "advent_planet_psionic_capital_ship",
+                        "options":
+                        {
+                            "level": 0,
+                            "forced_leveled_up_abilities": ["advent_planet_psionic_capital_ship_quell"],
+							"items": [
+								"laesinda_spawn_illusions",
+								"anundi_reincarnation",
+								"laesinda_parting_the_way"
+							]
+                        },
+                        "count": [1, 1]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "advent_antimodule_cruiser",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "advent_light_frigate",
+                        "weight": 6.0
+                    },
+                    {
+                        "unit": "advent_siege_frigate",
+                        "weight": 0.5
+                    }]
+                },
+                "supply_cap": 500,
+                "threat_level": "medium"
+            },
+            {
+                "value_threshold": [500.0, 1000.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "advent_siege_frigate",
+                        "count": [4, 6]
+                    },
+                    {
+                        "unit": "advent_planet_psionic_capital_ship",
+                        "options":
+                        {
+                            "level": 2,
+                            "forced_leveled_up_abilities": ["advent_planet_psionic_capital_ship_quell"],
+							"items": [
+								"laesinda_spawn_illusions",
+								"anundi_reincarnation",
+								"laesinda_parting_the_way"
+							]
+                        },
+                        "count": [1, 2]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "advent_antimodule_cruiser",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "advent_light_frigate",
+                        "weight": 6.0
+                    },
+                    {
+                        "unit": "advent_siege_frigate",
+                        "weight": 0.5
+                    }]
+                },
+                "supply_cap": 600,
+                "threat_level": "high"
+            },
+            {
+                "value_threshold": [1000.0, 100000.0],
+                "units":
+                {
+                    "required_units": [
+                    {
+                        "unit": "advent_siege_frigate",
+                        "count": [6, 8]
+                    },
+                    {
+                        "unit": "advent_planet_psionic_capital_ship",
+                        "options":
+                        {
+                            "level": 5,
+                            "forced_leveled_up_abilities": ["advent_planet_psionic_capital_ship_quell",
+															"advent_planet_psionic_capital_ship_provoke_hysteria"],
+							"items": [
+								"laesinda_spawn_illusions",
+								"anundi_reincarnation",
+								"laesinda_parting_the_way"
+							]
+                        },
+                        "count": [2, 2]
+                    }],
+                    "random_units": [
+                    {
+                        "unit": "advent_antimodule_cruiser",
+                        "weight": 2.0
+                    },
+                    {
+                        "unit": "advent_light_frigate",
+                        "weight": 4.0
+                    },
+                    {
+                        "unit": "advent_siege_frigate",
+                        "weight": 0.5
+                    }]
+                },
+                "supply_cap": 800,
+                "threat_level": "extreme"
+            }]
+        }],
         "simple_can_ever_be_colonized_planet_types": [
             "asteroid",
-			"crystalline",
+            "barren",
+            "city",
+            "crystalline",
             "desert",
-			"desert_home",
+            "desert_home",
             "ferrous",
-			"ferrous_home",
-			"ice_asteroid",
+            "ferrous_home",
+            "gas_giant",
+            "greenhouse",
+            "hive_asteroid",
             "ice",
+            "ice_asteroid",
+            "ice_moon",
+            "irradiated",
+            "magnetic",
             "moon",
             "oceanic",
-			"pirate_base",
-			"swamp",
+            "pirate_base",
+            "ship_graveyard",
+            "swamp",
             "terran",
-			"terran_home",
+            "terran_home",
             "volcanic",
-			"ship_graveyard",
-			"greenhouse",
-			"barren",
-			"city",
-			"magnetic",
-			"ice_moon",
-			"volcanic_moon",
-			"gas_giant",
-			"hive_asteroid"
+            "volcanic_moon"
         ],
         "simple_planet_level": 10,
         "simple_planet_tracks":
@@ -1184,7 +1431,7 @@
             "defense":
             {
                 "max_military_structure_slots": 10,
-                "max_health_points": 3000.0,
+                "max_health_points": 4000.0,
                 "health_points_restore_rate": 2.0
             },
             "logistics":
@@ -1241,22 +1488,46 @@
             {
                 "influence_point_cost": 2,
                 "npc_modifiers":
-                {}
+                {
+                    "send_raid_supply":
+                    {
+                        "value_behavior": "additive",
+                        "value": 20.0
+                    }
+		}
             },
             {
                 "influence_point_cost": 4,
                 "npc_modifiers":
-                {}
+                {
+                    "send_raid_supply":
+                    {
+                        "value_behavior": "additive",
+                        "value": 40.0
+                    }
+		}
             },
             {
                 "influence_point_cost": 8,
                 "npc_modifiers":
-                {}
+                {
+                    "send_raid_supply":
+                    {
+                        "value_behavior": "additive",
+                        "value": 60.0
+                    }
+		}
             },
             {
                 "influence_point_cost": 8,
                 "npc_modifiers":
-                {}
+                {
+                    "send_raid_supply":
+                    {
+                        "value_behavior": "additive",
+                        "value": 80.0
+                    }
+		}
             }]
         }
     },

@@ -704,7 +704,7 @@
             },
             "alliance_broken_cease_fire":
             {
-                "sound": "aluxian_npc_attacking_0",
+                "sound": "alutar_npc_attacking_0",
                 "is_dialogue": true
             },
             "alliance_offered_share_vision_aggressive":
@@ -880,12 +880,13 @@
         "advent_guardian_cruiser",
         "advent_colony_frigate",
         "advent_defense_cruiser",
+        "advent_carrier_cruiser",
 		"advent_subjugator_cruiser",
 		"advent_long_range_cruiser"
     ],
     "structure_builder":
     {
-        "ship": "advent_constructor_ship",
+        "ship": "advent_constructor_ship_npc",
         "special_operation_unit_kind": "structure_builder"
     },
     "structures": [
@@ -897,11 +898,12 @@
     ],
     "npc":
     {
+	"can_survey_planets": false,
         "visuals": [
         {
             "name": "npc_player.free_minds_of_hobari.name",
             "description": "npc_player.free_minds_of_hobari.description",
-            "portrait": "miner_0",
+            "portrait": "npc_hobari_0",
             "icon": "faction_12",
             "color_group": "npc_free_minds_of_hobari",
             "reputation_panel": "free_minds_of_hobari_panel"
@@ -910,20 +912,19 @@
         {
             "sounds":
             {
-                "use_ability_generic": "aluxian_npc_use_ability_generic_0",
-                "use_ability_raid_0": "aluxian_npc_use_ability_raid_0_0",
-                "use_ability_raid_1": "aluxian_npc_use_ability_raid_1_0",
-                "use_ability_purchase_item": "aluxian_npc_use_ability_purchase_item_0",
-                "reputation_level_increased": "aluxian_npc_reputation_level_increased_0",
-                "insufficient_influence_points": "aluxian_npc_insufficient_influence_points_0",
-                "auction_started": "aluxian_npc_auction_started_0",
-                "auction_won": "aluxian_npc_auction_won_0",
-                "auction_lost": "aluxian_npc_auction_lost_0",
-                "auction_ignored": "aluxian_npc_auction_ignored_0",
-                "attacking": "aluxian_npc_attacking_0"
+                "use_ability_generic": "alutar_npc_use_ability_generic_0",
+                "use_ability_raid_0": "alutar_npc_use_ability_raid_0",
+                "use_ability_raid_1": "alutar_npc_use_ability_raid_0",
+                "use_ability_purchase_item": "alutar_npc_use_ability_purchase_item_0",
+                "reputation_level_increased": "alutar_npc_reputation_level_increased_0",
+                "insufficient_influence_points": "alutar_npc_insufficient_influence_points_0",
+                "auction_started": "alutar_npc_auction_started_0",
+                "auction_won": "alutar_npc_auction_won_0",
+                "auction_lost": "alutar_npc_auction_lost_0",
+                "auction_ignored": "alutar_npc_auction_ignored_0",
+                "attacking": "alutar_npc_attacking_0"
             }
         },
-		"ai_difficulty": "hard",
         "ai_params":
         {
             "will_fleet_colonize": false,
@@ -938,7 +939,7 @@
         },
         "max_fleet_supply":
         {
-            "roam": [125, 250, 375, 500],
+            "roam": [0, 0, 0, 0],
             "defend": [312, 625, 875, 1250]
         },
         "npc_tags": [
@@ -947,6 +948,34 @@
         "start_allied_to_playable_players": true,
         "start_allied_to_other_npc_players": true,
         "start_allied_to_militia_npc_players": true,
+        "bounty_market":
+        {
+            "market_weight": 1,
+            "bounty_cut": 0.4,
+            "metal_credit_value": 3.0,
+            "crystal_credit_value": 3.0,
+            "exotic_credit_values": [
+            {
+                "exotic_name": "offense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "defense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "utility",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "economic",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "ultimate",
+                "credit_value": 1500
+            }]
+        },
         "auctions": [
         {
             "weight": 1.0,
@@ -1068,29 +1097,30 @@
         },						
         "simple_can_ever_be_colonized_planet_types": [
             "asteroid",
-			"crystalline",
+            "barren",
+            "city",
+            "crystalline",
             "desert",
-			"desert_home",
+            "desert_home",
             "ferrous",
-			"ferrous_home",
-			"ice_asteroid",
+            "ferrous_home",
+            "gas_giant",
+            "greenhouse",
+            "hive_asteroid",
             "ice",
+            "ice_asteroid",
+            "ice_moon",
+            "irradiated",
+            "magnetic",
             "moon",
             "oceanic",
-			"pirate_base",
-			"swamp",
+            "pirate_base",
+            "ship_graveyard",
+            "swamp",
             "terran",
-			"terran_home",
+            "terran_home",
             "volcanic",
-			"ship_graveyard",
-			"greenhouse",
-			"barren",
-			"city",
-			"magnetic",
-			"ice_moon",
-			"volcanic_moon",
-			"gas_giant",
-			"hive_asteroid"
+            "volcanic_moon"
         ],
         "simple_planet_level": 10,
         "simple_planet_tracks":
@@ -1159,22 +1189,46 @@
             {
                 "influence_point_cost": 2,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.02,
+                        "value_behavior": "scalar"
+                    }
+                }
             },
             {
                 "influence_point_cost": 4,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.04,
+                        "value_behavior": "scalar"
+                    }
+                }
             },
             {
                 "influence_point_cost": 6,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.06,
+                        "value_behavior": "scalar"
+                    }
+                }
             },
             {
                 "influence_point_cost": 10,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.08,
+                        "value_behavior": "scalar"
+                    }
+                }
             }]
         }
     },

@@ -904,6 +904,10 @@
             "count": [3, 6]
         },
         {
+            "unit": "trader_minefield_structure_buildable",
+            "count": [150, 150]
+        },
+        {
             "unit": "trader_starbase_n",
             "count": [1, 1]
         }]
@@ -951,7 +955,16 @@
         },
         {
             "unit": "trader_siege_capital_ship_n",
-            "count": [1, 1]
+            "count": [2, 2],
+			"options":
+			{
+				"level": 5,
+                "items": [
+                    "yannock_exclusive_packages",
+                    "trader_missile_guidance_computer",
+                    "trader_rapid_autoloader"
+                ]
+			}
         },
         {
             "unit": "trader_missile_corvette",
@@ -974,24 +987,31 @@
         {
             "tag": "starbase",
             "unit_limit": 1
+        }],
+	"planet": [
+        {
+            "tag": "mem_utility",
+            "unit_limit": 150
         }]
     },
     "buildable_units": [
         "trader_missile_corvette",
         "trader_siege_frigate",
         "trader_long_range_cruiser",
+        "trader_carrier_cruiser",
         "trader_torpedo_cruiser",
 		"trader_siege_capital_ship_n"
     ],
     "structure_builder":
     {
-        "ship": "trader_constructor_ship",
+        "ship": "trader_constructor_ship_npc",
         "special_operation_unit_kind": "structure_builder"
     },
     "structures": [
         "trader_capital_ship_factory_structure",
         "trader_frigate_factory_structure",
         "trader_hangar_defense_structure",
+	"trader_minefield_structure_buildable",
 	"trader_starbase_n"
     ],
     "ship_components": [
@@ -1000,11 +1020,12 @@
     ],
     "npc":
     {
+	"can_survey_planets": false,
         "visuals": [
         {
             "name": "npc_player.yannock_ordnance_specialists.name",
             "description": "npc_player.yannock_ordnance_specialists.description",
-            "portrait": "miner_0",
+            "portrait": "npc_yannock_0",
             "icon": "faction_10",
             "color_group": "npc_yannock_ordnance_specialists",
             "reputation_panel": "yannock_ordnance_specialists_panel"
@@ -1026,7 +1047,6 @@
                 "attacking": "eivonns_frigates_npc_attacking_0"
             }
         },
-		"ai_difficulty": "hard",
         "ai_params":
         {
             "will_fleet_colonize": false,
@@ -1041,7 +1061,7 @@
         },
         "max_fleet_supply":
         {
-            "roam": [125, 250, 375, 500],
+            "roam": [0, 0, 0, 0],
             "defend": [312, 625, 875, 1250]
         },
         "npc_tags": [
@@ -1050,6 +1070,34 @@
         "start_allied_to_playable_players": true,
         "start_allied_to_other_npc_players": true,
         "start_allied_to_militia_npc_players": false,
+        "bounty_market":
+        {
+            "market_weight": 4,
+            "bounty_cut": 0.4,
+            "metal_credit_value": 3.0,
+            "crystal_credit_value": 3.0,
+            "exotic_credit_values": [
+            {
+                "exotic_name": "offense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "defense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "utility",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "economic",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "ultimate",
+                "credit_value": 1500
+            }]
+        },
         "auctions": [
         {
             "weight": 1.0,
@@ -1106,7 +1154,7 @@
                 "",
                 "",
                 "",
-                "matter_compressor_planet_artifact"]
+                "missile_launcher_artifact"]
         },
         {
             "weight": 0.1,
@@ -1171,29 +1219,30 @@
         },						
         "simple_can_ever_be_colonized_planet_types": [
             "asteroid",
-			"crystalline",
+            "barren",
+            "city",
+            "crystalline",
             "desert",
-			"desert_home",
+            "desert_home",
             "ferrous",
-			"ferrous_home",
-			"ice_asteroid",
+            "ferrous_home",
+            "gas_giant",
+            "greenhouse",
+            "hive_asteroid",
             "ice",
+            "ice_asteroid",
+            "ice_moon",
+            "irradiated",
+            "magnetic",
             "moon",
             "oceanic",
-			"pirate_base",
-			"swamp",
+            "pirate_base",
+            "ship_graveyard",
+            "swamp",
             "terran",
-			"terran_home",
+            "terran_home",
             "volcanic",
-			"ship_graveyard",
-			"greenhouse",
-			"barren",
-			"city",
-			"magnetic",
-			"ice_moon",
-			"volcanic_moon",
-			"gas_giant",
-			"hive_asteroid"
+            "volcanic_moon"
         ],
         "simple_planet_level": 10,
         "simple_planet_tracks":
@@ -1243,7 +1292,7 @@
                 "cooldown_duration": 180
             },
             {
-                "reward": "yannock_exclusive_packages",
+                "reward": "yannock_penetrating_warheads",
                 "required_reputation_level": 1,
                 "influence_point_cost": 4,
                 "cooldown_duration": 240
@@ -1255,7 +1304,7 @@
                 "cooldown_duration": 360
             },
             {
-                "reward": "yannock_penetrating_warheads",
+                "reward": "yannock_exclusive_packages",
                 "required_reputation_level": 3,
                 "influence_point_cost": 8,
                 "cooldown_duration": 480
@@ -1264,22 +1313,46 @@
             {
                 "influence_point_cost": 2,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.02,
+                        "value_behavior": "scalar"
+                    }
+		}
             },
             {
                 "influence_point_cost": 4,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.04,
+                        "value_behavior": "scalar"
+                    }
+		}
             },
             {
                 "influence_point_cost": 6,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.06,
+                        "value_behavior": "scalar"
+                    }
+		}
             },
             {
                 "influence_point_cost": 8,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.08,
+                        "value_behavior": "scalar"
+                    }
+		}
             }]
         }
     },

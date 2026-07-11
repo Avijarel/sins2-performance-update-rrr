@@ -5,14 +5,14 @@
     "yaw_speed": 15.0,
     "yaw_firing_tolerance": 5.0,
     "range": 7500.0,
-    "cooldown_duration": 18.0,
+    "cooldown_duration": 9.0,
     "uniforms_target_filter_id": "common_weapon",
     "attack_target_type_groups": [
         "heavy_capital"
     ],
     "weapon_type": "normal",
     "damage_affect_type": "hull_and_armor_and_shields",
-    "damage": 150.0,
+    "damage": 75.0,
     "penetration": 400.0,
     "tags": [
         "missile",

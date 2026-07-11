@@ -1,0 +1,49 @@
+{
+    "version": 0,
+    "skin_stages": [
+    {
+        "is_main_view_icon_visible_camera_distance": 46559.832989,
+        "min_camera_distance": 519.537414,
+        "gui":
+        {
+            "hud_icon": "trader_torpedo_cruiser_torpedo_hud_icon",
+            "hud_monochrome_icon": "trader_torpedo_cruiser_torpedo_main_view_icon",
+			"hud_picture": "trader_torpedo_cruiser_torpedo_hud_picture",
+            "name": "trader_torpedo_cruiser_torpedo_name",
+            "description": "trader_torpedo_cruiser_torpedo_description"
+        },
+        "unit_mesh":
+        {
+            "mesh": "trader_torpedo_cruiser_torpedo",
+            "shader": "ship",
+            "is_shadow_blocker": true
+        },
+        "main_view_icon":
+        {
+            "group": "strikecraft",
+            "icon": "trader_torpedo_cruiser_torpedo_main_view_icon"
+        },
+        "effects":
+        {
+            "exhaust_effects":
+            {
+                "particle_effects": [
+                {
+                    "particle_effect": "torpedo_cruiser_exhaust"
+                }],
+                "trail_effects": [
+                {
+                    "trail_effect": "trader_large_torpedo"
+                }]
+            }
+        },
+        "sounds":
+        {
+            "move_sounds":
+            {
+                "engine": "ambient_loop_tech_neutrontorp_engine"
+            }
+        },
+        "death_sequence_group": "torpedo0"
+    }]
+}

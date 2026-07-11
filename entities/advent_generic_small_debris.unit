@@ -1,0 +1,72 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 7.467566,
+        "box": {
+            "center": [
+                0.387171,
+                -1.172877,
+                -0.718761
+            ],
+            "extents": [
+                3.809315,
+                2.66965,
+                5.449244
+            ]
+        },
+        "can_collide": false
+    },
+    "health": {
+        "release_time_after_death": 60.0,
+        "round_max_points_up_to_5": false,
+        "levels": [
+            {
+                "max_hull_points": 1.0,
+                "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "hull_crippled_percentage": 0.2,
+                "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "shield_point_restore_rate": 1.9,
+                "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+                "shield_burst_restore": {
+                    "cooldown_duration": 60.0,
+                    "restore_percentage": 0.5
+                }
+            }
+        ]
+    },
+    "physics": {
+        "can_move_linear": true,
+        "max_linear_speed": 500.0,
+        "time_to_max_linear_speed": 25.0,
+        "can_move_angular": true
+    },
+    "debris": {
+        "lifetime": [
+            5.0,
+            5.0
+        ],
+        "linear_speed": [
+            10.0,
+            40.0
+        ],
+        "angular_speed": [
+            0.1,
+            0.6
+        ]
+    },
+    "target_filter_unit_type": "debris",
+    "skin_groups": [
+        {
+            "skins": [
+                "advent_generic_small_debris_0",
+                "advent_generic_small_debris_1",
+                "advent_generic_small_debris_2",
+                "advent_generic_small_debris_3",
+                "advent_generic_small_debris_4",
+                "advent_generic_small_debris_5",
+                "advent_generic_small_debris_6"
+            ]
+        }
+    ],
+    "action_effect_size": "small_unit"
+}

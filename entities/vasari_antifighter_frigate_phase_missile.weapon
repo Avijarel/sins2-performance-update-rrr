@@ -4,7 +4,7 @@
     "pitch_speed": 0.0,
     "yaw_speed": 0.0,
     "range": 5100.0,
-    "cooldown_duration": 18.0,
+    "cooldown_duration": 12.0,
     "uniforms_target_filter_id": "common_weapon",
     "attack_target_type_groups": [
         "heavy_capital",
@@ -13,10 +13,10 @@
     "weapon_type": "normal",
     "damage_affect_type": "hull_and_armor_and_shields",
     "damage": 24.0,
-    "penetration": 120.0,
+    "penetration": 0.0,
     "tags": [
         "phasemissile",
-		"missile",
+        "missile",
         "physical"
     ],
     "acquire_target_logic": "order_target_or_best_target_in_range",
@@ -26,7 +26,7 @@
         "firing_type": "spawn_torpedo",
         "torpedo_firing_definition":
         {
-            "spawned_unit": "vasari_phase_missile",
+            "spawned_unit": "vasari_phase_missile_very_light",
             "duration": 12.0,
             "bypass_shields_chance": 0.3
         }

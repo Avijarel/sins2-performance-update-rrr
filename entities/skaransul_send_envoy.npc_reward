@@ -1,0 +1,40 @@
+{
+    "version": 0,
+    "gui":
+    {
+        "hud_icon": "trader_envoy_frigate_hud_icon",
+        "name": "npc_reward.skaransul_send_envoy.name",
+        "description": "npc_reward.skaransul_send_envoy.description",
+        "gravity_well_fixture_target_filter_description": "npc_reward.gravity_well_target_filter_description.owned_planets"
+    },
+    "gravity_well_fixture_target_filter_id": "uniforms_send_envoy",
+    "uses_range": false,
+    "type": "spawn_units",
+    "spawn_units":
+    {
+        "player_ai_usage": "defend_planet",
+        "spawn_units":
+        {
+            "random_units": [
+            {
+                "unit": "trader_envoy_frigate",
+                "weight": 1.0
+            },
+            {
+                "unit": "advent_skaransul_envoy_frigate",
+                "weight": 1.0
+            },
+            {
+                "unit": "vasari_envoy_frigate",
+                "weight": 1.0
+            }]
+        },
+        "arrival_delay_duration": 0,
+        "special_operation_unit_kind": "skaransul_send_envoy",
+        "supply": 4,
+        "spawn_units_ownership_type": "npc_player",
+        "target_alert": "targeted_by_ability",
+        "buff_on_units": "skaransul_send_envoy_on_self",
+        "action_data_source": "empty"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "version": 0,
+    "gui":
+    {
+        "hud_icon": "skaransul_tech_sharing_hud_icon",
+        "name": "npc_reward.skaransul_tech_sharing.name",
+        "description": "npc_reward.skaransul_tech_sharing.description"
+    },
+    "type": "ship_component",
+    "item": "skaransul_tech_sharing"
+}

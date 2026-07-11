@@ -1,0 +1,48 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 524.335449,
+        "box": {
+            "center": [
+                0.0,
+                3.8e-05,
+                -4.6e-05
+            ],
+            "extents": [
+                238.9785,
+                155.93988,
+                504.707458
+            ]
+        },
+        "collision_rank": 0
+    },
+    "physics": {
+        "can_move_linear": true,
+        "max_linear_speed": 500.0,
+        "time_to_max_linear_speed": 25.0,
+        "can_move_angular": true
+    },
+    "debris": {
+        "lifetime": [
+            5.0,
+            5.0
+        ],
+        "linear_speed": [
+            10.0,
+            40.0
+        ],
+        "angular_speed": [
+            0.1,
+            0.3
+        ]
+    },
+    "target_filter_unit_type": "debris",
+    "skin_groups": [
+        {
+            "skins": [
+                "dlc2_advent_loyalist_super_capital_ship_debris_back"
+            ]
+        }
+    ],
+    "action_effect_size": "small_unit"
+}

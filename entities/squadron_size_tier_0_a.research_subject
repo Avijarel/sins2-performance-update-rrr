@@ -21,7 +21,7 @@
         "modifier_type": "max_squadron_capacity",
         "value_behavior": "additive",
         "value": 1.0,
-        "tags": ["super_capital_ship", "titan"]
+        "tags": ["capital_ship", "super_capital_ship", "titan", "starbase"]
     }],
     "name": "research_subject.squad_capacity_capital_name",
     "name_uppercase": "research_subject.squad_capacity_capital_name_upper",

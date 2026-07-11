@@ -1,0 +1,117 @@
+{
+    "version": 0,
+    "skin_stages": [
+    {
+        "is_main_view_icon_visible_camera_distance": 2370.31877,
+        "min_camera_distance": 31.850409,
+        "gui":
+        {
+            "hud_icon": "advent_interceptor_strikecraft_hud_icon",
+            "hud_monochrome_icon": "advent_interceptor_strikecraft_main_view_icon",
+            "tooltip_picture": "advent_interceptor_strikecraft_tooltip_picture",
+            "hud_picture": "advent_interceptor_strikecraft_hud_picture",
+            "name": "advent_interceptor_strikecraft_name",
+            "description": "advent_interceptor_strikecraft_description"
+        },
+        "unit_mesh":
+        {
+            "mesh": "advent_interceptor_strikecraft",
+            "shader": "ship",
+            "is_shadow_blocker": true
+        },
+        "main_view_icon":
+        {
+            "group": "ship",
+            "icon": "advent_interceptor_strikecraft_main_view_icon",
+            "selected_icon": "advent_interceptor_strikecraft_main_view_icon_selected",
+            "sub_selected_icon": "advent_interceptor_strikecraft_main_view_icon_sub_selected"
+        },
+        "effects":
+        {
+            "exhaust_effects":
+            {
+                "particle_effects": [
+                {
+                    "particle_effect": "advent_medium_missile_exhaust"
+                }],
+                "trail_effects": [
+                {
+                    "trail_effect": "fighterpsicombat"
+                }]
+            },
+            "effect_alias_bindings": [
+            {
+                "alias_name": "advent_interceptor_strikecraft_light_laser_weapon_hit_hull",
+                "alias_binding":
+                {
+                    "particle_effect": "advent_laser_bolt_light_impact",
+                    "sounds": [
+                        "weapon_impact_energy_light_hithull",
+                        "weapon_impact_energy_light_hithull_01",
+                        "weapon_impact_energy_light_hithull_02"
+                    ]
+                }
+            },
+            {
+                "alias_name": "advent_interceptor_strikecraft_light_laser_weapon_hit_shield",
+                "alias_binding":
+                {
+                    "particle_effect": "advent_laser_bolt_light_impact",
+                    "sounds": [
+                        "weapon_impact_generic_light_hitshields",
+                        "weapon_impact_generic_light_hitshields_01",
+                        "weapon_impact_generic_light_hitshields_02",
+                        "weapon_impact_generic_light_hitshields_03"
+                    ]
+                }
+            },
+            {
+                "alias_name": "advent_interceptor_strikecraft_light_laser_weapon_muzzle",
+                "alias_binding":
+                {
+                    "particle_effect": "advent_laser_bolt_light_muzzle",
+                    "sounds": [
+                        "weapon_muzzle_psi_energy_light_laser",
+                        "weapon_muzzle_psi_energy_light_laser_01",
+                        "weapon_muzzle_psi_energy_light_laser_02",
+                        "weapon_muzzle_psi_energy_light_laser_03"
+                    ]
+                }
+            },
+            {
+                "alias_name": "advent_interceptor_strikecraft_light_laser_weapon_projectile_travel",
+                "alias_binding":
+                {
+                    "particle_effect": "advent_laser_bolt_light"
+                }
+            }]
+        },
+        "sounds":
+        {
+            "move_sounds":
+            {
+                "engine": "ambient_loop_psi_engine_strikecraft"
+            },
+            "dialogue":
+            {
+                "selected":
+                {
+                    "neutral": [
+                        "advent_interceptor_strikecraft_selected_neutral_0"]
+                },
+                "order_issued":
+                {
+                    "neutral": [
+                        "advent_interceptor_strikecraft_order_issued_neutral_0"]
+                },
+                "attack_order_issued":
+                {
+                    "neutral": [
+                        "advent_interceptor_strikecraft_attack_order_issued_neutral_0"
+                    ]
+                }
+            }
+        },
+        "death_sequence_group": "advent_fighter0"
+    }]
+}

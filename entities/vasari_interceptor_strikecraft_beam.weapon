@@ -1,0 +1,37 @@
+{
+    "version": 0,
+    "name": "weapon_name.light_pulse_beam",
+    "pitch_speed": 0.0,
+    "yaw_speed": 0.0,
+    "range": 3000.0,
+    "cooldown_duration": 6.0,
+    "uniforms_target_filter_id": "common_and_strikecraft_and_torpedo_weapon",
+    "attack_target_type_groups": [
+        "strikecraft_torpedo",
+        "corvette"
+    ],
+    "weapon_type": "normal",
+    "damage_affect_type": "hull_and_armor_and_shields",
+    "damage": 60.0,
+    "penetration": 78.0,
+    "tags": [
+        "beam",
+        "energy",
+        "fighter"
+    ],
+    "acquire_target_logic": "order_target_only",
+    "firing": {
+        "firing_type": "beam",
+        "beam_duration": 0.21
+    },
+    "effects": {
+        "burst_pattern": [
+            0.0
+        ],
+        "muzzle_effect": "vasari_interceptor_strikecraft_beam_weapon_muzzle",
+        "beam_effect": "vasari_interceptor_strikecraft_beam_weapon_beam",
+        "hit_hull_effect": "vasari_interceptor_strikecraft_beam_weapon_hit_hull",
+        "hit_shield_effect": "vasari_interceptor_strikecraft_beam_weapon_hit_shield",
+        "hit_shield_impact_radius_t": 0.1
+    }
+}

@@ -1,0 +1,142 @@
+{
+    "version": 0,
+    "skin_stages": [
+    {
+        "is_main_view_icon_visible_camera_distance": 10243.896064,
+        "min_camera_distance": 457.954496,
+        "gui":
+        {
+            "hud_icon": "trader_colony_frigate_hud_icon",
+            "hud_monochrome_icon": "trader_colony_frigate_main_view_icon",
+            "hud_picture": "trader_colony_frigate_hud_picture",
+            "tooltip_picture": "trader_colony_frigate_tooltip_picture",
+            "name": "unit.trader_kamikaze_frigate_name",
+            "description": "trader_colony_frigate_description"
+        },
+        "unit_mesh":
+        {
+            "mesh": "trader_colony_frigate",
+            "shader": "ship",
+            "is_shadow_blocker": true
+        },
+        "main_view_icon":
+        {
+            "group": "ship",
+            "icon": "trader_colony_frigate_main_view_icon",
+            "selected_icon": "trader_colony_frigate_main_view_icon_selected",
+            "sub_selected_icon": "trader_colony_frigate_main_view_icon_sub_selected"
+        },
+        "effects":
+        {
+            "exhaust_effects":
+            {
+                "particle_effects": [
+                {
+                    "particle_effect": "exhaust_tech_small_01"
+                }]
+            },
+            "damage_effects":
+            {
+                "max_damage_effect_count": 4,
+                "damage_effects": [
+                {
+                    "max_count": 2,
+                    "weight": 4.0,
+                    "hull_percentage_threshold": 0.99,
+                    "particle_effect": "tec_damage_embers"
+                },
+                {
+                    "max_count": 2,
+                    "weight": 4.0,
+                    "hull_percentage_threshold": 0.99,
+                    "particle_effect": "damage_smoke_1"
+                },
+                {
+                    "max_count": 1,
+                    "weight": 2.0,
+                    "hull_percentage_threshold": 0.75,
+                    "particle_effect": "tec_damage_plasma_sparks"
+                },
+                {
+                    "max_count": 1,
+                    "weight": 3.0,
+                    "hull_percentage_threshold": 0.75,
+                    "particle_effect": "damage_electricity_2",
+                    "sound": "ambient_loop_electrical_damage_01"
+                },
+                {
+                    "max_count": 2,
+                    "weight": 3.0,
+                    "hull_percentage_threshold": 0.75,
+                    "particle_effect": "damage_air_decompression",
+                    "sound": "ambient_loop_airdecompression"
+                },
+                {
+                    "max_count": 2,
+                    "hull_percentage_threshold": 0.75,
+                    "particle_effect": "tec_damage_escaping_gas",
+                    "sound": "ambient_loop_tech_escaping_gas"
+                }]
+            },
+            "flair_effects": [
+            {
+                "mesh_point_name": "center",
+                "particle_effect": "tec_damage_frigate",
+                "constraint": "is_crippled"
+            }],
+            "shield_effect": "trader_colony_frigate",
+            "effect_alias_bindings": [
+            {
+                "alias_name": "trader_colony_shuttle",
+                "alias_binding":
+                {
+                    "particle_effect": "trader_colony_shuttle",
+                    "sounds": [
+                        "ability_activate_tech_shuttlelaunch"]
+                }
+            }]
+        },
+        "sounds":
+        {
+            "move_sounds":
+            {
+                "engine": "engine_techsupportship"
+            },
+            "dialogue":
+            {
+                "spawned":
+                {
+                    "neutral": [
+                        "trader_colony_frigate_spawned_neutral_0"]
+                },
+                "selected":
+                {
+                    "neutral": [
+                        "trader_colony_frigate_selected_neutral_0",
+                        "trader_colony_frigate_selected_neutral_1",
+                        "trader_colony_frigate_selected_neutral_2"
+                    ],
+                    "scared": [
+                        "trader_colony_frigate_selected_scared_0_placeholder",
+                        "trader_colony_frigate_selected_scared_1_placeholder",
+                        "trader_colony_frigate_selected_scared_2_placeholder"
+                    ]
+                },
+                "order_issued":
+                {
+                    "neutral": [
+                        "trader_colony_frigate_order_issued_neutral_0",
+                        "trader_colony_frigate_order_issued_neutral_1",
+                        "trader_colony_frigate_order_issued_neutral_2"
+                    ],
+                    "scared": [
+                        "trader_colony_frigate_order_issued_scared_0_placeholder",
+                        "trader_colony_frigate_order_issued_scared_1_placeholder",
+                        "trader_colony_frigate_order_issued_scared_2_placeholder"
+                    ]
+                }
+            }
+        },
+        "death_sequence_group": "reactor_discharge"
+    }]
+}

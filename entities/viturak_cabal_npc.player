@@ -860,13 +860,14 @@
         "vasari_colony_cruiser",
         "vasari_heavy_cruiser",
         "vasari_long_range_frigate",
+        "vasari_carrier_cruiser",
         "vasari_anticorvette_corvette",
         "vasari_antiarmor_cruiser",
         "vasari_siege_cruiser"
     ],
     "structure_builder":
     {
-        "ship": "vasari_constructor_ship",
+        "ship": "vasari_constructor_ship_npc",
         "special_operation_unit_kind": "structure_builder"
     },
     "structures": [
@@ -882,11 +883,12 @@
     ],
     "npc":
     {
+        "can_survey_planets": false,
         "visuals": [
         {
             "name": "npc_player.viturak_cabal.name",
             "description": "npc_player.viturak_cabal.description",
-            "portrait": "vasari_13",
+            "portrait": "npc_viturak_0",
             "icon": "faction_13",
             "color_group": "npc_viturak_cabal",
             "reputation_panel": "viturak_cabal_panel"
@@ -908,12 +910,12 @@
                 "attacking": "viturak_npc_attacking_0"
             }
         },
-		"ai_difficulty": "hard",
         "ai_params":
         {
             "will_fleet_colonize": false,
             "max_jumps_from_home_planet_for_fleets": 0,
             "pick_another_buildable_attack_ship_type_interval_in_minutes": [0, 0],
+            "enable_build_starbase_delay_in_minutes": [0, 0],
             "desired_explore_ship_count":
             {
                 "type": "constant",
@@ -922,7 +924,7 @@
         },
         "max_fleet_supply":
         {
-            "roam": [125, 250, 375, 500],
+            "roam": [0, 0, 0, 0],
             "defend": [312, 625, 875, 1250]
         },
         "npc_tags": [
@@ -1012,6 +1014,34 @@
             "sell_price": 1.5,
             "buy_price": 3.0
         },
+        "bounty_market":
+        {
+            "market_weight": 2,
+            "bounty_cut": 0.4,
+            "metal_credit_value": 3.0,
+            "crystal_credit_value": 3.0,
+            "exotic_credit_values": [
+            {
+                "exotic_name": "offense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "defense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "utility",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "economic",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "ultimate",
+                "credit_value": 1500
+            }]
+        },
         "exotic_market":
         {
             "market_weight": 10,
@@ -1054,29 +1084,30 @@
         },
         "simple_can_ever_be_colonized_planet_types": [
             "asteroid",
-			"crystalline",
+            "barren",
+            "city",
+            "crystalline",
             "desert",
-			"desert_home",
+            "desert_home",
             "ferrous",
-			"ferrous_home",
-			"ice_asteroid",
+            "ferrous_home",
+            "gas_giant",
+            "greenhouse",
+            "hive_asteroid",
             "ice",
+            "ice_asteroid",
+            "ice_moon",
+            "irradiated",
+            "magnetic",
             "moon",
             "oceanic",
-			"pirate_base",
-			"swamp",
+            "pirate_base",
+            "ship_graveyard",
+            "swamp",
             "terran",
-			"terran_home",
+            "terran_home",
             "volcanic",
-			"ship_graveyard",
-			"greenhouse",
-			"barren",
-			"city",
-			"magnetic",
-			"ice_moon",
-			"volcanic_moon",
-			"gas_giant",
-			"hive_asteroid"
+            "volcanic_moon"
         ],
         "simple_planet_level": 10,
         "simple_planet_tracks":
@@ -1130,8 +1161,8 @@
             {
                 "reward": "viturak_spawn_attack_ships",
                 "required_reputation_level": 2,
-                "influence_point_cost": 6,
-                "cooldown_duration": 480
+                "influence_point_cost": 8,
+                "cooldown_duration": 360
             },
             {
                 "reward": "viturak_deploy_phase_gate",
@@ -1163,7 +1194,7 @@
                 }
             },
             {
-                "influence_point_cost": 6,
+                "influence_point_cost": 8,
                 "npc_modifiers":
                 {
                     "sell_exotic_credits_received":

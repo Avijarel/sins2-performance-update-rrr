@@ -1,0 +1,35 @@
+{
+    "version": 0,
+    "gui":
+    {
+        "hud_icon": "naibor_xeno_assault_raid_hud_icon",
+        "name": "npc_reward.naibor_xeno_assault_raid.name",
+        "description": "npc_reward.naibor_xeno_assault_raid.description",
+        "gravity_well_fixture_target_filter_description": "npc_reward.gravity_well_target_filter_description.enemy_planets_no_trader"
+    },
+    "gravity_well_fixture_target_filter_id": "common_planet_enemy_owner_not_trader",
+    "type": "spawn_units",
+    "uses_range": false,
+    "spawn_units":
+    {
+        "player_ai_usage": "raid_enemy_planet",
+        "spawn_units":
+        {
+            "required_units": [
+            {
+                "unit": "trader_scout_corvette",
+                "count": [5, 5]
+            },
+            {
+                "unit": "trader_light_frigate",
+                "count": [1, 1]
+            }]
+        },
+        "special_operation_unit_kind": "naibor_xeno_raid_scouts",
+        "supply": 45,
+        "target_alert": "targeted_by_ability",
+        "spawn_units_ownership_type": "npc_player",
+        "buff_on_units": "naibor_xeno_raid_on_ship",
+        "action_data_source": "naibor_xeno_raid"
+    }
+}

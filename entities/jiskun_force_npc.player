@@ -805,6 +805,14 @@
             "count": [12, 12]
         },
         {
+            "unit": "vasari_missile_defense_structure",
+            "count": [10, 10]
+        },
+        {
+            "unit": "vasari_phase_jump_inhibitor_structure",
+            "count": [1, 1]
+        },
+        {
             "unit": "vasari_starbase_n",
             "count": [1, 1]
         }]
@@ -848,26 +856,30 @@
         "vasari_colony_cruiser",
         "vasari_heavy_cruiser",
         "vasari_long_range_frigate",
+        "vasari_carrier_cruiser",
         "vasari_anticorvette_corvette",
         "vasari_antiarmor_cruiser",
         "vasari_siege_cruiser"
     ],
     "structure_builder":
     {
-        "ship": "vasari_constructor_ship",
+        "ship": "vasari_constructor_ship_npc",
         "special_operation_unit_kind": "structure_builder"
     },
     "structures": [
         "vasari_factory_structure",
+	"vasari_missile_defense_structure",
+	"vasari_phase_jump_inhibitor_structure",
 	"vasari_starbase_n"
     ],
     "npc":
     {
+        "can_survey_planets": false,
         "visuals": [
         {
             "name": "npc_player.jiskun_force.name",
             "description": "npc_player.jiskun_force.description",
-            "portrait": "vasari_18",
+            "portrait": "npc_jiskun_0",
             "icon": "faction_0",
             "color_group": "npc_jiskun_force",
             "reputation_panel": "jiskun_force_panel"
@@ -889,12 +901,12 @@
                 "attacking": "jiskun_npc_attacking_0"
             }
         },
-		"ai_difficulty": "hard",
         "ai_params":
         {
             "will_fleet_colonize": false,
             "max_jumps_from_home_planet_for_fleets": 0,
             "pick_another_buildable_attack_ship_type_interval_in_minutes": [0, 0],
+            "enable_build_starbase_delay_in_minutes": [0, 0],
             "desired_explore_ship_count":
             {
                 "type": "constant",
@@ -903,7 +915,7 @@
         },
         "max_fleet_supply":
         {
-            "roam": [125, 250, 375, 500],
+            "roam": [0, 0, 0, 0],
             "defend": [312, 625, 875, 1250]
         },
         "npc_tags": [
@@ -983,6 +995,34 @@
             "sell_price": 1.5,
             "buy_price": 3.0
         },
+        "bounty_market":
+        {
+            "market_weight": 1,
+            "bounty_cut": 0.4,
+            "metal_credit_value": 3.0,
+            "crystal_credit_value": 3.0,
+            "exotic_credit_values": [
+            {
+                "exotic_name": "offense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "defense",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "utility",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "economic",
+                "credit_value": 750
+            },
+            {
+                "exotic_name": "ultimate",
+                "credit_value": 1500
+            }]
+        },
         "exotic_market":
         {
             "market_weight": 5,
@@ -1025,29 +1065,30 @@
         },
         "simple_can_ever_be_colonized_planet_types": [
             "asteroid",
-			"crystalline",
+            "barren",
+            "city",
+            "crystalline",
             "desert",
-			"desert_home",
+            "desert_home",
             "ferrous",
-			"ferrous_home",
-			"ice_asteroid",
+            "ferrous_home",
+            "gas_giant",
+            "greenhouse",
+            "hive_asteroid",
             "ice",
+            "ice_asteroid",
+            "ice_moon",
+            "irradiated",
+            "magnetic",
             "moon",
             "oceanic",
-			"pirate_base",
-			"swamp",
+            "pirate_base",
+            "ship_graveyard",
+            "swamp",
             "terran",
-			"terran_home",
+            "terran_home",
             "volcanic",
-			"ship_graveyard",
-			"greenhouse",
-			"barren",
-			"city",
-			"magnetic",
-			"ice_moon",
-			"volcanic_moon",
-			"gas_giant",
-			"hive_asteroid"
+            "volcanic_moon"
         ],
         "simple_planet_level": 10,
         "simple_planet_tracks":
@@ -1093,13 +1134,13 @@
                 "cooldown_duration": 180
             },
             {
-                "reward": "jiskun_frontier_uplink",
+                "reward": "jiskun_deploy_missile_defense",
                 "required_reputation_level": 1,
                 "influence_point_cost": 2,
                 "cooldown_duration": 240
             },
             {
-                "reward": "jiskun_share_vision",
+                "reward": "jiskun_deploy_phase_inhib",
                 "required_reputation_level": 2,
                 "influence_point_cost": 4,
                 "cooldown_duration": 360
@@ -1114,22 +1155,46 @@
             {
                 "influence_point_cost": 1,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.02,
+                        "value_behavior": "scalar"
+                    }
+		}
             },
             {
                 "influence_point_cost": 2,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.04,
+                        "value_behavior": "scalar"
+                    }
+		}
             },
             {
                 "influence_point_cost": 4,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.06,
+                        "value_behavior": "scalar"
+                    }
+		}
             },
             {
                 "influence_point_cost": 6,
                 "npc_modifiers":
-                {}
+                {
+                    "reputation_ability_cooldown_duration":
+                    {
+                        "value": -0.08,
+                        "value_behavior": "scalar"
+                    }
+		}
             }]
         }
     }

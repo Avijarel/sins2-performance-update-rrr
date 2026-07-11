@@ -1,0 +1,192 @@
+{
+    "version": 0,
+    "target_filters": [
+    {
+        "target_filter_id": "ancient_starbase_planet_target_filter",
+        "target_filter":
+        {
+            "unit_types": [
+                "planet"
+            ],
+            "ownerships": [
+                "enemy",
+                "friendly",
+                "none"
+            ]
+        }
+    },
+    {
+        "target_filter_id": "ancient_starbase_enemy_planet_target_filter",
+        "target_filter":
+        {
+            "unit_types": [
+                "planet"
+            ],
+            "ownerships": [
+                "enemy"
+            ]
+        }
+    },
+    {
+        "target_filter_id": "deploy_ancient_starbase_starbase_buffs_target_filter",
+        "target_filter":
+        {
+            "unit_types": [
+                "starbase"
+            ],
+            "ownerships": [
+                "self"
+            ],
+            "constraints": [
+            {
+                "constraint_type": "has_buff",
+                "buff": "derelict_loot_2_spawn_ancient_starbase_on_starbase"
+            }]
+        }
+    },
+    {
+        "target_filter_id": "deploy_ancient_starbase_auto_cast_target_filter",
+        "target_filter":
+        {
+            "unit_types": [
+                "planet",
+                "star",
+                "uncolonizable"
+            ],
+            "ownerships": [
+                "enemy",
+                "none",
+                "friendly"
+            ],
+            "constraints": [
+            {
+                "constraint_type": "composite_or",
+                "constraints": [
+                {
+                    "constraint_type": "has_adjacent_planet_with_ownership",
+                    "max_jump_distance": 2,
+                    "targeter_relationship_type": "self"
+                },
+                {
+                    "constraint_type": "has_adjacent_planet_with_ownership",
+                    "max_jump_distance": 2,
+                    "targeter_relationship_type": "ally"
+                }]
+            }]
+        }
+    },
+    {
+        "target_filter_id": "deploy_ancient_starbase_target_filter",
+        "target_filter":
+        {
+            "unit_types": [
+                "capital_ship",
+                "titan",
+                "super_capital_ship"
+            ],
+            "ownerships": [
+                "self"
+            ]
+        }
+    }],
+    "action_values": [
+    {
+        "action_value_id": "bombing_damage_value",
+        "action_value":
+        {
+            "values": [300.0]
+        }
+    },
+    {
+        "action_value_id": "radius_value",
+        "action_value":
+        {
+            "values": [1700.0]
+        }
+    },
+    {
+        "action_value_id": "range_value",
+        "action_value":
+        {
+            "values": [6000.0]
+        }
+    },
+    {
+        "action_value_id": "shield_point_restore_cooldown_duration_after_damage_taken_bonus_additive",
+        "action_value":
+        {
+            "values": [-20.0]
+        }
+    },
+    {
+        "action_value_id": "armor_point_restore_cooldown_duration_after_damage_taken_bonus_additive",
+        "action_value":
+        {
+            "values": [-60.0]
+        }
+    },
+    {
+        "action_value_id": "hull_point_restore_cooldown_duration_after_damage_taken_bonus_additive",
+        "action_value":
+        {
+            "values": [-60.0]
+        }
+    }],
+    "buff_unit_modifiers": [
+    {
+        "buff_unit_modifier_id": "shield_point_restore_cooldown_duration_after_damage_taken_bonus",
+        "buff_unit_modifier":
+        {
+            "modifier_type": "shield_point_restore_cooldown_duration_after_damage_taken",
+            "value_behavior": "additive",
+            "value_id": "shield_point_restore_cooldown_duration_after_damage_taken_bonus_additive"
+        }
+    },
+    {
+        "buff_unit_modifier_id": "armor_point_restore_cooldown_duration_after_damage_taken_bonus",
+        "buff_unit_modifier":
+        {
+            "modifier_type": "armor_point_restore_cooldown_duration_after_damage_taken",
+            "value_behavior": "additive",
+            "value_id": "armor_point_restore_cooldown_duration_after_damage_taken_bonus_additive"
+        }
+    },
+    {
+        "buff_unit_modifier_id": "hull_point_restore_cooldown_duration_after_damage_taken_bonus",
+        "buff_unit_modifier":
+        {
+            "modifier_type": "hull_point_restore_cooldown_duration_after_damage_taken",
+            "value_behavior": "additive",
+            "value_id": "hull_point_restore_cooldown_duration_after_damage_taken_bonus_additive"
+        }
+    }],
+    "effect_alias_bindings": [
+    {
+        "alias_name": "dlc_ancient_starbase_planetary_shield_array_unit_item_buff",
+        "alias_binding":
+        {
+            "particle_effect": "dlc_ancient_starbase_planetary_shield_array_cast_from_starbase"
+        }
+    },
+    {
+        "alias_name": "dlc_ancient_starbase_planetary_shield_array_unit_item_on_planet_large",
+        "alias_binding":
+        {
+            "particle_effect": "advent_sanctify_gas_giant"
+        }
+    },
+    {
+        "alias_name": "dlc_ancient_starbase_planetary_shield_array_unit_item_on_planet_medium",
+        "alias_binding":
+        {
+            "particle_effect": "advent_sanctify_planet"
+        }
+    },
+    {
+        "alias_name": "dlc_ancient_starbase_planetary_shield_array_unit_item_on_planet_small",
+        "alias_binding":
+        {
+            "particle_effect": "advent_sanctify_asteroid"
+        }
+    }]
+}
