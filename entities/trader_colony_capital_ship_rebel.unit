@@ -1103,6 +1103,11 @@
             }
         ]
     },
+    "corruption": {
+        "max_corruption": 3000.0,
+        "corruption_decay_rate": 25.0,
+        "corruption_decay_delay_duration_after_gain": 60.0
+    },
     "antimatter": {
         "max_antimatter": 0.0,
         "antimatter_restore_rate": 0.0

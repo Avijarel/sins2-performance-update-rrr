@@ -2626,17 +2626,17 @@
                 "experience_given_on_death": 2000.0
             },
             {
-                "max_hull_points": 8400.0,
+                "max_hull_points": 8250.0,
                 "hull_point_restore_rate": 5.1,
                 "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "hull_point_restore_scalar_after_damage_taken": 0.25,
                 "hull_crippled_percentage": 1.0,
-                "max_armor_points": 4225.0,
+                "max_armor_points": 4400.0,
                 "armor_point_restore_rate": 6.4,
                 "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "armor_point_restore_scalar_after_damage_taken": 0.25,
                 "armor_strength": 135,
-                "max_shield_points": 4375.0,
+                "max_shield_points": 4400.0,
                 "shield_point_restore_rate": 8.25,
                 "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
                 "shield_point_restore_scalar_after_damage_taken": 0.25,
@@ -2647,17 +2647,17 @@
                 "experience_given_on_death": 2240.0
             },
             {
-                "max_hull_points": 9300.0,
+                "max_hull_points": 9000.0,
                 "hull_point_restore_rate": 5.7,
                 "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "hull_point_restore_scalar_after_damage_taken": 0.25,
                 "hull_crippled_percentage": 1.0,
-                "max_armor_points": 4450.0,
+                "max_armor_points": 4800.0,
                 "armor_point_restore_rate": 6.8,
                 "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "armor_point_restore_scalar_after_damage_taken": 0.25,
                 "armor_strength": 140.0,
-                "max_shield_points": 4750.0,
+                "max_shield_points": 4800.0,
                 "shield_point_restore_rate": 9.0,
                 "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
                 "shield_point_restore_scalar_after_damage_taken": 0.25,
@@ -2668,17 +2668,17 @@
                 "experience_given_on_death": 2480.0
             },
             {
-                "max_hull_points": 10200.0,
+                "max_hull_points": 9750.0,
                 "hull_point_restore_rate": 6.3,
                 "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "hull_point_restore_scalar_after_damage_taken": 0.25,
                 "hull_crippled_percentage": 1.0,
-                "max_armor_points": 4675.0,
+                "max_armor_points": 5200.0,
                 "armor_point_restore_rate": 7.2,
                 "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "armor_point_restore_scalar_after_damage_taken": 0.25,
                 "armor_strength": 145.0,
-                "max_shield_points": 5125.0,
+                "max_shield_points": 5200.0,
                 "shield_point_restore_rate": 9.75,
                 "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
                 "shield_point_restore_scalar_after_damage_taken": 0.25,
@@ -2689,17 +2689,17 @@
                 "experience_given_on_death": 2720.0
             },
             {
-                "max_hull_points": 11100.0,
+                "max_hull_points": 10500.0,
                 "hull_point_restore_rate": 6.9,
                 "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "hull_point_restore_scalar_after_damage_taken": 0.25,
                 "hull_crippled_percentage": 1.0,
-                "max_armor_points": 4900.0,
+                "max_armor_points": 5600.0,
                 "armor_point_restore_rate": 7.6,
                 "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "armor_point_restore_scalar_after_damage_taken": 0.25,
                 "armor_strength": 150.0,
-                "max_shield_points": 5500.0,
+                "max_shield_points": 5600.0,
                 "shield_point_restore_rate": 10.5,
                 "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
                 "shield_point_restore_scalar_after_damage_taken": 0.25,
@@ -2710,17 +2710,17 @@
                 "experience_given_on_death": 2960.0
             },
             {
-                "max_hull_points": 12000.0,
+                "max_hull_points": 11250.0,
                 "hull_point_restore_rate": 7.5,
                 "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "hull_point_restore_scalar_after_damage_taken": 0.25,
                 "hull_crippled_percentage": 1.0,
-                "max_armor_points": 5125.0,
+                "max_armor_points": 6000.0,
                 "armor_point_restore_rate": 8.0,
                 "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "armor_point_restore_scalar_after_damage_taken": 0.25,
                 "armor_strength": 155.0,
-                "max_shield_points": 5875.0,
+                "max_shield_points": 6000.0,
                 "shield_point_restore_rate": 11.25,
                 "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
                 "shield_point_restore_scalar_after_damage_taken": 0.25,
@@ -2731,17 +2731,17 @@
                 "experience_given_on_death": 3200.0
             },
             {
-                "max_hull_points": 12900.0,
+                "max_hull_points": 12000.0,
                 "hull_point_restore_rate": 8.1,
                 "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "hull_point_restore_scalar_after_damage_taken": 0.25,
                 "hull_crippled_percentage": 1.0,
-                "max_armor_points": 5350.0,
+                "max_armor_points": 6400.0,
                 "armor_point_restore_rate": 8.4,
                 "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "armor_point_restore_scalar_after_damage_taken": 0.25,
                 "armor_strength": 160.0,
-                "max_shield_points": 6250.0,
+                "max_shield_points": 6400.0,
                 "shield_point_restore_rate": 12.0,
                 "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
                 "shield_point_restore_scalar_after_damage_taken": 0.25,
@@ -2752,17 +2752,17 @@
                 "experience_given_on_death": 3440.0
             },
             {
-                "max_hull_points": 13800.0,
+                "max_hull_points": 12750.0,
                 "hull_point_restore_rate": 8.7,
                 "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "hull_point_restore_scalar_after_damage_taken": 0.25,
                 "hull_crippled_percentage": 1.0,
-                "max_armor_points": 5575.0,
+                "max_armor_points": 6800.0,
                 "armor_point_restore_rate": 8.8,
                 "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "armor_point_restore_scalar_after_damage_taken": 0.25,
                 "armor_strength": 165.0,
-                "max_shield_points": 6625.0,
+                "max_shield_points": 6800.0,
                 "shield_point_restore_rate": 12.75,
                 "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
                 "shield_point_restore_scalar_after_damage_taken": 0.25,
@@ -2773,17 +2773,17 @@
                 "experience_given_on_death": 3680.0
             },
             {
-                "max_hull_points": 14700.0,
+                "max_hull_points": 13500.0,
                 "hull_point_restore_rate": 9.3,
                 "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "hull_point_restore_scalar_after_damage_taken": 0.25,
                 "hull_crippled_percentage": 1.0,
-                "max_armor_points": 5800.0,
+                "max_armor_points": 7200.0,
                 "armor_point_restore_rate": 9.2,
                 "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "armor_point_restore_scalar_after_damage_taken": 0.25,
                 "armor_strength": 170.0,
-                "max_shield_points": 7000.0,
+                "max_shield_points": 7200.0,
                 "shield_point_restore_rate": 13.5,
                 "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
                 "shield_point_restore_scalar_after_damage_taken": 0.25,
@@ -2794,17 +2794,17 @@
                 "experience_given_on_death": 3920.0
             },
             {
-                "max_hull_points": 15600.0,
+                "max_hull_points": 14250.0,
                 "hull_point_restore_rate": 9.9,
                 "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "hull_point_restore_scalar_after_damage_taken": 0.25,
                 "hull_crippled_percentage": 1.0,
-                "max_armor_points": 6025.0,
+                "max_armor_points": 7600.0,
                 "armor_point_restore_rate": 9.6,
                 "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
                 "armor_point_restore_scalar_after_damage_taken": 0.25,
                 "armor_strength": 175.0,
-                "max_shield_points": 7375.0,
+                "max_shield_points": 7600.0,
                 "shield_point_restore_rate": 14.25,
                 "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
                 "shield_point_restore_scalar_after_damage_taken": 0.25,
@@ -2815,6 +2815,17 @@
                 "experience_given_on_death": 4160.0
             }
         ]
+    },
+    "corruption": {
+        "max_corruption": 10000.0,
+        "corruption_decay_rate": 50.0,
+        "corruption_decay_delay_duration_after_gain": 60.0,
+        "corruption_thresholds": [
+            0.1,
+            0.5,
+            0.9
+        ],
+        "show_main_view_icon_alert_fill": true
     },
     "unit_factory": {
         "build_kinds": [
@@ -2985,6 +2996,13 @@
         ]
     },
     "culture_provider": {},
+    "unit_modifiers": [
+        {
+            "modifier_type": "min_detection_level",
+            "value_behavior": "additive",
+            "value": 1.0
+        }
+    ],
     "target_filter_unit_type": "starbase",
     "tags": [
         "starbase"

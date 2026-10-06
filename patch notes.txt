@@ -1,37 +1,19 @@
-2.8
+2.89
 
 General / Bug Fixes
 
-Not save compatible.
+Updated for game version 2.1.1 and RRR 5.8.3-A.
+Fixed game start errors (Vasari cloak research subjects not found, missing effect alias definitions on Trader Robotics Cruiser and Vasari Overseer Cruiser).
+The mod is now built on top of the current RRR / game files and only overrides the values it actually changes (216 files instead of 409). All new RRR and game content (corruption, shroud, Eidolon interaction, new research, sounds and effects) is now fully available with this mod enabled.
 
 
 Performance
 
-All debris pieces across every faction (ships, starbases, titans, generic wreckage) now despawn after 5 seconds instead of 240-900 seconds depending on debris type. Massively reduces the number of simulated debris objects in long games.
-Trade ship construction time at Trader Starbases increased 1200 -> 1800 (20 -> 30 min), reducing the number of trade ships that accumulate over time.
-Missile Corvette main weapon no longer auto-acquires the best target in range mid-flight (acquire_target_logic: order_target_or_best_target_in_range -> order_target_only), cutting down on retargeting overhead.
-Hangar Defense Structures (Advent + Trader, Loyalist/Rebel) squadron capacity reduced from 4-6 -> 1, cutting simulated strikecraft counts around static defenses.
-Trader Colony Capital Ship squadron capacity roughly halved across all 20 experience levels (e.g. max level 8 -> 6), reducing strikecraft load from leveled colony ships.
+Unchanged: debris despawn after 5 seconds, strikecraft squadron size 1, reduced carrier / starbase / hangar defense squadron capacity, reduced trade and traffic ships, strikecraft weapons with doubled cooldown and damage, siege capital missile barrages with fewer but stronger missiles.
 
 
 Balance
 
-Missile weapons reworked across most factions: cooldown and per-hit damage halved (DPS-neutral) for the majority of swarm/torpedo weapons, while torpedo flight/firing duration increased (typically 12s -> 15-30s depending on weapon).
-
-Squadron Size research (Tier 0-1) now also affects Capital Ships and Starbases, not just Super Capital Ships and Titans.
-Squadron Size Tier 2 completely reworked: now costs 8000 Credits / 3000 Metal / 3000 Crystal + 4 Research Exotics (was free) and trades squadron count for damage (-33% squadron size, +33% Fighter/Bomber weapon damage) instead of a flat strikecraft bonus.
-Squadron Size Tier 3 now costs 10000 Credits / 3750 Metal / 3750 Crystal + 5 Research Exotics and actually grants its bonus (was free but non-functional).
-
-Garrison research (Garrison Tier 0-2, Garrison Max Supply, Loyalist Garrison Max Supply, Garrison Recruitment Center unlock) effectively disabled: prices set to 999999. Garrison Tier 0-2 planet population bonus increased 10 -> 40 for when re-enabled. Garrison Recruitment Center unit items removed.
-
-
-Visuals
-
-Restored exhaust particle/trail effects on ~60 ship skins (Advent, Trader, Vasari, Pirate) that previously had them stripped for performance.
-
-
-Removed
-
-Removed several minor faction starbase overrides (Aluxian, Jiskun, Pranast, Viturak) and associated unit skins/garrison items no longer used by this mod version.
-
-
+The following values now follow RRR again instead of older copies kept by this mod:
+Advent Starbase armor, Missile Frigate damage, Vasari Antifighter Frigate missile range, research time of Carrier Cruiser unlock and Missile Targeting, faction research / trade / culture modifiers.
+Missile weapons now use RRR's own target acquisition (order target only).

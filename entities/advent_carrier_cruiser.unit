@@ -123,6 +123,26 @@
             }
         ]
     },
+    "corruption": {
+        "max_corruption": 1000.0,
+        "corruption_decay_rate": 12.5,
+        "corruption_decay_delay_duration_after_gain": 60.0,
+        "corruption_thresholds": [
+            0.1,
+            0.5,
+            0.9
+        ],
+        "negative_corruption_buffs": [
+            "advent_ship_corruption_penalty_mild",
+            "advent_ship_corruption_penalty_moderate",
+            "advent_ship_corruption_penalty_extreme"
+        ],
+        "positive_corruption_buffs": [
+            "advent_ship_corruption_benefit_mild",
+            "advent_ship_corruption_benefit_moderate",
+            "advent_ship_corruption_benefit_extreme"
+        ]
+    },
     "build": {
         "build_time": 75.0,
         "price": {

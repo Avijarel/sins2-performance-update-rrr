@@ -2,188 +2,268 @@
     "version": 0,
     "level_count": 5,
     "target_filters": [
-    {
-        "target_filter_id": "trader_siege_capital_ship_missile_barrage_auto_cast_high_target_filter",
-        "target_filter":
         {
-            "unit_types": [
-                "capital_ship",
-                "starbase",
-                "super_capital_ship",
-                "titan"
-            ],
-            "ownerships": [
-                "enemy"
-            ],
-            "constraints": [
-            {
-                "constraint_type": "is_always_a_threat"
-            }]
-        }
-    },
-    {
-        "target_filter_id": "trader_siege_capital_ship_missile_barrage_auto_cast_low_target_filter",
-        "target_filter":
+            "target_filter_id": "trader_siege_capital_ship_missile_barrage_auto_cast_high_target_filter",
+            "target_filter": {
+                "unit_types": [
+                    "capital_ship",
+                    "starbase",
+                    "super_capital_ship",
+                    "titan"
+                ],
+                "ownerships": [
+                    "enemy"
+                ],
+                "constraints": [
+                    {
+                        "constraint_type": "is_always_a_threat"
+                    }
+                ]
+            }
+        },
         {
-            "unit_types": [
-                "cruiser",
-                "frigate",
-                "structure"
-            ],
-            "ownerships": [
-                "enemy"
-            ],
-            "constraints": [
-            {
-                "constraint_type": "is_always_a_threat"
-            }]
-        }
-    },
-    {
-        "target_filter_id": "trader_siege_capital_ship_missile_barrage_target_filter",
-        "target_filter":
+            "target_filter_id": "trader_siege_capital_ship_missile_barrage_auto_cast_low_target_filter",
+            "target_filter": {
+                "unit_types": [
+                    "cruiser",
+                    "frigate",
+                    "structure"
+                ],
+                "ownerships": [
+                    "enemy"
+                ],
+                "constraints": [
+                    {
+                        "constraint_type": "is_always_a_threat"
+                    }
+                ]
+            }
+        },
         {
-            "unit_types": [
-                "capital_ship",
-                "corvette",
-                "cruiser",
-                "frigate",
-                "starbase",
-                "structure",
-                "super_capital_ship",
-                "titan"
-            ],
-            "ownerships": [
-                "enemy"
-            ]
+            "target_filter_id": "trader_siege_capital_ship_missile_barrage_target_filter",
+            "target_filter": {
+                "unit_types": [
+                    "capital_ship",
+                    "corvette",
+                    "cruiser",
+                    "frigate",
+                    "starbase",
+                    "structure",
+                    "super_capital_ship",
+                    "titan"
+                ],
+                "ownerships": [
+                    "enemy"
+                ]
+            }
         }
-    }],
+    ],
     "action_values": [
-    {
-        "action_value_id": "missile_barrage_antimatter_cost_value",
-        "action_value":
         {
-            "values": [111.0, 122.0, 133.0, 144.0, 155.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_cooldown_time_value",
-        "action_value":
+            "action_value_id": "missile_barrage_antimatter_cost_value",
+            "action_value": {
+                "values": [
+                    111.0,
+                    122.0,
+                    133.0,
+                    144.0,
+                    155.0
+                ]
+            }
+        },
         {
-            "values": [200.0, 175.0, 150.0, 137.5, 125.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_damage_value",
-        "action_value":
+            "action_value_id": "missile_barrage_cooldown_time_value",
+            "action_value": {
+                "values": [
+                    200.0,
+                    175.0,
+                    150.0,
+                    137.5,
+                    125.0
+                ]
+            }
+        },
         {
-            "values": [300.0, 375.0, 450.0, 487.5, 525.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_penetration_value",
-        "action_value":
+            "action_value_id": "missile_barrage_damage_value",
+            "action_value": {
+                "values": [
+                    300.0,
+                    375.0,
+                    450.0,
+                    487.5,
+                    525.0
+                ]
+            }
+        },
         {
-            "values": [650.0, 650.0, 650.0, 650.0, 650.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_execution_count_value",
-        "action_value":
+            "action_value_id": "missile_barrage_penetration_value",
+            "action_value": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ]
+            }
+        },
         {
-            "values": [10.0, 12.0, 13.0, 14.0, 15.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_execution_interval_value",
-        "action_value":
+            "action_value_id": "missile_barrage_execution_count_value",
+            "action_value": {
+                "values": [
+                    10.0,
+                    12.0,
+                    13.0,
+                    14.0,
+                    15.0
+                ]
+            }
+        },
         {
-            "values": [1.8, 1.8, 1.8, 1.8, 1.8]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_radius_value",
-        "action_value":
+            "action_value_id": "missile_barrage_execution_interval_value",
+            "action_value": {
+                "values": [
+                    1.8,
+                    1.8,
+                    1.8,
+                    1.8,
+                    1.8
+                ]
+            }
+        },
         {
-            "values": [2500.0, 2500.0, 2500.0, 2500.0, 2500.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_range_value",
-        "action_value":
+            "action_value_id": "missile_barrage_radius_value",
+            "action_value": {
+                "values": [
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0
+                ]
+            }
+        },
         {
-            "values": [20000.0, 20000.0, 20000.0, 20000.0, 20000.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_max_target_count_value",
-        "action_value":
+            "action_value_id": "missile_barrage_range_value",
+            "action_value": {
+                "values": [
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0
+                ]
+            }
+        },
         {
-            "values": [24.0, 24.0, 24.0, 24.0, 24.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_torpedo_lifetime_value",
-        "action_value":
+            "action_value_id": "missile_barrage_max_target_count_value",
+            "action_value": {
+                "values": [
+                    24.0,
+                    24.0,
+                    24.0,
+                    24.0,
+                    24.0
+                ]
+            }
+        },
         {
-            "values": [20.0, 20.0, 20.0, 20.0, 20.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_torpedo_speed_value",
-        "action_value":
+            "action_value_id": "missile_barrage_torpedo_lifetime_value",
+            "action_value": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ]
+            }
+        },
         {
-            "values": [1250.0, 1250.0, 1250.0, 1250.0, 1250.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_torpedo_hull_value",
-        "action_value":
+            "action_value_id": "missile_barrage_torpedo_speed_value",
+            "action_value": {
+                "values": [
+                    1250.0,
+                    1250.0,
+                    1250.0,
+                    1250.0,
+                    1250.0
+                ]
+            }
+        },
         {
-            "values": [15.0, 15.0, 15.0, 15.0, 15.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_torpedo_armor_value",
-        "action_value":
+            "action_value_id": "missile_barrage_torpedo_hull_value",
+            "action_value": {
+                "values": [
+                    15.0,
+                    15.0,
+                    15.0,
+                    15.0,
+                    15.0
+                ]
+            }
+        },
         {
-            "values": [25.0, 25.0, 25.0, 25.0, 25.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_torpedo_armor_strength_value",
-        "action_value":
+            "action_value_id": "missile_barrage_torpedo_armor_value",
+            "action_value": {
+                "values": [
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
+                ]
+            }
+        },
         {
-            "values": [25.0, 25.0, 25.0, 25.0, 25.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_torpedo_steering_distance_radius_scalar_value",
-        "action_value":
+            "action_value_id": "missile_barrage_torpedo_armor_strength_value",
+            "action_value": {
+                "values": [
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
+                ]
+            }
+        },
         {
-            "values": [1.0, 1.0, 1.0, 1.0, 1.0]
-        }
-    },
-    {
-        "action_value_id": "missile_barrage_auto_cast_target_count_value",
-        "action_value":
+            "action_value_id": "missile_barrage_torpedo_steering_distance_radius_scalar_value",
+            "action_value": {
+                "values": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            }
+        },
         {
-            "values": [15.0, 15.0, 15.0, 15.0, 15.0]
+            "action_value_id": "missile_barrage_auto_cast_target_count_value",
+            "action_value": {
+                "values": [
+                    15.0,
+                    15.0,
+                    15.0,
+                    15.0,
+                    15.0
+                ]
+            }
         }
-    }],
+    ],
     "buff_actions": [
-    {
-        "action_id": "try_make_buff_dead_if_no_child_buffs",
-        "action":
         {
-            "constraint":
-            {
-                "constraint_type": "value_comparison",
-                "value_a": "common_child_buff_count_value",
-                "comparison_type": "less_than_equal_to",
-                "value_b": "fixed_zero"
-            },
-            "action_type": "make_buff_dead"
+            "action_id": "try_make_buff_dead_if_no_child_buffs",
+            "action": {
+                "constraint": {
+                    "constraint_type": "value_comparison",
+                    "value_a": "common_child_buff_count_value",
+                    "comparison_type": "less_than_equal_to",
+                    "value_b": "fixed_zero"
+                },
+                "action_type": "make_buff_dead"
+            }
         }
-    }]
+    ]
 }
