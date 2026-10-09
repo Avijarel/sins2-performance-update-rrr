@@ -1,0 +1,143 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 743.721497,
+        "box": {
+            "center": [
+                -0.594635,
+                3.1e-05,
+                40.704147
+            ],
+            "extents": [
+                426.519592,
+                579.358398,
+                447.410706
+            ]
+        },
+        "can_be_displaced_on_collision": false
+    },
+    "physics": {},
+    "ai_attack_target": {
+        "attack_priority": 25.0,
+        "is_always_a_threat": false,
+        "attack_target_type": "civilian"
+    },
+    "user_interface": {
+        "can_be_controlled_by_selected_planet": true,
+        "pip_type": "capital_ship",
+        "can_ever_be_selected": true,
+        "selection_priority": 100,
+        "selection_group_unit_type": "civilian_structure"
+    },
+    "structure": {
+        "slot_type": "civilian",
+        "slots_required": 3,
+        "roles": [
+            "exotic_factory"
+        ],
+        "build_group_id": "civilian"
+    },
+    "formation": {
+        "leader_priority": 3,
+        "offsets_per_formation_type": {
+            "ships_and_structures": {
+                "rank": 4,
+                "group": 5
+            }
+        }
+    },
+    "spawn_debris": {
+        "spawn_debris_time": 1.0,
+        "generic_group_name": "trader",
+        "generic_counts": {
+            "small_debris": [
+                14,
+                18
+            ],
+            "large_debris": [
+                3,
+                5
+            ]
+        }
+    },
+    "health": {
+        "release_time_after_death": 60.0,
+        "can_collide_duration_after_death": 3.8,
+        "durability": 500.0,
+        "levels": [
+            {
+                "max_hull_points": 4000.0,
+                "hull_point_restore_rate": 6.0,
+                "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "max_armor_points": 3500.0,
+                "armor_point_restore_rate": 8.0,
+                "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "armor_strength": 60.0,
+                "max_shield_points": 6000.0,
+                "shield_point_restore_rate": 10.0,
+                "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+                "shield_burst_restore": {
+                    "cooldown_duration": 60.0,
+                    "restore_percentage": 0.5
+                },
+                "experience_given_on_death": 75.0
+            }
+        ]
+    },
+    "corruption": {
+        "max_corruption": 3000.0,
+        "corruption_decay_rate": 25.0,
+        "corruption_decay_delay_duration_after_gain": 60.0,
+        "corruption_thresholds": [
+            0.1,
+            0.5,
+            0.9
+        ]
+    },
+    "exotic_factory": {},
+    "build": {
+        "build_time": 100.0,
+        "price": {
+            "credits": 1000.0,
+            "metal": 400.0,
+            "crystal": 400.0
+        },
+        "prerequisites": [
+            [
+                "dlc3_herald_unlock_exotic_factory_structure"
+            ]
+        ],
+        "build_kind": "structure",
+        "build_radius": 618.138611
+    },
+    "target_filter_unit_type": "structure",
+    "tags": [
+        "structure"
+    ],
+    "virtual_supply_cost": 10,
+    "skin_groups": [
+        {
+            "skins": [
+                "dlc3_herald_exotic_factory_structure"
+            ]
+        }
+    ],
+    "action_effect_size": "medium_unit",
+    "traffic_port": {
+        "max_traffic_ship_count": 1,
+        "traffic_ship_construction_time": 1800.0,
+        "traffic_ship": "dlc3_herald_refinery_ship",
+        "allowed_destination_units": [
+            "dlc3_herald_crystal_extractor_structure",
+            "dlc3_herald_exotic_factory_structure",
+            "dlc3_herald_metal_extractor_structure"
+        ],
+        "special_operation_unit_kind": "traffic_ship",
+        "create_traffic_ship_offset": [
+            0.0,
+            0.0,
+            1500.0
+        ],
+        "force_stay_in_gravity_well": false
+    }
+}

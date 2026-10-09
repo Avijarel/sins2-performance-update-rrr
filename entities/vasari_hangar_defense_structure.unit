@@ -86,8 +86,8 @@
     "build": {
         "build_time": 48.0,
         "price": {
-            "metal": 4000.0,
-            "crystal": 950.0
+            "metal": 400.0,
+            "crystal": 95.0
         },
         "prerequisites": [
             [

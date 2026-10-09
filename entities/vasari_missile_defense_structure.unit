@@ -1,0 +1,229 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 271.961853,
+        "box": {
+            "center": [
+                0.0,
+                39.124287,
+                -82.360855
+            ],
+            "extents": [
+                177.528595,
+                135.893875,
+                189.350021
+            ]
+        },
+        "can_be_displaced_on_collision": false
+    },
+    "physics": {
+        "can_move_angular": true,
+        "max_angular_speed": 8.0,
+        "death_angular_speed_range": [
+            5.0,
+            10.0
+        ]
+    },
+    "attack": {
+        "attack_pattern": {
+            "type": "immobile"
+        }
+    },
+    "ai": {
+        "attack_target_type_groups": [
+            "heavy_capital",
+            "defense"
+        ],
+        "attack_target_type_groups_to_ignore": [
+            "torpedo_strikecraft"
+        ],
+        "attack_target_type_groups_matching_weapon": "vasari_missile_defense_structure_medium_phase_missile",
+        "auto_follow_target_priority": 1.0
+    },
+    "ai_attack_target": {
+        "attack_priority": 50.0,
+        "is_always_a_threat": true,
+        "attack_target_type": "defense"
+    },
+    "user_interface": {
+        "pip_type": "cruiser",
+        "can_ever_be_selected": true,
+        "selection_priority": 100,
+        "has_sub_selection_grouping": true,
+        "selection_group_unit_type": "military_structure",
+        "can_attack": true,
+        "can_show_max_weapon_range_in_tactical_view": true,
+        "can_rotate": true
+    },
+    "structure": {
+        "slot_type": "military",
+        "slots_required": 1,
+        "roles": [
+            "defense"
+        ],
+        "build_group_id": "military"
+    },
+    "weapons": {
+        "weapons": [
+            {
+                "weapon": "vasari_missile_defense_structure_medium_phase_missile",
+                "mesh_point": "weapon.0.front",
+                "weapon_position": [
+                    -0.062833,
+                    3.522629,
+                    -33.388962
+                ],
+                "non_turret_muzzle_positions": [
+                    [
+                        -117.152397,
+                        13.200629,
+                        -48.451958
+                    ],
+                    [
+                        -132.532303,
+                        4.519711,
+                        -36.081467
+                    ],
+                    [
+                        -148.162033,
+                        -7.152454,
+                        -15.633454
+                    ],
+                    [
+                        116.747795,
+                        13.200629,
+                        -48.451958
+                    ],
+                    [
+                        132.22258,
+                        4.519711,
+                        -36.081467
+                    ],
+                    [
+                        148.499359,
+                        -7.152454,
+                        -15.633454
+                    ]
+                ],
+                "forward": [
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "up": [
+                    0.0,
+                    1.0,
+                    -0.0
+                ],
+                "yaw_arc": {
+                    "min_angle": -45.0,
+                    "max_angle": 45.0
+                },
+                "pitch_arc": {
+                    "min_angle": -45.0,
+                    "max_angle": 45.0
+                }
+            }
+        ],
+        "max_range_weapon_index": 0
+    },
+    "formation": {
+        "leader_priority": 3,
+        "offsets_per_formation_type": {
+            "ships_and_structures": {
+                "rank": 4,
+                "group": 5
+            }
+        }
+    },
+    "spawn_debris": {
+        "spawn_debris_time": 1.0,
+        "generic_group_name": "vasari",
+        "generic_counts": {
+            "small_debris": [
+                10,
+                12
+            ],
+            "large_debris": [
+                1,
+                2
+            ]
+        }
+    },
+    "health": {
+        "release_time_after_death": 60.0,
+        "can_collide_duration_after_death": 3.8,
+        "durability": 600.0,
+        "levels": [
+            {
+                "max_hull_points": 2400.0,
+                "hull_point_restore_rate": 3.0,
+                "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "hull_point_restore_scalar_after_damage_taken": 0.0,
+                "max_armor_points": 1320.0,
+                "armor_point_restore_rate": 4.0,
+                "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "armor_point_restore_scalar_after_damage_taken": 0.0,
+                "armor_strength": 72.0,
+                "experience_given_on_death": 50.0
+            }
+        ]
+    },
+    "corruption": {
+        "max_corruption": 1000.0,
+        "corruption_decay_rate": 12.5,
+        "corruption_decay_delay_duration_after_gain": 60.0,
+        "corruption_thresholds": [
+            0.1,
+            0.5,
+            0.9
+        ]
+    },
+    "build": {
+        "build_time": 72.0,
+        "price": {
+            "metal": 300.0,
+            "crystal": 120.0
+        },
+        "build_kind": "structure",
+        "build_radius": 259.556976
+    },
+    "abilities": [
+        {
+            "abilities": [
+                "vasari_missile_defense_disruptor_nanites"
+            ]
+        },
+        {
+            "abilities": [
+                "vasari_missile_defense_disruptor_nanites"
+            ],
+            "required_special_operation_unit_kind": "jiskun_deploy_structure"
+        },
+        {
+            "abilities": [
+                "vasari_missile_defense_disruptor_nanites"
+            ],
+            "required_player": "jiskun_force_npc"
+        }
+    ],
+    "target_filter_unit_type": "structure",
+    "tags": [
+        "structure"
+    ],
+    "virtual_supply_cost": 10,
+    "skin_groups": [
+        {
+            "skins": [
+                "vasari_missile_defense_structure"
+            ]
+        }
+    ],
+    "action_effect_size": "medium_unit",
+    "player_ai": {
+        "max_count_at_planet": {
+            "type": "constant",
+            "value": 15.0
+        }
+    }
+}

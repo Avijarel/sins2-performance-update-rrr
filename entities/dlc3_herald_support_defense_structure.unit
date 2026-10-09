@@ -1,0 +1,328 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 260.621979,
+        "box": {
+            "center": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "extents": [
+                127.333565,
+                126.915504,
+                232.226089
+            ]
+        },
+        "can_be_displaced_on_collision": false
+    },
+    "physics": {},
+    "attack": {
+        "attack_pattern": {
+            "type": "immobile"
+        }
+    },
+    "ai": {
+        "attack_target_type_groups": [
+            "torpedo_strikecraft"
+        ],
+        "attack_target_type_groups_matching_weapon": "dlc3_herald_carrier_capital_ship_point_defense_shock_cannon"
+    },
+    "ai_attack_target": {
+        "attack_priority": 50.0,
+        "is_always_a_threat": true,
+        "attack_target_type": "defense"
+    },
+    "user_interface": {
+        "can_be_controlled_by_selected_planet": true,
+        "pip_type": "cruiser",
+        "can_ever_be_selected": true,
+        "selection_priority": 100,
+        "has_sub_selection_grouping": true,
+        "selection_group_unit_type": "military_structure",
+        "can_attack": true,
+        "can_show_max_weapon_range_in_tactical_view": true
+    },
+    "structure": {
+        "slot_type": "military",
+        "slots_required": 2,
+        "roles": [
+            "defense"
+        ],
+        "build_group_id": "military"
+    },
+    "weapons": {
+        "weapons": [
+            {
+                "weapon": "dlc3_herald_carrier_capital_ship_point_defense_shock_cannon",
+                "mesh_point": "child.dlc3_herald_type_5_pd_large_mount_0",
+                "weapon_position": [
+                    80.099251,
+                    120.119896,
+                    -109.778473
+                ],
+                "forward": [
+                    0.209048,
+                    -0.010647,
+                    0.977847
+                ],
+                "up": [
+                    0.930663,
+                    0.309208,
+                    -0.195594
+                ],
+                "yaw_arc": {
+                    "min_angle": -180.0,
+                    "max_angle": 180.0
+                },
+                "pitch_arc": {
+                    "min_angle": -80.0,
+                    "max_angle": 7.5
+                }
+            },
+            {
+                "weapon": "dlc3_herald_carrier_capital_ship_point_defense_shock_cannon",
+                "mesh_point": "child.dlc3_herald_type_5_pd_large_mount_1",
+                "weapon_position": [
+                    -80.025459,
+                    120.119888,
+                    -109.778465
+                ],
+                "forward": [
+                    -0.166426,
+                    0.126952,
+                    0.977847
+                ],
+                "up": [
+                    -0.942493,
+                    0.271015,
+                    -0.195594
+                ],
+                "yaw_arc": {
+                    "min_angle": -180.0,
+                    "max_angle": 180.0
+                },
+                "pitch_arc": {
+                    "min_angle": -80.0,
+                    "max_angle": 7.5
+                }
+            }
+        ],
+        "max_range_weapon_index": 0
+    },
+    "formation": {
+        "leader_priority": 1,
+        "offsets_per_formation_type": {
+            "ships_and_structures": {
+                "rank": 1,
+                "group": 2
+            }
+        }
+    },
+    "spawn_debris": {
+        "spawn_debris_time": 1.0,
+        "generic_group_name": "trader",
+        "generic_counts": {
+            "small_debris": [
+                14,
+                18
+            ],
+            "large_debris": [
+                3,
+                5
+            ]
+        }
+    },
+    "health": {
+        "release_time_after_death": 60.0,
+        "can_collide_duration_after_death": 3.8,
+        "durability": 600.0,
+        "levels": [
+            {
+                "max_hull_points": 1500.0,
+                "hull_point_restore_rate": 3.0,
+                "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "max_armor_points": 2000.0,
+                "armor_point_restore_rate": 4.0,
+                "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "armor_strength": 60.0,
+                "max_shield_points": 3250.0,
+                "shield_point_restore_rate": 5.0,
+                "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+                "shield_burst_restore": {
+                    "cooldown_duration": 60.0,
+                    "restore_percentage": 0.5
+                },
+                "experience_given_on_death": 75.0
+            }
+        ]
+    },
+    "corruption": {
+        "max_corruption": 1000.0,
+        "corruption_decay_rate": 12.5,
+        "corruption_decay_delay_duration_after_gain": 60.0,
+        "corruption_thresholds": [
+            0.1,
+            0.5,
+            0.9
+        ]
+    },
+    "antimatter": {
+        "max_antimatter": 300.0,
+        "antimatter_restore_rate": 1.0
+    },
+    "build": {
+        "build_time": 75.0,
+        "price": {
+            "credits": 400.0,
+            "metal": 125.0,
+            "crystal": 125.0
+        },
+        "prerequisites": [
+            [
+                "dlc3_herald_unlock_support_defense_structure"
+            ]
+        ],
+        "build_kind": "structure",
+        "build_radius": 264.844849
+    },
+    "unit_modifiers": [
+        {
+            "modifier_type": "max_squadron_capacity",
+            "value_behavior": "additive",
+            "value": 2.0,
+            "prerequisites": [
+                [
+                    "dlc3_herald_unlock_support_defense_structure_hangar"
+                ]
+            ]
+        }
+    ],
+    "carrier": {
+        "base_max_squadron_capacity": 0,
+        "strikecraft_kinds": [
+            "interceptor",
+            "bomber"
+        ],
+        "launch_destination_formation": "hangar_defense_structure_strikecraft",
+        "launch_destination_formation_offset": {
+            "rank": 2,
+            "group": 0
+        },
+        "launch_points": [
+            {
+                "position": [
+                    160.829742,
+                    -5.101753,
+                    58.822479
+                ],
+                "rotation": [
+                    0.906308,
+                    0.0,
+                    -0.422619,
+                    0.0,
+                    1.0,
+                    1e-06,
+                    0.422619,
+                    -1e-06,
+                    0.906308
+                ]
+            },
+            {
+                "position": [
+                    -161.022034,
+                    -5.101768,
+                    58.822495
+                ],
+                "rotation": [
+                    0.906308,
+                    0.0,
+                    0.422618,
+                    -0.0,
+                    1.0,
+                    0.0,
+                    -0.422618,
+                    -1e-06,
+                    0.906308
+                ]
+            }
+        ],
+        "land_points": [
+            {
+                "position": [
+                    61.255215,
+                    22.08432,
+                    -166.360931
+                ],
+                "rotation": [
+                    0.906308,
+                    0.0,
+                    -0.422619,
+                    0.0,
+                    1.0,
+                    1e-06,
+                    0.422619,
+                    -1e-06,
+                    0.906308
+                ]
+            },
+            {
+                "position": [
+                    -62.524635,
+                    22.08432,
+                    -166.360931
+                ],
+                "rotation": [
+                    0.906308,
+                    0.0,
+                    0.422618,
+                    -0.0,
+                    1.0,
+                    0.0,
+                    -0.422618,
+                    -1e-06,
+                    0.906308
+                ]
+            }
+        ]
+    },
+    "target_filter_unit_type": "structure",
+    "tags": [
+        "structure"
+    ],
+    "abilities": [
+        {
+            "abilities": [
+                "dlc3_herald_support_defense_structure_revivify"
+            ]
+        }
+    ],
+    "virtual_supply_cost": 10,
+    "skin_groups": [
+        {
+            "skins": [
+                "dlc3_herald_support_defense_structure"
+            ]
+        }
+    ],
+    "child_meshes": [
+        {
+            "mesh_alias_name": "dlc3_herald_support_defense_structure_component_hangar",
+            "mesh_point": "child.dlc3_herald_support_defense_structure_component_hangar",
+            "is_weapon_effects_destination": true,
+            "prerequisites": [
+                [
+                    "dlc3_herald_unlock_support_defense_structure_hangar"
+                ]
+            ]
+        }
+    ],
+    "action_effect_size": "medium_unit",
+    "player_ai": {
+        "max_count_at_planet": {
+            "type": "per_used_military_slots_at_planet",
+            "per_count": 3,
+            "max_value": 10.0
+        }
+    }
+}

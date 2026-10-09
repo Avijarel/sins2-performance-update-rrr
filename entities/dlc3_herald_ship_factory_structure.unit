@@ -1,0 +1,775 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 206.597519,
+        "box": {
+            "center": [
+                1.1e-05,
+                -75.070381,
+                0.0
+            ],
+            "extents": [
+                57.552338,
+                37.401436,
+                178.403214
+            ]
+        },
+        "can_be_displaced_on_collision": false
+    },
+    "physics": {},
+    "ai_attack_target": {
+        "attack_priority": 25.0,
+        "is_always_a_threat": false,
+        "attack_target_type": "civilian"
+    },
+    "user_interface": {
+        "can_be_controlled_by_selected_planet": true,
+        "pip_type": "capital_ship",
+        "can_ever_be_selected": true,
+        "under_cursor_type": "sphere",
+        "selection_priority": 100,
+        "has_sub_selection_grouping": true,
+        "selection_group_unit_type": "factory_structure"
+    },
+    "structure": {
+        "slot_type": "civilian",
+        "slots_required": 2,
+        "roles": [
+            "unit_factory"
+        ],
+        "build_group_id": "civilian"
+    },
+    "formation": {
+        "leader_priority": 3,
+        "offsets_per_formation_type": {
+            "ships_and_structures": {
+                "rank": 4,
+                "group": 5
+            }
+        }
+    },
+    "spawn_debris": {
+        "spawn_debris_time": 1.0,
+        "generic_group_name": "trader",
+        "generic_counts": {
+            "small_debris": [
+                14,
+                18
+            ],
+            "large_debris": [
+                3,
+                5
+            ]
+        }
+    },
+    "health": {
+        "release_time_after_death": 60.0,
+        "can_collide_duration_after_death": 3.8,
+        "durability": 600.0,
+        "levels": [
+            {
+                "max_hull_points": 3000.0,
+                "hull_point_restore_rate": 6.0,
+                "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "max_armor_points": 3500.0,
+                "armor_point_restore_rate": 8.0,
+                "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "armor_strength": 60.0,
+                "shield_point_restore_rate": 10.0,
+                "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+                "shield_burst_restore": {
+                    "cooldown_duration": 60.0,
+                    "restore_percentage": 0.5
+                },
+                "experience_given_on_death": 50.0
+            }
+        ]
+    },
+    "corruption": {
+        "max_corruption": 1000.0,
+        "corruption_decay_rate": 12.5,
+        "corruption_decay_delay_duration_after_gain": 60.0,
+        "corruption_thresholds": [
+            0.1,
+            0.5,
+            0.9
+        ]
+    },
+    "unit_factory": {
+        "build_kinds": [
+            "corvette",
+            "frigate",
+            "cruiser"
+        ],
+        "default_rally_point_offset": [
+            0.0,
+            0.0,
+            2500.0
+        ],
+        "base_build_point": {
+            "position": [
+                -0.0,
+                70.580421,
+                -188.80867
+            ],
+            "rotation": [
+                1.0,
+                0.0,
+                -0.0,
+                -0.0,
+                1.0,
+                -0.0,
+                -0.0,
+                0.0,
+                1.0
+            ]
+        }
+    },
+    "build": {
+        "build_time": 75.0,
+        "price": {
+            "credits": 800.0,
+            "metal": 200.0,
+            "crystal": 125.0
+        },
+        "build_kind": "structure",
+        "build_radius": 487.456604
+    },
+    "traffic_port": {
+        "max_traffic_ship_count": 1,
+        "traffic_ship_construction_time": 1800.0,
+        "traffic_ship": "dlc3_herald_traffic_ship",
+        "allowed_destination_units": [
+            "dlc3_herald_civilian_research_lab_structure",
+            "dlc3_herald_military_research_lab_structure",
+            "dlc3_herald_ship_factory_structure",
+            "dlc3_herald_titan_factory_structure",
+            "dlc3_herald_starbase"
+        ],
+        "special_operation_unit_kind": "traffic_ship",
+        "create_traffic_ship_offset": [
+            0.0,
+            0.0,
+            1500.0
+        ],
+        "force_stay_in_gravity_well": false,
+        "traffic_ship_per_hundred_pop": 0.75
+    },
+    "target_filter_unit_type": "structure",
+    "tags": [
+        "structure"
+    ],
+    "virtual_supply_cost": 10,
+    "skin_groups": [
+        {
+            "skins": [
+                "dlc3_herald_ship_factory_structure"
+            ]
+        }
+    ],
+    "child_meshes": [
+        {
+            "mesh_alias_name": "dlc3_herald_ship_factory_structure_prong_0",
+            "mesh_point": "child.dlc3_herald_ship_factory_structure_prong_0",
+            "is_weapon_effects_destination": true,
+            "will_transition_positions": true,
+            "transition_time": 3.0,
+            "default_state_index": 3,
+            "position_states": [
+                {
+                    "state_name": "corvette",
+                    "position_offset": [
+                        -158.59465,
+                        91.68832,
+                        -110.08255
+                    ],
+                    "rotation_offset": [
+                        0.71263856,
+                        0.7015314,
+                        0.0,
+                        -0.7015314,
+                        0.71263856,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "frigate",
+                    "position_offset": [
+                        -158.59465,
+                        91.68832,
+                        -110.08255
+                    ],
+                    "rotation_offset": [
+                        0.71263856,
+                        0.7015314,
+                        0.0,
+                        -0.7015314,
+                        0.71263856,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "cruiser",
+                    "position_offset": [
+                        -158.59465,
+                        91.68832,
+                        -110.08255
+                    ],
+                    "rotation_offset": [
+                        0.71263856,
+                        0.7015314,
+                        0.0,
+                        -0.7015314,
+                        0.71263856,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "idle",
+                    "position_offset": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                }
+            ]
+        },
+        {
+            "mesh_alias_name": "dlc3_herald_ship_factory_structure_prong_1",
+            "mesh_point": "child.dlc3_herald_ship_factory_structure_prong_1",
+            "is_weapon_effects_destination": true,
+            "will_transition_positions": true,
+            "transition_time": 3.0,
+            "default_state_index": 3,
+            "position_states": [
+                {
+                    "state_name": "corvette",
+                    "position_offset": [
+                        -15.245345,
+                        146.64388,
+                        -77.35294
+                    ],
+                    "rotation_offset": [
+                        0.93819135,
+                        0.34611705,
+                        0.0,
+                        -0.34611705,
+                        0.93819135,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "frigate",
+                    "position_offset": [
+                        -15.245345,
+                        146.64388,
+                        -77.35294
+                    ],
+                    "rotation_offset": [
+                        0.93819135,
+                        0.34611705,
+                        0.0,
+                        -0.34611705,
+                        0.93819135,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "cruiser",
+                    "position_offset": [
+                        -15.245345,
+                        146.64388,
+                        -77.35294
+                    ],
+                    "rotation_offset": [
+                        0.93819135,
+                        0.34611705,
+                        0.0,
+                        -0.34611705,
+                        0.93819135,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "idle",
+                    "position_offset": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                }
+            ]
+        },
+        {
+            "mesh_alias_name": "dlc3_herald_ship_factory_structure_prong_2",
+            "mesh_point": "child.dlc3_herald_ship_factory_structure_prong_2",
+            "is_weapon_effects_destination": true,
+            "will_transition_positions": true,
+            "transition_time": 3.0,
+            "default_state_index": 3,
+            "position_states": [
+                {
+                    "state_name": "corvette",
+                    "position_offset": [
+                        36.757877,
+                        130.94653,
+                        -61.165222
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "frigate",
+                    "position_offset": [
+                        36.757877,
+                        130.94653,
+                        -61.165222
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "cruiser",
+                    "position_offset": [
+                        36.757877,
+                        130.94653,
+                        -61.165222
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "idle",
+                    "position_offset": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                }
+            ]
+        },
+        {
+            "mesh_alias_name": "dlc3_herald_ship_factory_structure_prong_3",
+            "mesh_point": "child.dlc3_herald_ship_factory_structure_prong_3",
+            "is_weapon_effects_destination": true,
+            "will_transition_positions": true,
+            "transition_time": 3.0,
+            "default_state_index": 3,
+            "position_states": [
+                {
+                    "state_name": "corvette",
+                    "position_offset": [
+                        44.19573,
+                        126.27051,
+                        71.5702
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "frigate",
+                    "position_offset": [
+                        44.19573,
+                        126.27051,
+                        71.5702
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "cruiser",
+                    "position_offset": [
+                        44.19573,
+                        126.27051,
+                        71.5702
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "idle",
+                    "position_offset": [
+                        4.3e-05,
+                        5.098036,
+                        1.127343
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                }
+            ]
+        },
+        {
+            "mesh_alias_name": "dlc3_herald_ship_factory_structure_prong_4",
+            "mesh_point": "child.dlc3_herald_ship_factory_structure_prong_4",
+            "is_weapon_effects_destination": true,
+            "will_transition_positions": true,
+            "transition_time": 3.0,
+            "default_state_index": 3,
+            "position_states": [
+                {
+                    "state_name": "corvette",
+                    "position_offset": [
+                        -15.289733,
+                        140.4284,
+                        96.38196
+                    ],
+                    "rotation_offset": [
+                        0.93819135,
+                        0.34611705,
+                        0.0,
+                        -0.34611705,
+                        0.93819135,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "frigate",
+                    "position_offset": [
+                        -15.289733,
+                        140.4284,
+                        96.38196
+                    ],
+                    "rotation_offset": [
+                        0.93819135,
+                        0.34611705,
+                        0.0,
+                        -0.34611705,
+                        0.93819135,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "cruiser",
+                    "position_offset": [
+                        -15.289733,
+                        140.4284,
+                        96.38196
+                    ],
+                    "rotation_offset": [
+                        0.93819135,
+                        0.34611705,
+                        0.0,
+                        -0.34611705,
+                        0.93819135,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "idle",
+                    "position_offset": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                }
+            ]
+        },
+        {
+            "mesh_alias_name": "dlc3_herald_ship_factory_structure_prong_5",
+            "mesh_point": "child.dlc3_herald_ship_factory_structure_prong_5",
+            "is_weapon_effects_destination": true,
+            "will_transition_positions": true,
+            "transition_time": 3.0,
+            "default_state_index": 3,
+            "position_states": [
+                {
+                    "state_name": "corvette",
+                    "position_offset": [
+                        -121.95558,
+                        80.587425,
+                        128.20769
+                    ],
+                    "rotation_offset": [
+                        0.71263856,
+                        0.7015314,
+                        0.0,
+                        -0.7015314,
+                        0.71263856,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "frigate",
+                    "position_offset": [
+                        -121.95558,
+                        80.587425,
+                        128.20769
+                    ],
+                    "rotation_offset": [
+                        0.71263856,
+                        0.7015314,
+                        0.0,
+                        -0.7015314,
+                        0.71263856,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "cruiser",
+                    "position_offset": [
+                        -121.95558,
+                        80.587425,
+                        128.20769
+                    ],
+                    "rotation_offset": [
+                        0.71263856,
+                        0.7015314,
+                        0.0,
+                        -0.7015314,
+                        0.71263856,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "idle",
+                    "position_offset": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                }
+            ]
+        },
+        {
+            "mesh_alias_name": "dlc3_herald_ship_factory_structure_top",
+            "mesh_point": "child.dlc3_herald_ship_factory_structure_top",
+            "is_weapon_effects_destination": true,
+            "will_transition_positions": true,
+            "transition_time": 3.0,
+            "default_state_index": 3,
+            "position_states": [
+                {
+                    "state_name": "corvette",
+                    "position_offset": [
+                        0.0,
+                        238.10202,
+                        0.0
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "frigate",
+                    "position_offset": [
+                        0.0,
+                        238.10202,
+                        0.0
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "cruiser",
+                    "position_offset": [
+                        0.0,
+                        238.10202,
+                        0.0
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                },
+                {
+                    "state_name": "idle",
+                    "position_offset": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "rotation_offset": [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                }
+            ]
+        }
+    ],
+    "action_effect_size": "medium_unit"
+}

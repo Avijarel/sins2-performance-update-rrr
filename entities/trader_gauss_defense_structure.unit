@@ -1,0 +1,224 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 288.728394,
+        "box": {
+            "center": [
+                0.0,
+                -5.649311,
+                59.525826
+            ],
+            "extents": [
+                136.897141,
+                103.8582,
+                214.199646
+            ]
+        },
+        "can_be_displaced_on_collision": false
+    },
+    "physics": {
+        "can_move_angular": true,
+        "max_angular_speed": 8.0,
+        "death_angular_speed_range": [
+            5.0,
+            10.0
+        ]
+    },
+    "attack": {
+        "attack_pattern": {
+            "type": "immobile"
+        }
+    },
+    "ai": {
+        "attack_target_type_groups": [
+            "heavy_capital"
+        ],
+        "attack_target_type_groups_to_ignore": [
+            "torpedo_strikecraft"
+        ],
+        "attack_target_type_groups_matching_weapon": "trader_gauss_defense_structure_heavy_gauss",
+        "auto_follow_target_priority": 1.0
+    },
+    "ai_attack_target": {
+        "attack_priority": 50.0,
+        "is_always_a_threat": true,
+        "attack_target_type": "defense"
+    },
+    "user_interface": {
+        "pip_type": "frigate",
+        "can_ever_be_selected": true,
+        "selection_priority": 100,
+        "has_sub_selection_grouping": true,
+        "selection_group_unit_type": "military_structure",
+        "can_attack": true,
+        "can_show_max_weapon_range_in_tactical_view": true,
+        "can_rotate": true
+    },
+    "structure": {
+        "slot_type": "military",
+        "slots_required": 1,
+        "roles": [
+            "defense"
+        ],
+        "build_group_id": "military"
+    },
+    "weapons": {
+        "weapons": [
+            {
+                "weapon": "trader_gauss_defense_structure_heavy_gauss",
+                "mesh_point": "weapon.0.front",
+                "weapon_position": [
+                    0.827344,
+                    0.668097,
+                    265.937439
+                ],
+                "non_turret_muzzle_positions": [
+                    [
+                        0.476266,
+                        -57.757538,
+                        265.937408
+                    ],
+                    [
+                        58.173126,
+                        29.880915,
+                        265.937408
+                    ],
+                    [
+                        -56.167358,
+                        29.880915,
+                        265.937408
+                    ]
+                ],
+                "forward": [
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "up": [
+                    0.0,
+                    1.0,
+                    -0.0
+                ],
+                "yaw_arc": {
+                    "min_angle": -5.0,
+                    "max_angle": 5.0
+                },
+                "pitch_arc": {
+                    "min_angle": -5.0,
+                    "max_angle": 5.0
+                }
+            }
+        ],
+        "max_range_weapon_index": 0
+    },
+    "formation": {
+        "leader_priority": 3,
+        "offsets_per_formation_type": {
+            "ships_and_structures": {
+                "rank": 4,
+                "group": 5
+            }
+        }
+    },
+    "spawn_debris": {
+        "spawn_debris_time": 1.0,
+        "generic_group_name": "trader",
+        "generic_counts": {
+            "small_debris": [
+                10,
+                12
+            ],
+            "large_debris": [
+                1,
+                2
+            ]
+        }
+    },
+    "health": {
+        "release_time_after_death": 60.0,
+        "can_collide_duration_after_death": 3.8,
+        "durability": 600.0,
+        "levels": [
+            {
+                "max_hull_points": 2000.0,
+                "hull_point_restore_rate": 3.0,
+                "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "hull_point_restore_scalar_after_damage_taken": 0.0,
+                "max_armor_points": 1750.0,
+                "armor_point_restore_rate": 4.0,
+                "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "armor_point_restore_scalar_after_damage_taken": 0.0,
+                "armor_strength": 75.0,
+                "shield_point_restore_rate": 5.0,
+                "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+                "shield_point_restore_scalar_after_damage_taken": 0.0,
+                "shield_burst_restore": {
+                    "cooldown_duration": 60.0,
+                    "restore_percentage": 0.5
+                },
+                "experience_given_on_death": 50.0
+            }
+        ]
+    },
+    "corruption": {
+        "max_corruption": 1000.0,
+        "corruption_decay_rate": 12.5,
+        "corruption_decay_delay_duration_after_gain": 60.0,
+        "corruption_thresholds": [
+            0.1,
+            0.5,
+            0.9
+        ]
+    },
+    "build": {
+        "build_time": 75.0,
+        "price": {
+            "credits": 750.0,
+            "metal": 150.0,
+            "crystal": 125.0
+        },
+        "build_kind": "structure",
+        "build_radius": 254.209198
+    },
+    "abilities": [
+        {
+            "abilities": [
+                "trader_gauss_defense_meson_bolt"
+            ]
+        },
+        {
+            "abilities": [
+                "trader_gauss_defense_meson_bolt",
+                "trader_gauss_defense_structure_burst_rockets"
+            ],
+            "required_special_operation_unit_kind": "pranast_gauss_defense_structure"
+        },
+        {
+            "abilities": [
+                "trader_gauss_defense_meson_bolt",
+                "trader_gauss_defense_structure_burst_rockets"
+            ],
+            "required_player": "pranast_united_npc"
+        }
+    ],
+    "culture_provider": {},
+    "target_filter_unit_type": "structure",
+    "tags": [
+        "structure"
+    ],
+    "virtual_supply_cost": 10,
+    "skin_groups": [
+        {
+            "skins": [
+                "trader_gauss_defense_structure"
+            ]
+        }
+    ],
+    "action_effect_size": "medium_unit",
+    "player_ai": {
+        "max_count_at_planet": {
+            "type": "constant",
+            "value": 15.0
+        }
+    }
+}

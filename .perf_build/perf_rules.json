@@ -26,6 +26,22 @@
             "damage": 64.0,
             "penetration": 260.0
         },
+        "advent_beam_defense_structure.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
+        },
+        "advent_beam_defense_structure_loyalist.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
+        },
         "advent_bomber_strikecraft.unit": {
             "strikecraft.squadron_size": 1
         },
@@ -50,9 +66,6 @@
             "traffic_port.traffic_ship_construction_time": 1800.0
         },
         "advent_hangar_defense_structure.unit": {
-            "build.price.credits": 6000.0,
-            "build.price.crystal": 1500.0,
-            "build.price.metal": 3000.0,
             "carrier.base_max_squadron_capacity": 1,
             "health.durability": 500.0,
             "health.levels[0].experience_given_on_death": 125.0,
@@ -64,9 +77,6 @@
             }
         },
         "advent_hangar_defense_structure_loyalist.unit": {
-            "build.price.credits": 6000.0,
-            "build.price.crystal": 1500.0,
-            "build.price.metal": 3000.0,
             "carrier.base_max_squadron_capacity": 1,
             "health.durability": 500.0,
             "health.levels[0].experience_given_on_death": 125.0,
@@ -87,6 +97,22 @@
         },
         "advent_interceptor_strikecraft_loyalist.unit": {
             "strikecraft.squadron_size": 1
+        },
+        "advent_laser_defense_structure.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
+        },
+        "advent_laser_defense_structure_loyalist.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
         },
         "advent_mine_strikecraft.unit": {
             "strikecraft.squadron_size": 1
@@ -109,8 +135,100 @@
         "advent_starbase_rebel.unit": {
             "carrier.base_max_squadron_capacity": 0
         },
+        "advent_temple_of_renewal_structure.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "per_used_military_slots_at_planet",
+                    "per_count": 3,
+                    "max_value": 10.0
+                }
+            }
+        },
+        "advent_temple_of_renewal_structure_loyalist.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "per_used_military_slots_at_planet",
+                    "per_count": 3,
+                    "max_value": 10.0
+                }
+            }
+        },
         "danoba_population_structure.unit": {
             "traffic_port.max_traffic_ship_count": 1,
+            "traffic_port.traffic_ship_construction_time": 1800.0
+        },
+        "dlc3_herald_bomber_strikecraft.unit": {
+            "strikecraft.squadron_size": 1
+        },
+        "dlc3_herald_bomber_strikecraft_phase_dart.weapon": {
+            "penetration": 780.0
+        },
+        "dlc3_herald_bomber_strikecraft_void_missile.weapon": {
+            "penetration": 520.0
+        },
+        "dlc3_herald_carrier_cruiser.unit": {
+            "build.build_time": 60.0,
+            "carrier.base_max_squadron_capacity": 1
+        },
+        "dlc3_herald_carrier_cruiser_hangar.unit_item": {
+            "unit_modifiers[modifier_type=max_squadron_capacity].values": [
+                1.0
+            ],
+            "unit_modifiers[modifier_type=max_squadron_capacity_per_kind].values": [
+                1.0
+            ]
+        },
+        "dlc3_herald_exotic_factory_structure.unit": {
+            "traffic_port.traffic_ship_construction_time": 1800.0
+        },
+        "dlc3_herald_gunship_strikecraft.unit": {
+            "strikecraft.squadron_size": 1
+        },
+        "dlc3_herald_heavy_defense_structure.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
+        },
+        "dlc3_herald_interceptor_strikecraft.unit": {
+            "strikecraft.squadron_size": 1
+        },
+        "dlc3_herald_interceptor_strikecraft_point_defense_shock_cannon.weapon": {
+            "cooldown_duration": 4.0,
+            "damage": 6.0
+        },
+        "dlc3_herald_interceptor_strikecraft_shock_cannon.weapon": {
+            "cooldown_duration": 8.0,
+            "damage": 56.0,
+            "penetration": 65.0
+        },
+        "dlc3_herald_light_defense_structure.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
+        },
+        "dlc3_herald_ship_factory_structure.unit": {
+            "traffic_port.traffic_ship_construction_time": 1800.0
+        },
+        "dlc3_herald_starbase.unit": {
+            "traffic_port.max_traffic_ship_count": 1,
+            "traffic_port.traffic_ship_construction_time": 1800.0
+        },
+        "dlc3_herald_support_defense_structure.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "per_used_military_slots_at_planet",
+                    "per_count": 3,
+                    "max_value": 10.0
+                }
+            }
+        },
+        "dlc3_herald_titan_factory_structure.unit": {
             "traffic_port.traffic_ship_construction_time": 1800.0
         },
         "npc_trader_trade_port_structure.unit": {
@@ -118,6 +236,14 @@
             "trade_port.trade_ship_construction_time": 1800.0
         },
         "squadron_size_tier_0_a.research_subject": {
+            "exotic_price": [
+                {
+                    "exotic_type": "research",
+                    "count": 4
+                }
+            ]
+        },
+        "squadron_size_tier_0_h.research_subject": {
             "exotic_price": [
                 {
                     "exotic_type": "research",
@@ -149,6 +275,14 @@
                 }
             ]
         },
+        "squadron_size_tier_1_h.research_subject": {
+            "exotic_price": [
+                {
+                    "exotic_type": "research",
+                    "count": 5
+                }
+            ]
+        },
         "squadron_size_tier_1_t.research_subject": {
             "exotic_price": [
                 {
@@ -166,6 +300,14 @@
             ]
         },
         "squadron_size_tier_2_a.research_subject": {
+            "exotic_price": [
+                {
+                    "exotic_type": "research",
+                    "count": 4
+                }
+            ]
+        },
+        "squadron_size_tier_2_h.research_subject": {
             "exotic_price": [
                 {
                     "exotic_type": "research",
@@ -197,6 +339,14 @@
                 }
             ]
         },
+        "squadron_size_tier_3_h.research_subject": {
+            "exotic_price": [
+                {
+                    "exotic_type": "research",
+                    "count": 5
+                }
+            ]
+        },
         "squadron_size_tier_3_t.research_subject": {
             "exotic_price": [
                 {
@@ -212,6 +362,22 @@
                     "count": 5
                 }
             ]
+        },
+        "trader_autocannon_defense_structure_loyalist.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
+        },
+        "trader_autocannon_defense_structure_rebel.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
         },
         "trader_bomber_strikecraft.unit": {
             "strikecraft.squadron_size": 1
@@ -279,10 +445,23 @@
             "price.metal": 999999.0,
             "research_time": 99999.0
         },
+        "trader_gauss_defense_structure.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
+        },
+        "trader_gauss_defense_structure_loyalist.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
+        },
         "trader_hangar_defense_structure.unit": {
-            "build.price.credits": 5000.0,
-            "build.price.crystal": 750.0,
-            "build.price.metal": 2000.0,
             "carrier.base_max_squadron_capacity": 1,
             "health.durability": 500.0,
             "player_ai": {
@@ -293,9 +472,6 @@
             }
         },
         "trader_hangar_defense_structure_loyalist.unit": {
-            "build.price.credits": 5000.0,
-            "build.price.crystal": 750.0,
-            "build.price.metal": 2000.0,
             "carrier.base_max_squadron_capacity": 1,
             "health.durability": 500.0,
             "player_ai": {
@@ -306,9 +482,6 @@
             }
         },
         "trader_hangar_defense_structure_rebel.unit": {
-            "build.price.credits": 5000.0,
-            "build.price.crystal": 750.0,
-            "build.price.metal": 2000.0,
             "carrier.base_max_squadron_capacity": 1,
             "health.durability": 500.0,
             "player_ai": {
@@ -436,8 +609,6 @@
             "traffic_port.traffic_ship_construction_time": 1800.0
         },
         "vasari_hangar_defense_structure.unit": {
-            "build.price.crystal": 950.0,
-            "build.price.metal": 4000.0,
             "carrier.base_max_squadron_capacity": 1,
             "player_ai": {
                 "max_count_at_planet": {
@@ -455,8 +626,24 @@
             "damage": 60.0,
             "penetration": 78.0
         },
+        "vasari_missile_defense_structure.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
+        },
         "vasari_population_structure.unit": {
             "traffic_port.traffic_ship_construction_time": 1800.0
+        },
+        "vasari_pulse_defense_structure.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
         },
         "vasari_raider_corvette_medium_pulse_strikecraft.weapon": {
             "cooldown_duration": 6.0,
@@ -467,6 +654,15 @@
             "cooldown_duration": 36.0,
             "damage": 240.0,
             "penetration": 468.0
+        },
+        "vasari_repair_platform_structure.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "per_used_military_slots_at_planet",
+                    "per_count": 3,
+                    "max_value": 10.0
+                }
+            }
         },
         "vasari_siege_capital_ship_phase_missile_swarm.action_data_source": {
             "action_values[action_value_id=phase_missile_swarm_damage_value].action_value.values": [

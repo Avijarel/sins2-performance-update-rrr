@@ -219,9 +219,9 @@
     "build": {
         "build_time": 50.0,
         "price": {
-            "credits": 5000.0,
-            "metal": 2000.0,
-            "crystal": 750.0
+            "credits": 500.0,
+            "metal": 100.0,
+            "crystal": 75.0
         },
         "prerequisites": [
             [

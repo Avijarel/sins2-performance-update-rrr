@@ -1,0 +1,261 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 239.497681,
+        "box": {
+            "center": [
+                -8e-06,
+                1.1e-05,
+                -8e-06
+            ],
+            "extents": [
+                93.340492,
+                89.289581,
+                226.211517
+            ]
+        },
+        "can_be_displaced_on_collision": false
+    },
+    "physics": {
+        "can_move_angular": true,
+        "max_angular_speed": 8.0,
+        "death_angular_speed_range": [
+            5.0,
+            10.0
+        ]
+    },
+    "attack": {
+        "attack_pattern": {
+            "type": "immobile"
+        }
+    },
+    "ai": {
+        "attack_target_type_groups": [
+            "capital_supercapital",
+            "defense_civilian",
+            "heavy",
+            "antistructure",
+            "carrier_support",
+            "light"
+        ],
+        "attack_target_type_groups_to_ignore": [
+            "torpedo_strikecraft"
+        ],
+        "attack_target_type_groups_matching_weapon": "dlc3_herald_heavy_defense_structure_phase_dart",
+        "auto_follow_target_priority": 1.0
+    },
+    "ai_attack_target": {
+        "attack_priority": 50.0,
+        "is_always_a_threat": true,
+        "attack_target_type": "defense"
+    },
+    "user_interface": {
+        "pip_type": "frigate",
+        "can_ever_be_selected": true,
+        "selection_priority": 100,
+        "has_sub_selection_grouping": true,
+        "selection_group_unit_type": "military_structure",
+        "can_rotate": true,
+        "can_attack": true,
+        "can_show_max_weapon_range_in_tactical_view": true
+    },
+    "structure": {
+        "slot_type": "military",
+        "slots_required": 2,
+        "roles": [
+            "defense"
+        ],
+        "build_group_id": "military"
+    },
+    "weapons": {
+        "weapons": [
+            {
+                "weapon": "dlc3_herald_heavy_defense_structure_phase_dart",
+                "mesh_point": "weapon.0",
+                "weapon_position": [
+                    0.0,
+                    8.462386,
+                    -36.481701
+                ],
+                "non_turret_muzzle_positions": [
+                    [
+                        -0.0,
+                        8.462386,
+                        -36.481701
+                    ]
+                ],
+                "forward": [
+                    0.0,
+                    -0.0,
+                    1.0
+                ],
+                "up": [
+                    0.0,
+                    1.0,
+                    -0.0
+                ],
+                "yaw_arc": {
+                    "min_angle": -5.0,
+                    "max_angle": 5.0
+                },
+                "pitch_arc": {
+                    "min_angle": -5.0,
+                    "max_angle": 5.0
+                }
+            },
+            {
+                "weapon": "dlc3_herald_heavy_defense_structure_void_missile",
+                "required_research_prerequisites": [
+                    [
+                        "dlc3_herald_unlock_heavy_defense_structure_weapon"
+                    ]
+                ],
+                "mesh_point": "weapon.1",
+                "weapon_position": [
+                    -0.321367,
+                    76.750793,
+                    -154.455002
+                ],
+                "non_turret_muzzle_positions": [
+                    [
+                        -8e-06,
+                        76.750793,
+                        -166.211197
+                    ],
+                    [
+                        -22.507442,
+                        76.750786,
+                        -148.576904
+                    ],
+                    [
+                        21.54335,
+                        76.750786,
+                        -148.576904
+                    ]
+                ],
+                "forward": [
+                    0.0,
+                    1.0,
+                    -1e-06
+                ],
+                "up": [
+                    -0.0,
+                    -1e-06,
+                    -1.0
+                ],
+                "yaw_arc": {
+                    "min_angle": -45.0,
+                    "max_angle": 45.0
+                },
+                "pitch_arc": {
+                    "min_angle": -45.0,
+                    "max_angle": 45.0
+                }
+            }
+        ],
+        "max_range_weapon_index": 0
+    },
+    "formation": {
+        "leader_priority": 3,
+        "offsets_per_formation_type": {
+            "ships_and_structures": {
+                "rank": 4,
+                "group": 5
+            }
+        }
+    },
+    "spawn_debris": {
+        "spawn_debris_time": 1.0,
+        "generic_group_name": "vasari",
+        "generic_counts": {
+            "small_debris": [
+                10,
+                12
+            ],
+            "large_debris": [
+                1,
+                2
+            ]
+        }
+    },
+    "health": {
+        "release_time_after_death": 60.0,
+        "can_collide_duration_after_death": 3.8,
+        "durability": 600.0,
+        "levels": [
+            {
+                "max_hull_points": 1250.0,
+                "hull_point_restore_rate": 3.0,
+                "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "max_armor_points": 1400.0,
+                "armor_point_restore_rate": 4.0,
+                "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "armor_strength": 80.0,
+                "max_shield_points": 2500.0,
+                "shield_point_restore_rate": 5.0,
+                "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+                "shield_burst_restore": {
+                    "cooldown_duration": 60.0,
+                    "restore_percentage": 0.5
+                },
+                "experience_given_on_death": 50.0
+            }
+        ]
+    },
+    "corruption": {
+        "max_corruption": 1000.0,
+        "corruption_decay_rate": 12.5,
+        "corruption_decay_delay_duration_after_gain": 60.0,
+        "corruption_thresholds": [
+            0.1,
+            0.5,
+            0.9
+        ]
+    },
+    "build": {
+        "build_time": 75.0,
+        "price": {
+            "credits": 500,
+            "metal": 175.0,
+            "crystal": 150.0
+        },
+        "prerequisites": [
+            [
+                "dlc3_herald_unlock_heavy_defense_structure"
+            ]
+        ],
+        "build_kind": "structure",
+        "build_radius": 244.71228
+    },
+    "target_filter_unit_type": "structure",
+    "tags": [
+        "structure"
+    ],
+    "virtual_supply_cost": 10,
+    "skin_groups": [
+        {
+            "skins": [
+                "dlc3_herald_heavy_defense_structure"
+            ]
+        }
+    ],
+    "child_meshes": [
+        {
+            "mesh_alias_name": "dlc3_herald_heavy_defense_structure_missile_cover",
+            "mesh_point": "child.dlc3_herald_heavy_defense_structure_missile_cover",
+            "is_weapon_effects_destination": true,
+            "hidden_by_prerequisites": [
+                [
+                    "dlc3_herald_unlock_heavy_defense_structure_weapon"
+                ]
+            ]
+        }
+    ],
+    "action_effect_size": "medium_unit",
+    "player_ai": {
+        "max_count_at_planet": {
+            "type": "constant",
+            "value": 15.0
+        }
+    }
+}
