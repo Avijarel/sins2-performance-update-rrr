@@ -20,7 +20,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 MOD = os.path.dirname(HERE)
 ENTITIES = os.path.join(MOD, "entities")
 RULES = os.path.join(HERE, "perf_rules.json")
-RRR = r"C:\Users\Avija\AppData\Local\sins2\mods\modio\5762\mods\4317372\entities"
+RRR = r"G:\Game Management\Sins2 Mods\modio\5762\mods\4317372\entities"
 VANILLA = r"G:\Game Management\Steam\steamapps\common\Sins2\entities"
 
 
