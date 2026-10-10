@@ -16,6 +16,23 @@
         }
     ],
     "files": {
+        "ac_sisters_beam_defense_structure.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "constant",
+                    "value": 15.0
+                }
+            }
+        },
+        "ac_sisters_temple_of_renewal_structure.unit": {
+            "player_ai": {
+                "max_count_at_planet": {
+                    "type": "per_used_military_slots_at_planet",
+                    "per_count": 3,
+                    "max_value": 10.0
+                }
+            }
+        },
         "advent_beam_corvette_beam_strikecraft.weapon": {
             "cooldown_duration": 10.0,
             "damage": 60.0,

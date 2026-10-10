@@ -22,6 +22,9 @@ ENTITIES = os.path.join(MOD, "entities")
 RULES = os.path.join(HERE, "perf_rules.json")
 RRR = r"G:\Game Management\Sins2 Mods\modio\5762\mods\4317372\entities"
 VANILLA = r"G:\Game Management\Steam\steamapps\common\Sins2\entities"
+# Eigene Gebaeude der Schwestern (ac_*) gibt es nur im Advent-Sisters-Mod.
+# Der Performance-Mod muss dafuer NACH Advent Sisters geladen werden.
+SISTERS = os.path.join(os.path.dirname(MOD), "Advent Sisters", "entities")
 
 
 def load(path):
@@ -38,7 +41,7 @@ def save(path, data):
 
 
 def base_path(name):
-    for d in (RRR, VANILLA):
+    for d in (RRR, VANILLA, SISTERS):
         p = os.path.join(d, name)
         if os.path.exists(p):
             return p
@@ -155,6 +158,7 @@ def main():
 
     print(f"Basis: RRR  {RRR}")
     print(f"       Van  {VANILLA}")
+    print(f"       AS   {SISTERS}  (nur Dateien, die es in RRR/Vanilla nicht gibt)")
     print(f"Override-Dateien nach Build: {len(built)}  (vorher {len(existing)})")
     print(f"  neu hinzugekommen: {len(new)}")
     print(f"  entfernt (Basis reicht / veraltet): {len(remove)}")
@@ -167,7 +171,7 @@ def main():
         for m in report["missing"]:
             print(f"     ! {m}")
     if report["no_base"]:
-        print(f"  WARNUNG - Datei gibt es weder in RRR noch Vanilla ({len(report['no_base'])}):")
+        print(f"  WARNUNG - Datei gibt es weder in RRR, Vanilla noch Advent Sisters ({len(report['no_base'])}):")
         for m in report["no_base"]:
             print(f"     ! {m}")
 

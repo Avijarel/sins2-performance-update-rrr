@@ -1,0 +1,147 @@
+{
+    "version": 0,
+    "spatial": {
+        "radius": 356.073975,
+        "box": {
+            "center": [
+                0.0,
+                0.118988,
+                0.0
+            ],
+            "extents": [
+                349.464355,
+                353.097229,
+                350.098907
+            ]
+        },
+        "can_be_displaced_on_collision": false
+    },
+    "physics": {},
+    "ai": {
+        "attack_target_type_groups_to_ignore": [
+            "torpedo_strikecraft"
+        ]
+    },
+    "ai_attack_target": {
+        "attack_priority": 25.0,
+        "is_always_a_threat": true,
+        "attack_target_type": "defense"
+    },
+    "user_interface": {
+        "pip_type": "frigate",
+        "can_ever_be_selected": true,
+        "selection_priority": 100,
+        "has_sub_selection_grouping": true,
+        "selection_group_unit_type": "military_structure"
+    },
+    "structure": {
+        "slot_type": "military",
+        "slots_required": 1,
+        "roles": [
+            "defense"
+        ],
+        "build_group_id": "military",
+        "abilities_for_range_in_build_rendering": [
+            "advent_temple_of_renewal_recharge_shields"
+        ]
+    },
+    "formation": {
+        "leader_priority": 3,
+        "offsets_per_formation_type": {
+            "ships_and_structures": {
+                "rank": 4,
+                "group": 5
+            }
+        }
+    },
+    "spawn_debris": {
+        "spawn_debris_time": 1.0,
+        "generic_group_name": "advent",
+        "generic_counts": {
+            "small_debris": [
+                14,
+                18
+            ],
+            "large_debris": [
+                3,
+                5
+            ]
+        }
+    },
+    "health": {
+        "release_time_after_death": 60.0,
+        "can_collide_duration_after_death": 3.8,
+        "durability": 1000.0,
+        "levels": [
+            {
+                "max_hull_points": 12500.0,
+                "hull_point_restore_rate": 3.0,
+                "hull_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "hull_point_restore_scalar_after_damage_taken": 0.0,
+                "max_armor_points": 6250.0,
+                "armor_point_restore_rate": 4.0,
+                "armor_point_restore_cooldown_duration_after_damage_taken": 60.0,
+                "armor_point_restore_scalar_after_damage_taken": 0.0,
+                "armor_strength": 50.0,
+                "max_shield_points": 13750.0,
+                "shield_point_restore_rate": 5.0,
+                "shield_point_restore_cooldown_duration_after_damage_taken": 20.0,
+                "shield_point_restore_scalar_after_damage_taken": 0.0,
+                "shield_burst_restore": {
+                    "cooldown_duration": 60.0,
+                    "restore_percentage": 0.5
+                },
+                "experience_given_on_death": 25.0
+            }
+        ]
+    },
+    "antimatter": {
+        "max_antimatter": 300.0,
+        "antimatter_restore_rate": 1.0
+    },
+    "build": {
+        "build_time": 100.0,
+        "price": {
+            "credits": 600.0,
+            "metal": 125.0,
+            "crystal": 250.0
+        },
+        "prerequisites": [
+            [
+                "advent_unlock_temple_of_renewal_structure"
+            ]
+        ],
+        "build_kind": "structure",
+        "build_radius": 494.666138,
+        "build_group_id": "structure"
+    },
+    "target_filter_unit_type": "structure",
+    "tags": [
+        "structure"
+    ],
+    "virtual_supply_cost": 10,
+    "abilities": [
+        {
+            "abilities": [
+                "advent_temple_of_renewal_recharge_antimatter",
+                "advent_temple_of_renewal_recharge_shields",
+                "ac_sisters_world_purification"
+            ]
+        }
+    ],
+    "skin_groups": [
+        {
+            "skins": [
+                "ac_sisters_temple_of_renewal_structure"
+            ]
+        }
+    ],
+    "action_effect_size": "medium_unit",
+    "player_ai": {
+        "max_count_at_planet": {
+            "type": "per_used_military_slots_at_planet",
+            "per_count": 3,
+            "max_value": 10.0
+        }
+    }
+}
