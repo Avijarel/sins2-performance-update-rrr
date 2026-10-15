@@ -11,7 +11,7 @@ The performance changes now cover the Eidolon as well:
 
 Advent Sisters support
 - The AI builds the Sisters' own defenses in sensible numbers (beam defense max 15 per planet, Temple of Renewal max 10).
-- Load this mod AFTER Advent Sisters if you use both.
+- Place this mod ABOVE Advent Sisters (at the very top of your mod list) if you use both.
 
 
 CHANGED
