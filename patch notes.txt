@@ -1,3 +1,29 @@
+2.90
+
+NEW
+
+Eidolon (Herald) support
+The performance changes now cover the Eidolon as well:
+- Strikecraft squadrons reduced to 1 ship - their weapons hit harder to compensate.
+- Carrier Cruiser carries 1 squadron (slightly longer build time), hangar module +1.
+- Fewer trade and traffic ships (1 per port, longer build time).
+- Squadron research now costs exotics.
+
+Advent Sisters support
+- The AI builds the Sisters' own defenses in sensible numbers (beam defense max 15 per planet, Temple of Renewal max 10).
+- Load this mod AFTER Advent Sisters if you use both.
+
+
+CHANGED
+
+AI building limits (all factions)
+- The AI builds at most 15 turrets of each type per planet. Large AI empires no longer flood planets with hundreds of turrets - a big gain on large maps.
+- The AI builds healing structures in military slots in moderation (1 per 3 used slots, max 10).
+
+Balance
+- Hangar defense price back to RRR values.
+
+
 2.89
 
 General / Bug Fixes
